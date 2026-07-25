@@ -45,6 +45,42 @@ GROQ_MODEL=llama-3.3-70b-versatile
 `llm.py` reads a comma-separated list so it can rotate across multiple free-tier
 keys if one gets rate-limited. A single `GROQ_API_KEY` also works.
 
+## Deploying to Vercel
+
+`vercel.json` (project root) deploys this repo as two Vercel services from one
+project: `frontend` (Vite static build) and `backend` (this directory, rooted
+at `backend/`, built by Vercel's zero-config Python builder). Two things had
+to line up for that to actually work, both already in place:
+
+- **Entrypoint**: Vercel's Python builder looks for a serverless function
+  under `api/` *relative to the service root* — so `backend/api/index.py`
+  (not `backend/app/main.py` directly). It's a one-line re-export:
+  `from app.main import app`.
+- **Path prefix**: `vercel.json`'s rewrite (`"/api(/.*)?" → backend service`)
+  forwards the **full** incoming path — e.g. a browser request to
+  `/api/players/create` arrives at this service as literally
+  `/api/players/create`, not `/players/create`. `main.py` therefore mounts
+  every router under `API_PREFIX = "/api"` at `include_router()` time (the
+  routers themselves are untouched — their own internal prefixes, e.g.
+  `players.router`'s `/players`, just get `/api` prepended on top). `/health`
+  is exposed at both `/health` (local dev) and `/api/health` (matches the
+  rewrite) for the same reason.
+- **Frontend must match**: in the Vercel project settings for the `frontend`
+  service, set `VITE_API_BASE=/api` — a relative, same-origin path, so
+  requests hit the `/api(/.*)?` rewrite instead of trying to reach
+  `localhost:8001` (which doesn't exist in production). Locally, `api.js`
+  already defaults to `http://localhost:8001/api` with no env var needed.
+
+**Known limitation**: SQLite at `backend/data/app.db` is a file on local disk.
+Vercel serverless functions get an ephemeral, effectively read-only
+filesystem outside `/tmp` — writes may not persist between invocations, and
+almost certainly won't survive a cold start or a new deployment. This is fine
+for local dev and demoing directly off `uvicorn`, but a real Vercel deploy
+that needs to retain player/session data across requests will need a hosted
+database (e.g. Vercel Postgres, Turso, or any managed Postgres/MySQL) behind
+`database.py`'s `engine`, not this local SQLite file. Not implemented here —
+flagging it so it isn't a silent surprise after a deploy that "works."
+
 ---
 
 ## File-by-file

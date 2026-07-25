@@ -16,12 +16,20 @@ Opens on http://localhost:5173 (or the next free port — Vite tries 5174, 5175,
 ... automatically if 5173 is taken; the backend's CORS policy accepts any
 localhost port, so this just works).
 
-Expects the backend running at `http://localhost:8001` by default. Override
-with a `VITE_API_BASE` environment variable (e.g. in a `.env` file or your
-shell) if the backend is elsewhere.
+Expects the backend running at `http://localhost:8001/api` by default
+(routes are mounted under `/api` — see `backend/README.md`). Override with a
+`VITE_API_BASE` environment variable (e.g. in a `.env` file or your shell) if
+the backend is elsewhere.
 
 `npm run build` produces a static `dist/` bundle; nothing here needs
 server-side rendering.
+
+## Deploying to Vercel
+
+This service is the `frontend` entry in the project-root `vercel.json`. Set
+`VITE_API_BASE=/api` in this service's Vercel environment variables — a
+relative, same-origin path that hits the `/api(/.*)?` rewrite to the backend
+service, rather than the local-dev default of `localhost:8001`.
 
 ---
 

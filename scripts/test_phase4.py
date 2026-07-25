@@ -43,10 +43,10 @@ att, _ = bot_decide(1200, ARCHETYPES["calibrated"], 1200, scheme)
 check("calibrated attempts an equal question", att is True)
 
 with TestClient(app) as client:
-    pid = client.post("/players/create", json={"name": "Arena Ace"}).json()["player_id"]
+    pid = client.post("/api/players/create", json={"name": "Arena Ace"}).json()["player_id"]
 
     print("\n1) start arena session")
-    r = client.post(f"/risk_arena/{pid}/start",
+    r = client.post(f"/api/risk_arena/{pid}/start",
                     json={"num_rounds": 7, "first_session": True})
     check("start 200", r.status_code == 200)
     arena = r.json()
@@ -64,7 +64,7 @@ with TestClient(app) as client:
     # "timeout" exercises the new rule: raised hand + no answer in time -> wrong
     plan = ["correct", "wrong", "skip", "correct", "skip", "timeout"]
     for n, action in enumerate(plan, start=1):
-        rd = client.get(f"/risk_arena/{sid}/round/{n}").json()
+        rd = client.get(f"/api/risk_arena/{sid}/round/{n}").json()
         check(f"round {n}: no answer leaked", "correct_answer" not in rd)
         check(f"round {n}: theta_q + marking_scheme present",
               "theta_q" in rd and rd["marking_scheme"]["correct"] == 4)
@@ -73,22 +73,22 @@ with TestClient(app) as client:
         db.close()
 
         if action == "skip":
-            res = client.post(f"/risk_arena/{sid}/round/{n}/decide",
+            res = client.post(f"/api/risk_arena/{sid}/round/{n}/decide",
                               json={"hand_raised": False, "reaction_time_ms": 3000}).json()
             check(f"round {n}: decide(skip) resolves immediately", res["phase"] == "resolved")
         else:
-            decide_res = client.post(f"/risk_arena/{sid}/round/{n}/decide",
+            decide_res = client.post(f"/api/risk_arena/{sid}/round/{n}/decide",
                                      json={"hand_raised": True, "reaction_time_ms": 2000}).json()
             check(f"round {n}: decide(raise) returns 'raised'", decide_res["phase"] == "raised")
             check(f"round {n}: answer_seconds present", decide_res["answer_seconds"] == 15)
 
             if action == "timeout":
-                res = client.post(f"/risk_arena/{sid}/round/{n}/answer",
+                res = client.post(f"/api/risk_arena/{sid}/round/{n}/answer",
                                   json={"selected_answer": None, "reaction_time_ms": 15000}).json()
             else:
                 pick = correct_ans if action == "correct" else \
                     next(o for o in rd["options"] if o != correct_ans)
-                res = client.post(f"/risk_arena/{sid}/round/{n}/answer",
+                res = client.post(f"/api/risk_arena/{sid}/round/{n}/answer",
                                   json={"selected_answer": pick, "reaction_time_ms": 2500}).json()
             check(f"round {n}: answer resolves", res["phase"] == "resolved")
 
@@ -107,28 +107,28 @@ with TestClient(app) as client:
     check("not yet complete (7 rounds prepared, 6 played)", res["session_complete"] is False)
 
     print("\n3) guards")
-    dup = client.post(f"/risk_arena/{sid}/round/1/decide",
+    dup = client.post(f"/api/risk_arena/{sid}/round/1/decide",
                       json={"hand_raised": False})
     check("resubmit round -> 409", dup.status_code == 409)
-    out_of_range = client.post(f"/risk_arena/{sid}/round/8/decide",
+    out_of_range = client.post(f"/api/risk_arena/{sid}/round/8/decide",
                                json={"hand_raised": True})
     check("round out of range -> 404", out_of_range.status_code == 404)
-    orphan_answer = client.post(f"/risk_arena/{sid}/round/7/answer",
+    orphan_answer = client.post(f"/api/risk_arena/{sid}/round/7/answer",
                                 json={"selected_answer": "x"})
     check("answer without prior decide/raise -> 409", orphan_answer.status_code == 409)
 
     # finish round 7 (untouched) so the session completes for the coach report
-    client.post(f"/risk_arena/{sid}/round/7/decide", json={"hand_raised": False})
+    client.post(f"/api/risk_arena/{sid}/round/7/decide", json={"hand_raised": False})
     check("session now complete", True)
 
     print("\n4) elo: mode rating exists, skips didn't update it")
-    prof = client.get(f"/players/{pid}").json()
+    prof = client.get(f"/api/players/{pid}").json()
     check("risk_arena mode rating exists", "risk_arena" in prof["mode_ratings"])
     check("mode attempts_count == 4 (skips excluded)",
           prof["mode_ratings"]["risk_arena"]["attempts_count"] == 4)
 
     print("\n5) coach report (REAL Groq call)")
-    r = client.get(f"/risk_arena/{sid}/coach_report")
+    r = client.get(f"/api/risk_arena/{sid}/coach_report")
     check("coach report 200", r.status_code == 200)
     cr = r.json()
     check("actual_score == 6", cr["actual_score"] == 6)

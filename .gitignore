@@ -3,5 +3,6 @@ __pycache__/
 .venv/
 backend/.env
 backend/data/app.db
+frontend/.env
 node_modules/
 dist/

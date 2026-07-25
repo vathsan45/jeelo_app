@@ -57,17 +57,28 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(players.router)
-app.include_router(quiz.router)
-app.include_router(risk_arena.router)
-app.include_router(reports.router)
+# Vercel's rewrite forwards the full "/api/..." path to this service
+# unchanged, so every route needs that prefix in production. Applying it here
+# (rather than inside each router) keeps the routers' own path definitions
+# untouched — this is purely how they're mounted onto the app.
+API_PREFIX = "/api"
+
+app.include_router(players.router, prefix=API_PREFIX)
+app.include_router(quiz.router, prefix=API_PREFIX)
+app.include_router(risk_arena.router, prefix=API_PREFIX)
+app.include_router(reports.router, prefix=API_PREFIX)
 
 
-@app.get("/health")
-def health():
+def _health():
     db = SessionLocal()
     try:
         question_count = db.query(Question).count()
     finally:
         db.close()
     return {"status": "ok", "questions_loaded": question_count}
+
+
+# exposed at both paths: bare /health for local dev convenience, /api/health
+# so the same check works once deployed behind the /api rewrite
+app.get("/health")(_health)
+app.get(f"{API_PREFIX}/health")(_health)

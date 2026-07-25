@@ -1,4 +1,7 @@
-const API = import.meta.env.VITE_API_BASE || 'http://localhost:8001'
+// Local dev: FastAPI on 8001, routes mounted under /api (see backend main.py).
+// Production (Vercel): set VITE_API_BASE=/api so requests stay same-origin
+// and hit the /api(/.*)? rewrite to the backend service.
+const API = import.meta.env.VITE_API_BASE || 'http://localhost:8001/api'
 
 async function request(path, options = {}) {
   const res = await fetch(`${API}${path}`, {
