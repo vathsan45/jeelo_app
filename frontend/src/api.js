@@ -34,8 +34,13 @@ export const api = {
   arenaStart: (playerId, body) =>
     request(`/risk_arena/${playerId}/start`, { method: 'POST', body: JSON.stringify(body) }),
   arenaRound: (sessionId, n) => request(`/risk_arena/${sessionId}/round/${n}`),
-  arenaSubmit: (sessionId, n, body) =>
-    request(`/risk_arena/${sessionId}/round/${n}/submit`, {
+  arenaDecide: (sessionId, n, body) =>
+    request(`/risk_arena/${sessionId}/round/${n}/decide`, {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+  arenaAnswer: (sessionId, n, body) =>
+    request(`/risk_arena/${sessionId}/round/${n}/answer`, {
       method: 'POST',
       body: JSON.stringify(body),
     }),

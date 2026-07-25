@@ -4,7 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { api } from '../api.js'
 import AnimatedNumber from '../components/AnimatedNumber.jsx'
 
-const ROUND_SECONDS = 15
+const DECIDE_SECONDS = 10
+const ANSWER_SECONDS = 15
 
 export default function Arena() {
   const { sessionId } = useParams()
@@ -12,12 +13,18 @@ export default function Arena() {
 
   const [round, setRound] = useState(null)
   const [roundNum, setRoundNum] = useState(1)
+  // 'deciding' -> raise hand or skip within DECIDE_SECONDS
+  // 'answering' -> pick an option within ANSWER_SECONDS (hand already raised)
+  // 'result' -> round resolved, showing the reveal
+  const [phase, setPhase] = useState('deciding')
+  const [decideLeft, setDecideLeft] = useState(DECIDE_SECONDS)
+  const [answerLeft, setAnswerLeft] = useState(ANSWER_SECONDS)
   const [result, setResult] = useState(null)
   const [board, setBoard] = useState(null) // persists across rounds so reorders animate
-  const [timeLeft, setTimeLeft] = useState(ROUND_SECONDS)
   const [error, setError] = useState(null)
   const [thetaBefore, setThetaBefore] = useState(null)
-  const shownAt = useRef(null)
+  const decideStart = useRef(null)
+  const answerStart = useRef(null)
   const submitting = useRef(false)
 
   const loadRound = useCallback(
@@ -29,8 +36,9 @@ export default function Arena() {
         const r = await api.arenaRound(sessionId, n)
         setRound(r)
         setRoundNum(n)
-        setTimeLeft(ROUND_SECONDS)
-        shownAt.current = Date.now()
+        setPhase('deciding')
+        setDecideLeft(DECIDE_SECONDS)
+        decideStart.current = Date.now()
       } catch (e) {
         setError(e.message)
       }
@@ -42,19 +50,26 @@ export default function Arena() {
     loadRound(1)
   }, [loadRound])
 
-  const submit = useCallback(
-    async (handRaised, selectedAnswer) => {
+  const decide = useCallback(
+    async (handRaised) => {
       if (submitting.current) return
       submitting.current = true
       try {
-        const res = await api.arenaSubmit(sessionId, roundNum, {
+        const res = await api.arenaDecide(sessionId, roundNum, {
           hand_raised: handRaised,
-          reaction_time_ms: Date.now() - shownAt.current,
-          selected_answer: selectedAnswer ?? null,
+          reaction_time_ms: Date.now() - decideStart.current,
         })
-        setThetaBefore((prev) => prev ?? res.player.effective_arena_theta)
-        setResult(res)
-        setBoard(res.leaderboard)
+        if (res.phase === 'raised') {
+          submitting.current = false
+          setPhase('answering')
+          setAnswerLeft(ANSWER_SECONDS)
+          answerStart.current = Date.now()
+        } else {
+          setThetaBefore((prev) => prev ?? res.player.effective_arena_theta)
+          setResult(res)
+          setBoard(res.leaderboard)
+          setPhase('result')
+        }
       } catch (e) {
         setError(e.message)
       }
@@ -62,15 +77,47 @@ export default function Arena() {
     [sessionId, roundNum],
   )
 
+  const answer = useCallback(
+    async (selectedAnswer) => {
+      if (submitting.current) return
+      submitting.current = true
+      try {
+        const res = await api.arenaAnswer(sessionId, roundNum, {
+          selected_answer: selectedAnswer,
+          reaction_time_ms: Date.now() - answerStart.current,
+        })
+        setThetaBefore((prev) => prev ?? res.player.effective_arena_theta)
+        setResult(res)
+        setBoard(res.leaderboard)
+        setPhase('result')
+      } catch (e) {
+        setError(e.message)
+      }
+    },
+    [sessionId, roundNum],
+  )
+
+  // decide-phase countdown — expiry means an implicit skip
   useEffect(() => {
-    if (!round || result) return
-    if (timeLeft <= 0) {
-      submit(false, null)
+    if (phase !== 'deciding') return
+    if (decideLeft <= 0) {
+      decide(false)
       return
     }
-    const t = setTimeout(() => setTimeLeft((s) => s - 1), 1000)
+    const t = setTimeout(() => setDecideLeft((s) => s - 1), 1000)
     return () => clearTimeout(t)
-  }, [round, result, timeLeft, submit])
+  }, [phase, decideLeft, decide])
+
+  // answer-phase countdown — expiry counts as a wrong answer (you committed)
+  useEffect(() => {
+    if (phase !== 'answering') return
+    if (answerLeft <= 0) {
+      answer(null)
+      return
+    }
+    const t = setTimeout(() => setAnswerLeft((s) => s - 1), 1000)
+    return () => clearTimeout(t)
+  }, [phase, answerLeft, answer])
 
   if (error) {
     return (
@@ -84,9 +131,12 @@ export default function Arena() {
   }
   if (!round) return <p className="mt-24 text-center text-zinc-500">Loading…</p>
 
-  const urgent = timeLeft <= 4
+  const timeLeft = phase === 'answering' ? answerLeft : decideLeft
+  const urgentThreshold = phase === 'answering' ? 5 : 3
+  const midThreshold = phase === 'answering' ? 10 : 6
+  const urgent = timeLeft <= urgentThreshold
   const timerColor =
-    timeLeft > 8 ? 'text-violet-400' : timeLeft > 4 ? 'text-amber-400' : 'text-red-500'
+    timeLeft > midThreshold ? 'text-violet-400' : timeLeft > urgentThreshold ? 'text-amber-400' : 'text-red-500'
 
   return (
     <div className="mt-6">
@@ -101,10 +151,15 @@ export default function Arena() {
           <div className="flex justify-between items-center mb-4">
             <span className="text-sm text-zinc-500">
               Risk Arena · Round {round.round} / {round.total}
+              {phase !== 'result' && (
+                <span className="ml-2 text-zinc-600">
+                  · {phase === 'deciding' ? 'decide' : 'answer'}
+                </span>
+              )}
             </span>
-            {!result && (
+            {phase !== 'result' && (
               <motion.span
-                key={timeLeft}
+                key={`${phase}-${timeLeft}`}
                 initial={{ scale: urgent ? 1.35 : 1.1, opacity: 0.7 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3 }}
@@ -130,28 +185,44 @@ export default function Arena() {
           </p>
           <h2 className="text-lg mb-6 leading-relaxed">{round.text}</h2>
 
-          {!result ? (
-            <>
-              <div className="space-y-3 mb-6">
-                {round.options.map((opt) => (
-                  <motion.button
-                    key={opt}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => submit(true, opt)}
-                    className="w-full text-left border border-zinc-700 bg-zinc-900 hover:border-violet-500 rounded px-4 py-3 transition-colors"
-                  >
-                    {opt}
-                  </motion.button>
-                ))}
-              </div>
+          {phase === 'deciding' && (
+            <div className="text-center">
+              <p className="text-xs text-zinc-500 mb-4">
+                Raise your hand to commit to answering — you'll get {ANSWER_SECONDS}s
+                to pick an option once you do.
+              </p>
+              <motion.button
+                whileTap={{ scale: 0.96 }}
+                onClick={() => decide(true)}
+                className="w-full bg-violet-600 hover:bg-violet-500 rounded px-6 py-4 font-bold text-lg mb-3"
+              >
+                🖐 Raise Hand
+              </motion.button>
               <button
-                onClick={() => submit(false, null)}
+                onClick={() => decide(false)}
                 className="w-full border border-zinc-600 text-zinc-400 hover:text-zinc-200 rounded px-4 py-2"
               >
                 Skip this one (0 points)
               </button>
-            </>
-          ) : (
+            </div>
+          )}
+
+          {phase === 'answering' && (
+            <div className="space-y-3">
+              {round.options.map((opt) => (
+                <motion.button
+                  key={opt}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => answer(opt)}
+                  className="w-full text-left border border-violet-600 bg-violet-950/30 hover:border-violet-400 rounded px-4 py-3 transition-colors"
+                >
+                  {opt}
+                </motion.button>
+              ))}
+            </div>
+          )}
+
+          {phase === 'result' && (
             <RoundResult
               result={result}
               thetaBefore={thetaBefore}

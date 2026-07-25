@@ -20,6 +20,9 @@ router = APIRouter(prefix="/risk_arena", tags=["risk_arena"])
 # Lost on server restart — sessions must then be restarted; fine for a demo.
 ARENA_STATE = {}
 
+DECIDE_SECONDS = 10  # time to raise hand or skip
+ANSWER_SECONDS = 15  # time to pick an option, once hand is raised
+
 COACH_SYSTEM_PROMPT = (
     "You are a decision-making coach for a quiz risk game. Players choose to "
     "attempt (+4 correct / -1 wrong) or skip (0) each question. You are given "
@@ -37,10 +40,15 @@ class StartBody(BaseModel):
     first_session: bool = True
 
 
-class RoundSubmitBody(BaseModel):
+class DecideBody(BaseModel):
     hand_raised: bool
     reaction_time_ms: Optional[int] = None
+
+
+class AnswerBody(BaseModel):
+    # None means the answer-phase timer ran out before a selection was made
     selected_answer: Optional[str] = None
+    reaction_time_ms: Optional[int] = None
 
 
 def _get_arena(session_id):
@@ -60,6 +68,30 @@ def _leaderboard(state, player_name):
         rows.append({"name": b["name"], "score": b["score"], "is_player": False,
                      "last_action": b.get("last_action")})
     return sorted(rows, key=lambda r: r["score"], reverse=True)
+
+
+def _resolve_bots(state, question):
+    """Bots decide (attempt or not) and resolve immediately — they don't need
+    a separate answer phase, their 'reaction time' already models the whole
+    decision. Called exactly once per round, from /decide."""
+    scheme = question.marking_scheme
+    bot_results = []
+    for b in state["bots"]:
+        attempt, reaction_ms = bot_decide(b["theta"], ARCHETYPES[b["archetype"]],
+                                          question.theta_q, scheme)
+        if attempt:
+            correct = bot_answer_correct(b["theta"], question.theta_q)
+            delta = scheme["correct"] if correct else scheme["incorrect"]
+            b["score"] += delta
+            b["last_action"] = "correct" if correct else "wrong"
+        else:
+            correct = None
+            delta = 0
+            b["last_action"] = "skipped"
+        bot_results.append({"name": b["name"], "attempted": attempt,
+                            "correct": correct, "points_delta": delta,
+                            "reaction_time_ms": reaction_ms})
+    return bot_results
 
 
 @router.post("/{player_id}/start")
@@ -98,11 +130,14 @@ def start(player_id: str, body: StartBody, db: DBSession = Depends(get_db)):
         ],
         "player_score": 0.0,
         "submitted_rounds": set(),
+        "pending": {},  # round_num -> {bot_results} once hand is raised, awaiting an answer
     }
 
     return {
         "session_id": session.session_id,
         "num_rounds": len(question_ids),
+        "decide_seconds": DECIDE_SECONDS,
+        "answer_seconds": ANSWER_SECONDS,
         "bots": [{"name": b["name"], "archetype": b["archetype"]}
                  for b in ARENA_STATE[session.session_id]["bots"]],
     }
@@ -128,86 +163,38 @@ def get_round(session_id: str, n: int, db: DBSession = Depends(get_db)):
         "sub_topic": q.sub_topic,
         "theta_q": round(q.theta_q),
         "marking_scheme": q.marking_scheme,
+        "decide_seconds": DECIDE_SECONDS,
+        "answer_seconds": ANSWER_SECONDS,
     }
 
 
-@router.post("/{session_id}/round/{n}/submit")
-def submit_round(session_id: str, n: int, body: RoundSubmitBody,
-                 db: DBSession = Depends(get_db)):
-    state = _get_arena(session_id)
-    session = db.get(Session, session_id)
-    player = db.get(Player, session.player_id)
-    if not (1 <= n <= len(state["question_ids"])):
-        raise HTTPException(status_code=404, detail="round out of range")
-    if n in state["submitted_rounds"]:
-        raise HTTPException(status_code=409, detail="round already submitted")
-
-    question = db.get(Question, state["question_ids"][n - 1])
-    scheme = question.marking_scheme
-
-    # --- bots decide + resolve (in-memory only) ---
-    bot_results = []
-    for b in state["bots"]:
-        attempt, reaction_ms = bot_decide(b["theta"], ARCHETYPES[b["archetype"]],
-                                          question.theta_q, scheme)
-        if attempt:
-            correct = bot_answer_correct(b["theta"], question.theta_q)
-            delta = scheme["correct"] if correct else scheme["incorrect"]
-            b["score"] += delta
-            b["last_action"] = "correct" if correct else "wrong"
-        else:
-            correct = None
-            delta = 0
-            b["last_action"] = "skipped"
-        bot_results.append({"name": b["name"], "attempted": attempt,
-                            "correct": correct, "points_delta": delta,
-                            "reaction_time_ms": reaction_ms})
-
-    # --- player resolution ---
-    round_num = db.query(AttemptLog).filter_by(session_id=session_id).count() + 1
-    if body.hand_raised:
-        if not body.selected_answer:
-            raise HTTPException(status_code=422,
-                                detail="selected_answer required when hand_raised")
-        correct = body.selected_answer == question.correct_answer
-        deltas = apply_attempt_result(session.player_id, question.question_id,
-                                      "risk_arena", correct, db)
-        points_delta = scheme["correct"] if correct else scheme["incorrect"]
-        state["player_score"] += points_delta
-        state["player_last_action"] = "correct" if correct else "wrong"
-        theta_p_before = deltas["theta_p_before"]
-        theta_q_before = deltas["theta_q_before"]
-    else:
-        # skip: no elo update, but log EVERY round with ratings captured
-        correct = None
-        points_delta = 0.0
-        state["player_last_action"] = "skipped"
-        theta_p_before = player.theta_overall
-        theta_q_before = question.theta_q
-
+def _finish_round(db, session, state, player, question, n, hand_raised, correct,
+                  points_delta, selected_answer, reaction_time_ms, theta_p_before,
+                  theta_q_before, bot_results):
+    round_num = db.query(AttemptLog).filter_by(session_id=session.session_id).count() + 1
     db.add(AttemptLog(
-        session_id=session_id,
+        session_id=session.session_id,
         player_id=session.player_id,
         question_id=question.question_id,
         round_num=round_num,
         mode="risk_arena",
         theta_p_before=theta_p_before,
         theta_q_before=theta_q_before,
-        hand_raised=body.hand_raised,
-        reaction_time_ms=body.reaction_time_ms,
-        attempted=body.hand_raised,
+        hand_raised=hand_raised,
+        reaction_time_ms=reaction_time_ms,
+        attempted=hand_raised,
         correct=correct,
         points_delta=float(points_delta),
-        selected_answer=body.selected_answer if body.hand_raised else None,
+        selected_answer=selected_answer,
     ))
     state["submitted_rounds"].add(n)
+    state["pending"].pop(n, None)
 
     is_last = len(state["submitted_rounds"]) >= len(state["question_ids"])
     if is_last and session.ended_at is None:
         session.ended_at = datetime.utcnow()
     db.commit()
 
-    # effective risk_arena rating after this round
     db.refresh(player)
     mode_row = (db.query(PlayerModeRating)
                 .filter_by(player_id=session.player_id, mode="risk_arena").first())
@@ -221,7 +208,7 @@ def submit_round(session_id: str, n: int, body: RoundSubmitBody,
     return {
         "correct_answer": question.correct_answer,
         "player": {
-            "attempted": body.hand_raised,
+            "attempted": hand_raised,
             "correct": correct,
             "points_delta": points_delta,
             "total_score": state["player_score"],
@@ -231,6 +218,84 @@ def submit_round(session_id: str, n: int, body: RoundSubmitBody,
         "leaderboard": _leaderboard(state, player.name),
         "session_complete": is_last,
     }
+
+
+@router.post("/{session_id}/round/{n}/decide")
+def decide_round(session_id: str, n: int, body: DecideBody,
+                 db: DBSession = Depends(get_db)):
+    """Phase 1 (10s): raise your hand to commit to answering, or let it pass
+    to skip. Bots resolve here regardless — their 'decision' is instant."""
+    state = _get_arena(session_id)
+    session = db.get(Session, session_id)
+    player = db.get(Player, session.player_id)
+    if not (1 <= n <= len(state["question_ids"])):
+        raise HTTPException(status_code=404, detail="round out of range")
+    if n in state["submitted_rounds"]:
+        raise HTTPException(status_code=409, detail="round already submitted")
+    if n in state["pending"]:
+        raise HTTPException(status_code=409, detail="hand already raised for this round")
+
+    question = db.get(Question, state["question_ids"][n - 1])
+    bot_results = _resolve_bots(state, question)
+
+    if not body.hand_raised:
+        # skip: no elo update, but log EVERY round with ratings captured
+        state["player_last_action"] = "skipped"
+        result = _finish_round(
+            db, session, state, player, question, n,
+            hand_raised=False, correct=None, points_delta=0.0,
+            selected_answer=None, reaction_time_ms=body.reaction_time_ms,
+            theta_p_before=player.theta_overall, theta_q_before=question.theta_q,
+            bot_results=bot_results,
+        )
+        return {"phase": "resolved", **result}
+
+    # hand raised: hold the round open for the answer phase. Nothing about
+    # the player/question is mutated yet, so the before-snapshot captured now
+    # is still valid whenever /answer eventually resolves it.
+    state["pending"][n] = {
+        "bot_results": bot_results,
+        "decide_reaction_time_ms": body.reaction_time_ms,
+    }
+    return {"phase": "raised", "answer_seconds": ANSWER_SECONDS}
+
+
+@router.post("/{session_id}/round/{n}/answer")
+def answer_round(session_id: str, n: int, body: AnswerBody,
+                 db: DBSession = Depends(get_db)):
+    """Phase 2 (15s): pick an option having already raised your hand. Running
+    out the clock here counts as a wrong answer — raising your hand is a
+    commitment, not a free look."""
+    state = _get_arena(session_id)
+    session = db.get(Session, session_id)
+    player = db.get(Player, session.player_id)
+    if not (1 <= n <= len(state["question_ids"])):
+        raise HTTPException(status_code=404, detail="round out of range")
+    if n in state["submitted_rounds"]:
+        raise HTTPException(status_code=409, detail="round already submitted")
+    pending = state["pending"].get(n)
+    if pending is None:
+        raise HTTPException(status_code=409,
+                            detail="hand not raised for this round — call /decide first")
+
+    question = db.get(Question, state["question_ids"][n - 1])
+    correct = bool(body.selected_answer) and body.selected_answer == question.correct_answer
+
+    deltas = apply_attempt_result(session.player_id, question.question_id,
+                                  "risk_arena", correct, db)
+    scheme = question.marking_scheme
+    points_delta = scheme["correct"] if correct else scheme["incorrect"]
+    state["player_score"] += points_delta
+    state["player_last_action"] = "correct" if correct else "wrong"
+
+    result = _finish_round(
+        db, session, state, player, question, n,
+        hand_raised=True, correct=correct, points_delta=points_delta,
+        selected_answer=body.selected_answer, reaction_time_ms=body.reaction_time_ms,
+        theta_p_before=deltas["theta_p_before"], theta_q_before=deltas["theta_q_before"],
+        bot_results=pending["bot_results"],
+    )
+    return {"phase": "resolved", **result}
 
 
 @router.get("/{session_id}/coach_report")
