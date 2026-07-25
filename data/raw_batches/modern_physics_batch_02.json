@@ -1,0 +1,257 @@
+[
+  {
+    "question_id": "physics_modern_physics_06",
+    "text": "A nucleus has a mass defect of 0.01 u. The corresponding binding energy is closest to:",
+    "options": [
+      "9.3 MeV",
+      "0.93 MeV",
+      "93 MeV",
+      "18.6 MeV"
+    ],
+    "correct_answer": "9.3 MeV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Mass Defect & Binding Energy",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Einstein Mass-Energy Relation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Einstein Mass-Energy Relation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Einstein Mass-Energy Relation"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_07",
+    "text": "A silicon diode is forward biased. Its typical forward voltage drop is:",
+    "options": [
+      "0.7 V",
+      "0.3 V",
+      "1.5 V",
+      "5 V"
+    ],
+    "correct_answer": "0.7 V",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Semiconductor Diodes",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Diode Forward Bias Characteristic",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Diode Forward Bias Characteristic",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Diode Forward Bias Characteristic"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_08",
+    "text": "A radioactive nucleus emits an \u03b1-particle. Its atomic number decreases by:",
+    "options": [
+      "2",
+      "1",
+      "4",
+      "0"
+    ],
+    "correct_answer": "2",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Physics",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Alpha Decay Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Alpha Decay Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Alpha Decay Law"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_09",
+    "text": "The output of an AND gate is HIGH when:",
+    "options": [
+      "Both inputs are HIGH",
+      "At least one input is HIGH",
+      "Both inputs are LOW",
+      "Inputs are different"
+    ],
+    "correct_answer": "Both inputs are HIGH",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Logic Gates",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Truth Table of AND Gate",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Truth Table of AND Gate",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Truth Table of AND Gate"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_10",
+    "text": "The conductivity of an intrinsic semiconductor increases with temperature because:",
+    "options": [
+      "More electron-hole pairs are generated",
+      "Carrier mobility becomes zero",
+      "Band gap increases",
+      "Number of atoms increases"
+    ],
+    "correct_answer": "More electron-hole pairs are generated",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Semiconductors",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Intrinsic Semiconductor Conductivity",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Intrinsic Semiconductor Conductivity",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Intrinsic Semiconductor Conductivity"
+    ]
+  }
+]

@@ -1,0 +1,257 @@
+[
+  {
+    "question_id": "physics_mechanics_06",
+    "text": "A projectile is fired at 30\u00b0 with speed 20 m/s. Take g=10 m/s\u00b2. Time of flight is:",
+    "options": [
+      "2 s",
+      "1 s",
+      "4 s",
+      "3 s"
+    ],
+    "correct_answer": "2 s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Projectile Motion",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Time of Flight Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Time of Flight Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Time of Flight Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_07",
+    "text": "A 5 kg block rests on a horizontal surface with coefficient of static friction 0.4. Take g=10 m/s\u00b2. Maximum static friction is:",
+    "options": [
+      "20 N",
+      "50 N",
+      "10 N",
+      "25 N"
+    ],
+    "correct_answer": "20 N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Friction",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Maximum Static Friction Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Maximum Static Friction Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Maximum Static Friction Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_08",
+    "text": "A car moves in a circle of radius 50 m at 10 m/s. Centripetal acceleration is:",
+    "options": [
+      "2 m/s\u00b2",
+      "5 m/s\u00b2",
+      "10 m/s\u00b2",
+      "1 m/s\u00b2"
+    ],
+    "correct_answer": "2 m/s\u00b2",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Circular Motion",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Centripetal Acceleration Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Centripetal Acceleration Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Centripetal Acceleration Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_09",
+    "text": "A 2 kg body moving at 5 m/s collides elastically head-on with an identical stationary body. Speed of the first body after collision is:",
+    "options": [
+      "0 m/s",
+      "5 m/s",
+      "2.5 m/s",
+      "10 m/s"
+    ],
+    "correct_answer": "0 m/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Momentum",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Conservation of Momentum",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Conservation of Momentum",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Conservation of Momentum"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_10",
+    "text": "A 10 kg block is lifted vertically upward at constant speed 2 m/s. Take g=10 m/s\u00b2. Power delivered is:",
+    "options": [
+      "200 W",
+      "100 W",
+      "20 W",
+      "400 W"
+    ],
+    "correct_answer": "200 W",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Power",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Power Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Power Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Power Formula"
+    ]
+  }
+]

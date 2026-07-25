@@ -1,0 +1,287 @@
+[
+  {
+    "question_id": "physics_modern_physics_11",
+    "text": "During \u03b2\u207b decay of a nucleus, the atomic number of the daughter nucleus:",
+    "options": [
+      "Increases by 1",
+      "Decreases by 1",
+      "Remains unchanged",
+      "Increases by 2"
+    ],
+    "correct_answer": "Increases by 1",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Beta Decay",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Beta Decay Rule",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Beta Decay Rule",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Beta Decay Rule"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_12",
+    "text": "Emission of a \u03b3-ray from an excited nucleus results in:",
+    "options": [
+      "No change in mass number and atomic number",
+      "Mass number decreases by 1",
+      "Atomic number increases by 1",
+      "Both mass number and atomic number decrease"
+    ],
+    "correct_answer": "No change in mass number and atomic number",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Gamma Decay",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Gamma Decay Rule",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Gamma Decay Rule",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Gamma Decay Rule"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_13",
+    "text": "In the reaction \u00b2H + \u00b3H \u2192 \u2074He + X, the particle X is:",
+    "options": [
+      "Neutron",
+      "Proton",
+      "Electron",
+      "Alpha particle"
+    ],
+    "correct_answer": "Neutron",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Reactions",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Conservation of Nucleon Number",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Conservation of Nucleon Number",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Conservation of Nucleon Number"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_14",
+    "text": "In the active region of an NPN transistor, the emitter-base junction is:",
+    "options": [
+      "Forward biased and collector-base junction is reverse biased",
+      "Reverse biased and collector-base junction is forward biased",
+      "Both junctions forward biased",
+      "Both junctions reverse biased"
+    ],
+    "correct_answer": "Forward biased and collector-base junction is reverse biased",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Transistors",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Transistor Biasing Principle",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Transistor Biasing Principle",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Transistor Biasing Principle"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_15",
+    "text": "A Zener diode is primarily used as a:",
+    "options": [
+      "Voltage regulator",
+      "Rectifier",
+      "Amplifier",
+      "Oscillator"
+    ],
+    "correct_answer": "Voltage regulator",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Zener Diode",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Zener Breakdown Principle",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Zener Breakdown Principle",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Zener Breakdown Principle"
+    ]
+  }
+]

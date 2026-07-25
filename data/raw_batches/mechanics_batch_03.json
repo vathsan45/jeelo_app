@@ -1,0 +1,287 @@
+[
+  {
+    "question_id": "physics_mechanics_11",
+    "text": "A solid disc of mass 2 kg and radius 0.5 m rotates about its central axis at 4 rad/s. Its rotational kinetic energy is:",
+    "options": [
+      "2 J",
+      "4 J",
+      "8 J",
+      "16 J"
+    ],
+    "correct_answer": "2 J",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Rotational Dynamics",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Rotational Kinetic Energy Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Rotational Kinetic Energy Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Rotational Kinetic Energy Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_12",
+    "text": "A satellite orbits just above Earth's surface. If g=10 m/s\u00b2 and Earth's radius is 6400 km, its orbital speed is closest to:",
+    "options": [
+      "8 km/s",
+      "4 km/s",
+      "11.2 km/s",
+      "16 km/s"
+    ],
+    "correct_answer": "8 km/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Gravitation",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Orbital Velocity Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Orbital Velocity Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Orbital Velocity Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_13",
+    "text": "A particle executes SHM with amplitude 0.2 m and angular frequency 5 rad/s. Maximum speed is:",
+    "options": [
+      "1 m/s",
+      "5 m/s",
+      "0.25 m/s",
+      "2 m/s"
+    ],
+    "correct_answer": "1 m/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Simple Harmonic Motion",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Maximum Speed in SHM",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Maximum Speed in SHM",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Maximum Speed in SHM"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_14",
+    "text": "Two particles of masses 2 kg and 3 kg are placed at x=0 m and x=10 m respectively. The x-coordinate of the center of mass is:",
+    "options": [
+      "6 m",
+      "4 m",
+      "5 m",
+      "8 m"
+    ],
+    "correct_answer": "6 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Center of Mass",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Center of Mass Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Center of Mass Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Center of Mass Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_15",
+    "text": "A spring of spring constant 200 N/m is compressed by 0.10 m. The elastic potential energy stored is:",
+    "options": [
+      "1 J",
+      "2 J",
+      "0.5 J",
+      "4 J"
+    ],
+    "correct_answer": "1 J",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Work-Energy & Springs",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Elastic Potential Energy Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Elastic Potential Energy Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Elastic Potential Energy Formula"
+    ]
+  }
+]

@@ -1,0 +1,257 @@
+[
+  {
+    "question_id": "physics_electricity_and_magnetism_01",
+    "text": "A resistor of 5 \u03a9 is connected across a 10 V battery. The current through the resistor is:",
+    "options": [
+      "2 A",
+      "0.5 A",
+      "5 A",
+      "10 A"
+    ],
+    "correct_answer": "2 A",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Ohm's Law",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Ohm's Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Ohm's Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Ohm's Law"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_02",
+    "text": "A 4 \u03a9 resistor carries a current of 3 A. The power dissipated is:",
+    "options": [
+      "36 W",
+      "12 W",
+      "24 W",
+      "48 W"
+    ],
+    "correct_answer": "36 W",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Electric Power",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Electrical Power Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Electrical Power Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Electrical Power Formula"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_03",
+    "text": "Two resistors of 6 \u03a9 and 3 \u03a9 are connected in parallel. Their equivalent resistance is:",
+    "options": [
+      "2 \u03a9",
+      "9 \u03a9",
+      "4.5 \u03a9",
+      "3 \u03a9"
+    ],
+    "correct_answer": "2 \u03a9",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Series and Parallel Circuits",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Equivalent Resistance of Parallel Combination",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Equivalent Resistance of Parallel Combination",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Equivalent Resistance of Parallel Combination"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_04",
+    "text": "A capacitor of 2 \u03bcF is charged to 100 V. The charge stored is:",
+    "options": [
+      "200 \u03bcC",
+      "20 \u03bcC",
+      "100 \u03bcC",
+      "400 \u03bcC"
+    ],
+    "correct_answer": "200 \u03bcC",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Capacitance",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Capacitance Relation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Capacitance Relation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Capacitance Relation"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_05",
+    "text": "A proton enters a uniform magnetic field of 0.5 T perpendicular to the field with speed 2\u00d710^6 m/s. The magnetic force on the proton is closest to:",
+    "options": [
+      "1.6\u00d710^-13 N",
+      "3.2\u00d710^-13 N",
+      "8\u00d710^-14 N",
+      "1.6\u00d710^-12 N"
+    ],
+    "correct_answer": "1.6\u00d710^-13 N",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Magnetic Force",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Magnetic Lorentz Force",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Magnetic Lorentz Force",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Magnetic Lorentz Force"
+    ]
+  }
+]

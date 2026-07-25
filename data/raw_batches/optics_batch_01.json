@@ -1,0 +1,257 @@
+[
+  {
+    "question_id": "physics_optics_01",
+    "text": "A ray of light is incident at 35\u00b0 on a plane mirror. The angle of reflection is:",
+    "options": [
+      "35\u00b0",
+      "55\u00b0",
+      "70\u00b0",
+      "90\u00b0"
+    ],
+    "correct_answer": "35\u00b0",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Reflection from Plane Mirrors",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Law of Reflection",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Law of Reflection",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Law of Reflection"
+    ]
+  },
+  {
+    "question_id": "physics_optics_02",
+    "text": "A light ray enters glass from air with angle of incidence 30\u00b0. If refractive index of glass is 1.5, sin(r) is:",
+    "options": [
+      "1/3",
+      "2/3",
+      "1/2",
+      "3/4"
+    ],
+    "correct_answer": "1/3",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Refraction",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Snell's Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Snell's Law",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Snell's Law"
+    ]
+  },
+  {
+    "question_id": "physics_optics_03",
+    "text": "A concave mirror has focal length 20 cm. An object is placed 40 cm in front of it. The image is formed at:",
+    "options": [
+      "40 cm",
+      "20 cm",
+      "80 cm",
+      "10 cm"
+    ],
+    "correct_answer": "40 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Spherical Mirrors",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Mirror Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Mirror Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Mirror Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_04",
+    "text": "A convex lens has focal length 25 cm. An object is placed at 50 cm from the lens. Image distance is:",
+    "options": [
+      "50 cm",
+      "25 cm",
+      "100 cm",
+      "12.5 cm"
+    ],
+    "correct_answer": "50 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Lenses",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Lens Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Lens Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Lens Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_05",
+    "text": "In Young's double-slit experiment, wavelength is 600 nm, slit separation is 0.3 mm, and screen distance is 1.5 m. Fringe width is:",
+    "options": [
+      "3 mm",
+      "1 mm",
+      "6 mm",
+      "0.3 mm"
+    ],
+    "correct_answer": "3 mm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Young's Double Slit Experiment",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Fringe Width Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Fringe Width Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Fringe Width Formula"
+    ]
+  }
+]

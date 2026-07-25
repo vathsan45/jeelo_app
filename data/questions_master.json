@@ -1,0 +1,3124 @@
+[
+  {
+    "question_id": "physics_electricity_and_magnetism_01",
+    "text": "A resistor of 5 Ω is connected across a 10 V battery. The current through the resistor is:",
+    "options": [
+      "2 A",
+      "0.5 A",
+      "5 A",
+      "10 A"
+    ],
+    "correct_answer": "2 A",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Ohm's Law",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Ohm's Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Ohm's Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Ohm's Law"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_02",
+    "text": "A 4 Ω resistor carries a current of 3 A. The power dissipated is:",
+    "options": [
+      "36 W",
+      "12 W",
+      "24 W",
+      "48 W"
+    ],
+    "correct_answer": "36 W",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Electric Power",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Electrical Power Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Electrical Power Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Electrical Power Formula"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_03",
+    "text": "Two resistors of 6 Ω and 3 Ω are connected in parallel. Their equivalent resistance is:",
+    "options": [
+      "2 Ω",
+      "9 Ω",
+      "4.5 Ω",
+      "3 Ω"
+    ],
+    "correct_answer": "2 Ω",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Series and Parallel Circuits",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Equivalent Resistance of Parallel Combination",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Equivalent Resistance of Parallel Combination",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Equivalent Resistance of Parallel Combination"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_04",
+    "text": "A capacitor of 2 μF is charged to 100 V. The charge stored is:",
+    "options": [
+      "200 μC",
+      "20 μC",
+      "100 μC",
+      "400 μC"
+    ],
+    "correct_answer": "200 μC",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Capacitance",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Capacitance Relation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Capacitance Relation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Capacitance Relation"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_05",
+    "text": "A proton enters a uniform magnetic field of 0.5 T perpendicular to the field with speed 2×10^6 m/s. The magnetic force on the proton is closest to:",
+    "options": [
+      "1.6×10^-13 N",
+      "3.2×10^-13 N",
+      "8×10^-14 N",
+      "1.6×10^-12 N"
+    ],
+    "correct_answer": "1.6×10^-13 N",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Magnetic Force",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Magnetic Lorentz Force",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Magnetic Lorentz Force",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Magnetic Lorentz Force"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_06",
+    "text": "A current of 2 A enters a junction and splits into two branches carrying 0.8 A and I respectively. The value of I is:",
+    "options": [
+      "1.2 A",
+      "2.8 A",
+      "0.4 A",
+      "1.6 A"
+    ],
+    "correct_answer": "1.2 A",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Kirchhoff's Laws",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Kirchhoff's Current Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Kirchhoff's Current Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Kirchhoff's Current Law"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_07",
+    "text": "Two point charges of +2 μC and +3 μC are separated by 1 m in vacuum. The electrostatic force between them is closest to:",
+    "options": [
+      "0.054 N",
+      "0.018 N",
+      "0.108 N",
+      "0.009 N"
+    ],
+    "correct_answer": "0.054 N",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Electrostatics",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Coulomb's Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Coulomb's Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Coulomb's Law"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_08",
+    "text": "A cell of emf 12 V and internal resistance 1 Ω is connected to an external resistor of 5 Ω. The current drawn is:",
+    "options": [
+      "2 A",
+      "2.4 A",
+      "1.5 A",
+      "3 A"
+    ],
+    "correct_answer": "2 A",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Current Electricity",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Ohm's Law with Internal Resistance",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Ohm's Law with Internal Resistance",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Ohm's Law with Internal Resistance"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_09",
+    "text": "A straight conductor carrying 10 A current produces a magnetic field at a point 0.1 m away. The field is closest to:",
+    "options": [
+      "2×10^-5 T",
+      "1×10^-5 T",
+      "4×10^-5 T",
+      "5×10^-6 T"
+    ],
+    "correct_answer": "2×10^-5 T",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Moving Charges and Magnetism",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Magnetic Field due to Long Straight Conductor",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Magnetic Field due to Long Straight Conductor",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Magnetic Field due to Long Straight Conductor"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_10",
+    "text": "A conducting rod of length 0.5 m moves with speed 4 m/s perpendicular to a magnetic field of 2 T. The induced emf is:",
+    "options": [
+      "4 V",
+      "2 V",
+      "8 V",
+      "1 V"
+    ],
+    "correct_answer": "4 V",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Electromagnetic Induction",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Motional EMF Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Motional EMF Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Motional EMF Formula"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_11",
+    "text": "A 0.5 m wire carrying 4 A current is placed perpendicular to a 2 T magnetic field. The magnetic force is:",
+    "options": [
+      "4 N",
+      "2 N",
+      "8 N",
+      "1 N"
+    ],
+    "correct_answer": "4 N",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Force on Current-Carrying Conductor",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the appropriate formula.",
+        "formula_used": "Magnetic Force on Current-Carrying Conductor",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Magnetic Force on Current-Carrying Conductor",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Magnetic Force on Current-Carrying Conductor"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_12",
+    "text": "A circular loop of radius 0.2 m carries 5 A current. The magnetic field at its center is closest to:",
+    "options": [
+      "1.57×10^-5 T",
+      "3.14×10^-5 T",
+      "7.85×10^-6 T",
+      "6.28×10^-5 T"
+    ],
+    "correct_answer": "1.57×10^-5 T",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Biot-Savart Law",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the appropriate formula.",
+        "formula_used": "Magnetic Field at Center of Circular Loop",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Magnetic Field at Center of Circular Loop",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Magnetic Field at Center of Circular Loop"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_13",
+    "text": "An infinitely long straight wire carries 20 A current. The magnetic field at a distance of 0.2 m is closest to:",
+    "options": [
+      "2×10^-5 T",
+      "4×10^-5 T",
+      "1×10^-5 T",
+      "8×10^-5 T"
+    ],
+    "correct_answer": "2×10^-5 T",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Ampere's Circuital Law",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the appropriate formula.",
+        "formula_used": "Ampere's Circuital Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Ampere's Circuital Law",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Ampere's Circuital Law"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_14",
+    "text": "An AC source has peak voltage 100 V. The rms voltage is:",
+    "options": [
+      "70.7 V",
+      "50 V",
+      "100 V",
+      "141.4 V"
+    ],
+    "correct_answer": "70.7 V",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Alternating Current",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the appropriate formula.",
+        "formula_used": "RMS Value of AC Voltage",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "RMS Value of AC Voltage",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "RMS Value of AC Voltage"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_15",
+    "text": "A transformer has 500 primary turns and 100 secondary turns. If the primary voltage is 220 V, the secondary voltage is:",
+    "options": [
+      "44 V",
+      "110 V",
+      "22 V",
+      "55 V"
+    ],
+    "correct_answer": "44 V",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Transformer",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the appropriate formula.",
+        "formula_used": "Transformer Turns Ratio",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Transformer Turns Ratio",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Transformer Turns Ratio"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_01",
+    "text": "A particle starts from rest with constant acceleration \\(4\\,m/s^2\\). Distance travelled in first \\(5\\,s\\) is:",
+    "options": [
+      "50 m",
+      "40 m",
+      "25 m",
+      "100 m"
+    ],
+    "correct_answer": "50 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Kinematics",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify uniformly accelerated motion with u=0.",
+        "formula_used": null,
+        "concept_tested": "Recognize motion type"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose s=ut+1/2at².",
+        "formula_used": "Second Equation of Motion",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute u=0,a=4,t=5.",
+        "formula_used": "Second Equation of Motion",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute s=0+0.5×4×25=50 m.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Second Equation of Motion"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_02",
+    "text": "A ball is projected vertically upward with speed \\(20\\,m/s\\). Take \\(g=10\\,m/s^2\\). Maximum height is:",
+    "options": [
+      "20 m",
+      "40 m",
+      "10 m",
+      "30 m"
+    ],
+    "correct_answer": "20 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Vertical Motion",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Velocity at highest point is zero.",
+        "formula_used": null,
+        "concept_tested": "Top point condition"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Use v²=u²+2as.",
+        "formula_used": "Third Equation of Motion",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute v=0,u=20,a=-10.",
+        "formula_used": "Third Equation of Motion",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Solve for s=20 m.",
+        "formula_used": "Algebra",
+        "concept_tested": "Equation solving"
+      }
+    ],
+    "formulas_used": [
+      "Third Equation of Motion"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_03",
+    "text": "A 4 kg block is pulled on a smooth horizontal surface by a horizontal force of 20 N. Acceleration is:",
+    "options": [
+      "5 m/s²",
+      "4 m/s²",
+      "2 m/s²",
+      "20 m/s²"
+    ],
+    "correct_answer": "5 m/s²",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Newton's Laws",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Net horizontal force equals 20 N.",
+        "formula_used": null,
+        "concept_tested": "Free-body analysis"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply F=ma.",
+        "formula_used": "Newton's Second Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute F=20,m=4.",
+        "formula_used": "Newton's Second Law",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute a=5 m/s².",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Newton's Second Law"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_04",
+    "text": "A 2 kg body moving at 8 m/s is stopped uniformly in 8 m. Retarding force equals:",
+    "options": [
+      "8 N",
+      "16 N",
+      "4 N",
+      "12 N"
+    ],
+    "correct_answer": "8 N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Work-Energy Theorem",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Compute initial kinetic energy.",
+        "formula_used": "Kinetic Energy Formula",
+        "concept_tested": "KE evaluation"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Final kinetic energy is zero.",
+        "formula_used": null,
+        "concept_tested": "Final state"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Apply Work-Energy theorem.",
+        "formula_used": "Work-Energy Theorem",
+        "concept_tested": "Energy principle"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Fs=64 J so F=8 N.",
+        "formula_used": "Work Formula",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Kinetic Energy Formula",
+      "Work-Energy Theorem",
+      "Work Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_05",
+    "text": "Two blocks of masses 2 kg and 3 kg are connected by a light string on a smooth surface. A 20 N force acts on the 3 kg block. Tension is:",
+    "options": [
+      "8 N",
+      "12 N",
+      "20 N",
+      "6 N"
+    ],
+    "correct_answer": "8 N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Connected Bodies",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Treat both blocks as one system.",
+        "formula_used": null,
+        "concept_tested": "System approach"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Find acceleration a=20/(2+3)=4 m/s².",
+        "formula_used": "Newton's Second Law",
+        "concept_tested": "Common acceleration"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Analyze 2 kg block separately.",
+        "formula_used": null,
+        "concept_tested": "Free-body diagram"
+      },
+      {
+        "step_order": 4,
+        "step_text": "T=ma=2×4=8 N.",
+        "formula_used": "Newton's Second Law",
+        "concept_tested": "Internal force"
+      }
+    ],
+    "formulas_used": [
+      "Newton's Second Law"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_06",
+    "text": "A projectile is fired at 30° with speed 20 m/s. Take g=10 m/s². Time of flight is:",
+    "options": [
+      "2 s",
+      "1 s",
+      "4 s",
+      "3 s"
+    ],
+    "correct_answer": "2 s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Projectile Motion",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Time of Flight Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Time of Flight Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Time of Flight Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_07",
+    "text": "A 5 kg block rests on a horizontal surface with coefficient of static friction 0.4. Take g=10 m/s². Maximum static friction is:",
+    "options": [
+      "20 N",
+      "50 N",
+      "10 N",
+      "25 N"
+    ],
+    "correct_answer": "20 N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Friction",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Maximum Static Friction Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Maximum Static Friction Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Maximum Static Friction Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_08",
+    "text": "A car moves in a circle of radius 50 m at 10 m/s. Centripetal acceleration is:",
+    "options": [
+      "2 m/s²",
+      "5 m/s²",
+      "10 m/s²",
+      "1 m/s²"
+    ],
+    "correct_answer": "2 m/s²",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Circular Motion",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Centripetal Acceleration Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Centripetal Acceleration Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Centripetal Acceleration Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_09",
+    "text": "A 2 kg body moving at 5 m/s collides elastically head-on with an identical stationary body. Speed of the first body after collision is:",
+    "options": [
+      "0 m/s",
+      "5 m/s",
+      "2.5 m/s",
+      "10 m/s"
+    ],
+    "correct_answer": "0 m/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Momentum",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Conservation of Momentum",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Conservation of Momentum",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Conservation of Momentum"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_10",
+    "text": "A 10 kg block is lifted vertically upward at constant speed 2 m/s. Take g=10 m/s². Power delivered is:",
+    "options": [
+      "200 W",
+      "100 W",
+      "20 W",
+      "400 W"
+    ],
+    "correct_answer": "200 W",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Power",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate equation.",
+        "formula_used": "Power Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Power Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute the final result.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Power Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_11",
+    "text": "A solid disc of mass 2 kg and radius 0.5 m rotates about its central axis at 4 rad/s. Its rotational kinetic energy is:",
+    "options": [
+      "2 J",
+      "4 J",
+      "8 J",
+      "16 J"
+    ],
+    "correct_answer": "2 J",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Rotational Dynamics",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Rotational Kinetic Energy Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Rotational Kinetic Energy Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Rotational Kinetic Energy Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_12",
+    "text": "A satellite orbits just above Earth's surface. If g=10 m/s² and Earth's radius is 6400 km, its orbital speed is closest to:",
+    "options": [
+      "8 km/s",
+      "4 km/s",
+      "11.2 km/s",
+      "16 km/s"
+    ],
+    "correct_answer": "8 km/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Gravitation",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Orbital Velocity Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Orbital Velocity Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Orbital Velocity Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_13",
+    "text": "A particle executes SHM with amplitude 0.2 m and angular frequency 5 rad/s. Maximum speed is:",
+    "options": [
+      "1 m/s",
+      "5 m/s",
+      "0.25 m/s",
+      "2 m/s"
+    ],
+    "correct_answer": "1 m/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Simple Harmonic Motion",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Maximum Speed in SHM",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Maximum Speed in SHM",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Maximum Speed in SHM"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_14",
+    "text": "Two particles of masses 2 kg and 3 kg are placed at x=0 m and x=10 m respectively. The x-coordinate of the center of mass is:",
+    "options": [
+      "6 m",
+      "4 m",
+      "5 m",
+      "8 m"
+    ],
+    "correct_answer": "6 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Center of Mass",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Center of Mass Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Center of Mass Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Center of Mass Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_15",
+    "text": "A spring of spring constant 200 N/m is compressed by 0.10 m. The elastic potential energy stored is:",
+    "options": [
+      "1 J",
+      "2 J",
+      "0.5 J",
+      "4 J"
+    ],
+    "correct_answer": "1 J",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Work-Energy & Springs",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Write the relevant equation.",
+        "formula_used": "Elastic Potential Energy Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values carefully.",
+        "formula_used": "Elastic Potential Energy Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify to obtain the required quantity.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Elastic Potential Energy Formula"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_01",
+    "text": "The work function of a metal is 2 eV. If photons of energy 5 eV are incident on it, the maximum kinetic energy of emitted photoelectrons is:",
+    "options": [
+      "3 eV",
+      "2 eV",
+      "5 eV",
+      "7 eV"
+    ],
+    "correct_answer": "3 eV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Photoelectric Effect",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Einstein Photoelectric Equation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Einstein Photoelectric Equation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Einstein Photoelectric Equation"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_02",
+    "text": "The radius of the first Bohr orbit of hydrogen is:",
+    "options": [
+      "0.53 Å",
+      "1.06 Å",
+      "0.26 Å",
+      "5.3 Å"
+    ],
+    "correct_answer": "0.53 Å",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Bohr Model",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Bohr Radius Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Bohr Radius Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Bohr Radius Formula"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_03",
+    "text": "The half-life of a radioactive sample is 4 hours. The fraction remaining after 8 hours is:",
+    "options": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "1/8"
+    ],
+    "correct_answer": "1/4",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Radioactivity",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Radioactive Decay Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Radioactive Decay Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Radioactive Decay Law"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_04",
+    "text": "The momentum of a particle is doubled. The de Broglie wavelength becomes:",
+    "options": [
+      "Half",
+      "Double",
+      "Unchanged",
+      "Four times"
+    ],
+    "correct_answer": "Half",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "de Broglie Waves",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "de Broglie Relation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "de Broglie Relation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "de Broglie Relation"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_05",
+    "text": "The minimum wavelength of X-rays produced in an X-ray tube decreases when:",
+    "options": [
+      "Accelerating voltage increases",
+      "Accelerating voltage decreases",
+      "Filament current increases",
+      "Target temperature increases"
+    ],
+    "correct_answer": "Accelerating voltage increases",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "X-rays",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Duane-Hunt Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Duane-Hunt Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Duane-Hunt Law"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_06",
+    "text": "A nucleus has a mass defect of 0.01 u. The corresponding binding energy is closest to:",
+    "options": [
+      "9.3 MeV",
+      "0.93 MeV",
+      "93 MeV",
+      "18.6 MeV"
+    ],
+    "correct_answer": "9.3 MeV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Mass Defect & Binding Energy",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Einstein Mass-Energy Relation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Einstein Mass-Energy Relation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Einstein Mass-Energy Relation"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_07",
+    "text": "A silicon diode is forward biased. Its typical forward voltage drop is:",
+    "options": [
+      "0.7 V",
+      "0.3 V",
+      "1.5 V",
+      "5 V"
+    ],
+    "correct_answer": "0.7 V",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Semiconductor Diodes",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Diode Forward Bias Characteristic",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Diode Forward Bias Characteristic",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Diode Forward Bias Characteristic"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_08",
+    "text": "A radioactive nucleus emits an α-particle. Its atomic number decreases by:",
+    "options": [
+      "2",
+      "1",
+      "4",
+      "0"
+    ],
+    "correct_answer": "2",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Physics",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Alpha Decay Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Alpha Decay Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Alpha Decay Law"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_09",
+    "text": "The output of an AND gate is HIGH when:",
+    "options": [
+      "Both inputs are HIGH",
+      "At least one input is HIGH",
+      "Both inputs are LOW",
+      "Inputs are different"
+    ],
+    "correct_answer": "Both inputs are HIGH",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Logic Gates",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Truth Table of AND Gate",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Truth Table of AND Gate",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Truth Table of AND Gate"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_10",
+    "text": "The conductivity of an intrinsic semiconductor increases with temperature because:",
+    "options": [
+      "More electron-hole pairs are generated",
+      "Carrier mobility becomes zero",
+      "Band gap increases",
+      "Number of atoms increases"
+    ],
+    "correct_answer": "More electron-hole pairs are generated",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Semiconductors",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Intrinsic Semiconductor Conductivity",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Intrinsic Semiconductor Conductivity",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Intrinsic Semiconductor Conductivity"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_11",
+    "text": "During β⁻ decay of a nucleus, the atomic number of the daughter nucleus:",
+    "options": [
+      "Increases by 1",
+      "Decreases by 1",
+      "Remains unchanged",
+      "Increases by 2"
+    ],
+    "correct_answer": "Increases by 1",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Beta Decay",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Beta Decay Rule",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Beta Decay Rule",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Beta Decay Rule"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_12",
+    "text": "Emission of a γ-ray from an excited nucleus results in:",
+    "options": [
+      "No change in mass number and atomic number",
+      "Mass number decreases by 1",
+      "Atomic number increases by 1",
+      "Both mass number and atomic number decrease"
+    ],
+    "correct_answer": "No change in mass number and atomic number",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Gamma Decay",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Gamma Decay Rule",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Gamma Decay Rule",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Gamma Decay Rule"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_13",
+    "text": "In the reaction ²H + ³H → ⁴He + X, the particle X is:",
+    "options": [
+      "Neutron",
+      "Proton",
+      "Electron",
+      "Alpha particle"
+    ],
+    "correct_answer": "Neutron",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Reactions",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Conservation of Nucleon Number",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Conservation of Nucleon Number",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Conservation of Nucleon Number"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_14",
+    "text": "In the active region of an NPN transistor, the emitter-base junction is:",
+    "options": [
+      "Forward biased and collector-base junction is reverse biased",
+      "Reverse biased and collector-base junction is forward biased",
+      "Both junctions forward biased",
+      "Both junctions reverse biased"
+    ],
+    "correct_answer": "Forward biased and collector-base junction is reverse biased",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Transistors",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Transistor Biasing Principle",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Transistor Biasing Principle",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Transistor Biasing Principle"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_15",
+    "text": "A Zener diode is primarily used as a:",
+    "options": [
+      "Voltage regulator",
+      "Rectifier",
+      "Amplifier",
+      "Oscillator"
+    ],
+    "correct_answer": "Voltage regulator",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Zener Diode",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula or principle.",
+        "formula_used": "Zener Breakdown Principle",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values or apply the rule.",
+        "formula_used": "Zener Breakdown Principle",
+        "concept_tested": "Formula application"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute or infer the required result.",
+        "formula_used": "Arithmetic / Logical deduction",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Verify the result against the answer choices.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Zener Breakdown Principle"
+    ]
+  },
+  {
+    "question_id": "physics_optics_01",
+    "text": "A ray of light is incident at 35° on a plane mirror. The angle of reflection is:",
+    "options": [
+      "35°",
+      "55°",
+      "70°",
+      "90°"
+    ],
+    "correct_answer": "35°",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Reflection from Plane Mirrors",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Law of Reflection",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Law of Reflection",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Law of Reflection"
+    ]
+  },
+  {
+    "question_id": "physics_optics_02",
+    "text": "A light ray enters glass from air with angle of incidence 30°. If refractive index of glass is 1.5, sin(r) is:",
+    "options": [
+      "1/3",
+      "2/3",
+      "1/2",
+      "3/4"
+    ],
+    "correct_answer": "1/3",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Refraction",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Snell's Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Snell's Law",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Snell's Law"
+    ]
+  },
+  {
+    "question_id": "physics_optics_03",
+    "text": "A concave mirror has focal length 20 cm. An object is placed 40 cm in front of it. The image is formed at:",
+    "options": [
+      "40 cm",
+      "20 cm",
+      "80 cm",
+      "10 cm"
+    ],
+    "correct_answer": "40 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Spherical Mirrors",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Mirror Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Mirror Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Mirror Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_04",
+    "text": "A convex lens has focal length 25 cm. An object is placed at 50 cm from the lens. Image distance is:",
+    "options": [
+      "50 cm",
+      "25 cm",
+      "100 cm",
+      "12.5 cm"
+    ],
+    "correct_answer": "50 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Lenses",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Lens Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Lens Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Lens Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_05",
+    "text": "In Young's double-slit experiment, wavelength is 600 nm, slit separation is 0.3 mm, and screen distance is 1.5 m. Fringe width is:",
+    "options": [
+      "3 mm",
+      "1 mm",
+      "6 mm",
+      "0.3 mm"
+    ],
+    "correct_answer": "3 mm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Young's Double Slit Experiment",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the relevant optics concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the governing formula.",
+        "formula_used": "Fringe Width Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Fringe Width Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Fringe Width Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_06",
+    "text": "The critical angle for a glass-air interface (μ = 1.5) is closest to:",
+    "options": [
+      "42°",
+      "30°",
+      "60°",
+      "48°"
+    ],
+    "correct_answer": "42°",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Total Internal Reflection",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Critical Angle Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Critical Angle Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the result and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Critical Angle Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_07",
+    "text": "A prism has refracting angle 6° and refractive index 1.5. At minimum deviation, the deviation is:",
+    "options": [
+      "3°",
+      "6°",
+      "9°",
+      "12°"
+    ],
+    "correct_answer": "3°",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Prism",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Minimum Deviation Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Minimum Deviation Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the result and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Minimum Deviation Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_08",
+    "text": "A simple microscope has focal length 5 cm. The least distance of distinct vision is 25 cm. Its magnifying power (normal adjustment) is:",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "7"
+    ],
+    "correct_answer": "6",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Optical Instruments",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Magnifying Power of Simple Microscope",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Magnifying Power of Simple Microscope",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the result and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Magnifying Power of Simple Microscope"
+    ]
+  },
+  {
+    "question_id": "physics_optics_09",
+    "text": "In single-slit diffraction, if the slit width is doubled while wavelength and screen distance remain unchanged, the angular width of the central maximum becomes:",
+    "options": [
+      "Half",
+      "Double",
+      "Four times",
+      "Unchanged"
+    ],
+    "correct_answer": "Half",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Diffraction",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Single-Slit Diffraction Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Single-Slit Diffraction Formula",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the result and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Single-Slit Diffraction Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_10",
+    "text": "Unpolarized light of intensity I₀ passes successively through two ideal polarizers whose transmission axes are at 60° to each other. The final intensity is:",
+    "options": [
+      "I₀/8",
+      "I₀/4",
+      "I₀/2",
+      "I₀/16"
+    ],
+    "correct_answer": "I₀/8",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Polarization",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate formula.",
+        "formula_used": "Malus' Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Malus' Law",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the result and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Malus' Law"
+    ]
+  },
+  {
+    "question_id": "physics_optics_11",
+    "text": "Two thin lenses of focal lengths +20 cm and +30 cm are kept in contact. The equivalent focal length is:",
+    "options": [
+      "12 cm",
+      "24 cm",
+      "50 cm",
+      "60 cm"
+    ],
+    "correct_answer": "12 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Lens Combination",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Lens Maker's Combination Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Lens Maker's Combination Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Lens Maker's Combination Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_12",
+    "text": "A concave mirror of focal length 15 cm forms the image of an object placed 30 cm in front of it. The image is:",
+    "options": [
+      "Real, inverted and same size",
+      "Virtual and erect",
+      "Real and diminished",
+      "Virtual and magnified"
+    ],
+    "correct_answer": "Real, inverted and same size",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Mirror-Lens Combination",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Mirror Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Mirror Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Mirror Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_13",
+    "text": "In Young's double-slit experiment, if both the wavelength and slit separation are doubled while the screen distance remains unchanged, the fringe width becomes:",
+    "options": [
+      "Unchanged",
+      "Double",
+      "Half",
+      "Four times"
+    ],
+    "correct_answer": "Unchanged",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Interference",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Fringe Width Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Fringe Width Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Fringe Width Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_14",
+    "text": "The resolving power of a microscope increases when:",
+    "options": [
+      "The wavelength of light decreases",
+      "The wavelength increases",
+      "The objective focal length increases",
+      "The aperture decreases"
+    ],
+    "correct_answer": "The wavelength of light decreases",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Resolving Power",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Resolving Power Relation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Resolving Power Relation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Resolving Power Relation"
+    ]
+  },
+  {
+    "question_id": "physics_optics_15",
+    "text": "An optical fibre works on the principle of:",
+    "options": [
+      "Total Internal Reflection",
+      "Diffraction",
+      "Polarization",
+      "Dispersion"
+    ],
+    "correct_answer": "Total Internal Reflection",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Optical Fibre",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Total Internal Reflection",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Total Internal Reflection",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Total Internal Reflection"
+    ]
+  }
+]

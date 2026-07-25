@@ -1,0 +1,259 @@
+[
+  {
+    "question_id": "physics_mechanics_01",
+    "text": "A particle starts from rest with constant acceleration \\(4\\,m/s^2\\). Distance travelled in first \\(5\\,s\\) is:",
+    "options": [
+      "50 m",
+      "40 m",
+      "25 m",
+      "100 m"
+    ],
+    "correct_answer": "50 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Kinematics",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify uniformly accelerated motion with u=0.",
+        "formula_used": null,
+        "concept_tested": "Recognize motion type"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose s=ut+1/2at\u00b2.",
+        "formula_used": "Second Equation of Motion",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute u=0,a=4,t=5.",
+        "formula_used": "Second Equation of Motion",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute s=0+0.5\u00d74\u00d725=50 m.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Second Equation of Motion"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_02",
+    "text": "A ball is projected vertically upward with speed \\(20\\,m/s\\). Take \\(g=10\\,m/s^2\\). Maximum height is:",
+    "options": [
+      "20 m",
+      "40 m",
+      "10 m",
+      "30 m"
+    ],
+    "correct_answer": "20 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Vertical Motion",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Velocity at highest point is zero.",
+        "formula_used": null,
+        "concept_tested": "Top point condition"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Use v\u00b2=u\u00b2+2as.",
+        "formula_used": "Third Equation of Motion",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute v=0,u=20,a=-10.",
+        "formula_used": "Third Equation of Motion",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Solve for s=20 m.",
+        "formula_used": "Algebra",
+        "concept_tested": "Equation solving"
+      }
+    ],
+    "formulas_used": [
+      "Third Equation of Motion"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_03",
+    "text": "A 4 kg block is pulled on a smooth horizontal surface by a horizontal force of 20 N. Acceleration is:",
+    "options": [
+      "5 m/s\u00b2",
+      "4 m/s\u00b2",
+      "2 m/s\u00b2",
+      "20 m/s\u00b2"
+    ],
+    "correct_answer": "5 m/s\u00b2",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Newton's Laws",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Net horizontal force equals 20 N.",
+        "formula_used": null,
+        "concept_tested": "Free-body analysis"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply F=ma.",
+        "formula_used": "Newton's Second Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute F=20,m=4.",
+        "formula_used": "Newton's Second Law",
+        "concept_tested": "Substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Compute a=5 m/s\u00b2.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Newton's Second Law"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_04",
+    "text": "A 2 kg body moving at 8 m/s is stopped uniformly in 8 m. Retarding force equals:",
+    "options": [
+      "8 N",
+      "16 N",
+      "4 N",
+      "12 N"
+    ],
+    "correct_answer": "8 N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Work-Energy Theorem",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Compute initial kinetic energy.",
+        "formula_used": "Kinetic Energy Formula",
+        "concept_tested": "KE evaluation"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Final kinetic energy is zero.",
+        "formula_used": null,
+        "concept_tested": "Final state"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Apply Work-Energy theorem.",
+        "formula_used": "Work-Energy Theorem",
+        "concept_tested": "Energy principle"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Fs=64 J so F=8 N.",
+        "formula_used": "Work Formula",
+        "concept_tested": "Calculation"
+      }
+    ],
+    "formulas_used": [
+      "Kinetic Energy Formula",
+      "Work-Energy Theorem",
+      "Work Formula"
+    ]
+  },
+  {
+    "question_id": "physics_mechanics_05",
+    "text": "Two blocks of masses 2 kg and 3 kg are connected by a light string on a smooth surface. A 20 N force acts on the 3 kg block. Tension is:",
+    "options": [
+      "8 N",
+      "12 N",
+      "20 N",
+      "6 N"
+    ],
+    "correct_answer": "8 N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Connected Bodies",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Treat both blocks as one system.",
+        "formula_used": null,
+        "concept_tested": "System approach"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Find acceleration a=20/(2+3)=4 m/s\u00b2.",
+        "formula_used": "Newton's Second Law",
+        "concept_tested": "Common acceleration"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Analyze 2 kg block separately.",
+        "formula_used": null,
+        "concept_tested": "Free-body diagram"
+      },
+      {
+        "step_order": 4,
+        "step_text": "T=ma=2\u00d74=8 N.",
+        "formula_used": "Newton's Second Law",
+        "concept_tested": "Internal force"
+      }
+    ],
+    "formulas_used": [
+      "Newton's Second Law"
+    ]
+  }
+]

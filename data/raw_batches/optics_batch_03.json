@@ -1,0 +1,287 @@
+[
+  {
+    "question_id": "physics_optics_11",
+    "text": "Two thin lenses of focal lengths +20 cm and +30 cm are kept in contact. The equivalent focal length is:",
+    "options": [
+      "12 cm",
+      "24 cm",
+      "50 cm",
+      "60 cm"
+    ],
+    "correct_answer": "12 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Lens Combination",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Lens Maker's Combination Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Lens Maker's Combination Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Lens Maker's Combination Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_12",
+    "text": "A concave mirror of focal length 15 cm forms the image of an object placed 30 cm in front of it. The image is:",
+    "options": [
+      "Real, inverted and same size",
+      "Virtual and erect",
+      "Real and diminished",
+      "Virtual and magnified"
+    ],
+    "correct_answer": "Real, inverted and same size",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Mirror-Lens Combination",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Mirror Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Mirror Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Mirror Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_13",
+    "text": "In Young's double-slit experiment, if both the wavelength and slit separation are doubled while the screen distance remains unchanged, the fringe width becomes:",
+    "options": [
+      "Unchanged",
+      "Double",
+      "Half",
+      "Four times"
+    ],
+    "correct_answer": "Unchanged",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Interference",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Fringe Width Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Fringe Width Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Fringe Width Formula"
+    ]
+  },
+  {
+    "question_id": "physics_optics_14",
+    "text": "The resolving power of a microscope increases when:",
+    "options": [
+      "The wavelength of light decreases",
+      "The wavelength increases",
+      "The objective focal length increases",
+      "The aperture decreases"
+    ],
+    "correct_answer": "The wavelength of light decreases",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Resolving Power",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Resolving Power Relation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Resolving Power Relation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Resolving Power Relation"
+    ]
+  },
+  {
+    "question_id": "physics_optics_15",
+    "text": "An optical fibre works on the principle of:",
+    "options": [
+      "Total Internal Reflection",
+      "Diffraction",
+      "Polarization",
+      "Dispersion"
+    ],
+    "correct_answer": "Total Internal Reflection",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Optical Fibre",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing optics principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Apply the relevant formula.",
+        "formula_used": "Total Internal Reflection",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Total Internal Reflection",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Simplify the expression.",
+        "formula_used": "Algebra",
+        "concept_tested": "Calculation"
+      },
+      {
+        "step_order": 5,
+        "step_text": "Match the computed result with the correct option.",
+        "formula_used": null,
+        "concept_tested": "Answer verification"
+      }
+    ],
+    "formulas_used": [
+      "Total Internal Reflection"
+    ]
+  }
+]

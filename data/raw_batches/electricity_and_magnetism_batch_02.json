@@ -1,0 +1,257 @@
+[
+  {
+    "question_id": "physics_electricity_and_magnetism_06",
+    "text": "A current of 2 A enters a junction and splits into two branches carrying 0.8 A and I respectively. The value of I is:",
+    "options": [
+      "1.2 A",
+      "2.8 A",
+      "0.4 A",
+      "1.6 A"
+    ],
+    "correct_answer": "1.2 A",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Kirchhoff's Laws",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Kirchhoff's Current Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Kirchhoff's Current Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Kirchhoff's Current Law"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_07",
+    "text": "Two point charges of +2 \u03bcC and +3 \u03bcC are separated by 1 m in vacuum. The electrostatic force between them is closest to:",
+    "options": [
+      "0.054 N",
+      "0.018 N",
+      "0.108 N",
+      "0.009 N"
+    ],
+    "correct_answer": "0.054 N",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Electrostatics",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Coulomb's Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Coulomb's Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Coulomb's Law"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_08",
+    "text": "A cell of emf 12 V and internal resistance 1 \u03a9 is connected to an external resistor of 5 \u03a9. The current drawn is:",
+    "options": [
+      "2 A",
+      "2.4 A",
+      "1.5 A",
+      "3 A"
+    ],
+    "correct_answer": "2 A",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Current Electricity",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Ohm's Law with Internal Resistance",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Ohm's Law with Internal Resistance",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Ohm's Law with Internal Resistance"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_09",
+    "text": "A straight conductor carrying 10 A current produces a magnetic field at a point 0.1 m away. The field is closest to:",
+    "options": [
+      "2\u00d710^-5 T",
+      "1\u00d710^-5 T",
+      "4\u00d710^-5 T",
+      "5\u00d710^-6 T"
+    ],
+    "correct_answer": "2\u00d710^-5 T",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Moving Charges and Magnetism",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Magnetic Field due to Long Straight Conductor",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Magnetic Field due to Long Straight Conductor",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Magnetic Field due to Long Straight Conductor"
+    ]
+  },
+  {
+    "question_id": "physics_electricity_and_magnetism_10",
+    "text": "A conducting rod of length 0.5 m moves with speed 4 m/s perpendicular to a magnetic field of 2 T. The induced emf is:",
+    "options": [
+      "4 V",
+      "2 V",
+      "8 V",
+      "1 V"
+    ],
+    "correct_answer": "4 V",
+    "subject": "Physics",
+    "topic": "Electricity and Magnetism",
+    "sub_topic": "Electromagnetic Induction",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing physical principle.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Select the appropriate equation.",
+        "formula_used": "Motional EMF Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Motional EMF Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and compare with the options.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical computation"
+      }
+    ],
+    "formulas_used": [
+      "Motional EMF Formula"
+    ]
+  }
+]

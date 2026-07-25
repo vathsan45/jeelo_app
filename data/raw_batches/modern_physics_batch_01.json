@@ -1,0 +1,257 @@
+[
+  {
+    "question_id": "physics_modern_physics_01",
+    "text": "The work function of a metal is 2 eV. If photons of energy 5 eV are incident on it, the maximum kinetic energy of emitted photoelectrons is:",
+    "options": [
+      "3 eV",
+      "2 eV",
+      "5 eV",
+      "7 eV"
+    ],
+    "correct_answer": "3 eV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Photoelectric Effect",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Einstein Photoelectric Equation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Einstein Photoelectric Equation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Einstein Photoelectric Equation"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_02",
+    "text": "The radius of the first Bohr orbit of hydrogen is:",
+    "options": [
+      "0.53 \u00c5",
+      "1.06 \u00c5",
+      "0.26 \u00c5",
+      "5.3 \u00c5"
+    ],
+    "correct_answer": "0.53 \u00c5",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Bohr Model",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Bohr Radius Formula",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Bohr Radius Formula",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Bohr Radius Formula"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_03",
+    "text": "The half-life of a radioactive sample is 4 hours. The fraction remaining after 8 hours is:",
+    "options": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "1/8"
+    ],
+    "correct_answer": "1/4",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Radioactivity",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Radioactive Decay Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Radioactive Decay Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Radioactive Decay Law"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_04",
+    "text": "The momentum of a particle is doubled. The de Broglie wavelength becomes:",
+    "options": [
+      "Half",
+      "Double",
+      "Unchanged",
+      "Four times"
+    ],
+    "correct_answer": "Half",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "de Broglie Waves",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "de Broglie Relation",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "de Broglie Relation",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "de Broglie Relation"
+    ]
+  },
+  {
+    "question_id": "physics_modern_physics_05",
+    "text": "The minimum wavelength of X-rays produced in an X-ray tube decreases when:",
+    "options": [
+      "Accelerating voltage increases",
+      "Accelerating voltage decreases",
+      "Filament current increases",
+      "Target temperature increases"
+    ],
+    "correct_answer": "Accelerating voltage increases",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "X-rays",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "source": "LLM-generated, JEE Main style",
+    "solution_steps": [
+      {
+        "step_order": 1,
+        "step_text": "Identify the governing concept.",
+        "formula_used": null,
+        "concept_tested": "Concept identification"
+      },
+      {
+        "step_order": 2,
+        "step_text": "Choose the appropriate formula.",
+        "formula_used": "Duane-Hunt Law",
+        "concept_tested": "Formula selection"
+      },
+      {
+        "step_order": 3,
+        "step_text": "Substitute the given values.",
+        "formula_used": "Duane-Hunt Law",
+        "concept_tested": "Formula substitution"
+      },
+      {
+        "step_order": 4,
+        "step_text": "Evaluate the expression and select the correct option.",
+        "formula_used": "Arithmetic",
+        "concept_tested": "Numerical calculation"
+      }
+    ],
+    "formulas_used": [
+      "Duane-Hunt Law"
+    ]
+  }
+]
