@@ -51,7 +51,7 @@ app = FastAPI(title="JEE Physics Adaptive Learning API", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     # local demo: Vite may land on 5173/5174/... depending on what's free
-    allow_origin_regex=r"http://(localhost|127\.0\.0\.1):\d+",
+    allow_origin_regex=r"http://(localhost|127\.0\.0\.1):\d+|https://jeelo-app.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
