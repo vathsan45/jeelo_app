@@ -4,8 +4,8 @@ from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-ROOT = Path(__file__).resolve().parent.parent.parent  # project root (d:/elo_fable)
-DEFAULT_DB_PATH = ROOT / "data" / "app.db"
+BACKEND_ROOT = Path(__file__).resolve().parent.parent  # backend/
+DEFAULT_DB_PATH = BACKEND_ROOT / "data" / "app.db"
 DB_PATH = Path(os.environ.get("ELO_DB_PATH", DEFAULT_DB_PATH))
 
 engine = create_engine(

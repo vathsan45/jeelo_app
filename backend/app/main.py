@@ -9,7 +9,7 @@ from .database import Base, SessionLocal, engine
 from .models import Question
 from .routers import players, quiz, reports, risk_arena
 
-QUESTIONS_MASTER = Path(__file__).resolve().parent.parent.parent / "data" / "questions_master.json"
+QUESTIONS_MASTER = Path(__file__).resolve().parent.parent / "data" / "questions_master.json"
 
 
 def seed_questions_if_empty():

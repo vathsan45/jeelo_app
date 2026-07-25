@@ -21,17 +21,17 @@ From the `backend/` directory:
 uvicorn app.main:app --reload --port 8001
 ```
 
-On first startup the app creates `data/app.db` (project root `data/` folder) and
-seeds the `questions` table from `data/questions_master.json` (run
+On first startup the app creates `backend/data/app.db` and seeds the
+`questions` table from `backend/data/questions_master.json` (run
 `python scripts/consolidate_questions.py` first if that file doesn't exist).
 
 Verify: http://localhost:8001/health → `{"status": "ok", "questions_loaded": 60}`
 
 Interactive API docs: http://localhost:8001/docs
 
-To reset all player/session state, stop the server, delete `data/app.db`, and
-restart — it reseeds automatically. Deleting `data/app.db` does **not** touch
-`data/questions_master.json`.
+To reset all player/session state, stop the server, delete `backend/data/app.db`,
+and restart — it reseeds automatically. Deleting `app.db` does **not** touch
+`questions_master.json`.
 
 ## Environment
 
@@ -55,10 +55,10 @@ The FastAPI application entrypoint. Responsibilities:
 
 - Builds the `FastAPI` app with a `lifespan` context manager that runs once at
   startup: `Base.metadata.create_all(bind=engine)` creates all tables (SQLite
-  file at `data/app.db`) if they don't exist, then `seed_questions_if_empty()`
-  loads `data/questions_master.json` into the `questions` table **only if the
-  table is currently empty** — safe to restart the server repeatedly without
-  duplicating or re-seeding data.
+  file at `backend/data/app.db`) if they don't exist, then
+  `seed_questions_if_empty()` loads `backend/data/questions_master.json` into
+  the `questions` table **only if the table is currently empty** — safe to
+  restart the server repeatedly without duplicating or re-seeding data.
 - `seed_questions_if_empty()` maps each JSON question's `theta_q_seed` field to
   the live `theta_q` column — this is the one-time initialization of a
   question's difficulty rating; after that, `theta_q` is only ever updated by
@@ -78,7 +78,7 @@ The FastAPI application entrypoint. Responsibilities:
 SQLAlchemy engine/session wiring. Nothing else in the app should import
 `sqlite3` or construct its own engine.
 
-- `DB_PATH` resolves to `<project root>/data/app.db` by default, but honors an
+- `DB_PATH` resolves to `<backend root>/data/app.db` by default, but honors an
   `ELO_DB_PATH` environment variable override — every test script in
   `scripts/` sets this to a scratch temp-file path so tests never touch the
   real database.

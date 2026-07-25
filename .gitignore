@@ -2,6 +2,6 @@ __pycache__/
 *.pyc
 .venv/
 backend/.env
-data/app.db
+backend/data/app.db
 node_modules/
 dist/

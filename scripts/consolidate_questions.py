@@ -1,8 +1,9 @@
-"""Phase 0: consolidate 12 raw question batch files into data/questions_master.json.
+"""Phase 0: consolidate 12 raw question batch files into
+backend/data/questions_master.json.
 
 - Normalizes common key-name variants from separate LLM generation calls.
 - Validates strictly against the target schema; failures are logged to
-  data/discarded_questions_log.json and excluded (never auto-fixed).
+  backend/data/discarded_questions_log.json and excluded (never auto-fixed).
 - Deduplicates question_ids across files by regenerating the ID of the
   second occurrence (rename logged, question kept).
 """
@@ -13,9 +14,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW_DIR = ROOT / "data" / "raw_batches"
-MASTER_PATH = ROOT / "data" / "questions_master.json"
-DISCARD_LOG_PATH = ROOT / "data" / "discarded_questions_log.json"
+DATA_DIR = ROOT / "backend" / "data"
+RAW_DIR = DATA_DIR / "raw_batches"
+MASTER_PATH = DATA_DIR / "questions_master.json"
+DISCARD_LOG_PATH = DATA_DIR / "discarded_questions_log.json"
 
 VALID_DIFFICULTIES = {"easy", "medium", "hard"}
 THETA_SEED_BY_DIFFICULTY = {"easy": 900, "medium": 1200, "hard": 1500}

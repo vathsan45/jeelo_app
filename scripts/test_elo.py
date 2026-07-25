@@ -1,6 +1,6 @@
 """Manual verification of elo.py before building routers on top of it.
 
-Uses a throwaway SQLite DB (ELO_DB_PATH env var) — never touches data/app.db.
+Uses a throwaway SQLite DB (ELO_DB_PATH env var) — never touches backend/data/app.db.
 Run: python scripts/test_elo.py
 """
 
