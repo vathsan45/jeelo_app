@@ -7,11 +7,12 @@ export default function Diagnose() {
   const { sessionId, questionId } = useParams()
   const navigate = useNavigate()
 
-  const [phase, setPhase] = useState('loading') // loading | probing | diagnosing | reveal | fallback | error
+  const [phase, setPhase] = useState('loading') // loading | probing | reveal | fallback | error
   const [probes, setProbes] = useState([])
   const [steps, setSteps] = useState([])
   const [answered, setAnswered] = useState(0)
-  const [response, setResponse] = useState('')
+  const [selected, setSelected] = useState(null) // option just clicked, during the brief per-probe reveal
+  const [lastFeedback, setLastFeedback] = useState(null) // { correct, correct_option }
   const [diagnosis, setDiagnosis] = useState(null)
   const [error, setError] = useState(null)
   const started = useRef(false)
@@ -39,26 +40,29 @@ export default function Diagnose() {
 
   const goBack = () => navigate(-1) // return to whichever summary launched this
 
-  async function submitResponse(e) {
-    e.preventDefault()
+  async function choose(option) {
+    if (selected) return
+    setSelected(option)
     const probe = probes[answered]
-    const isLast = answered + 1 >= probes.length
-    if (isLast) setPhase('diagnosing')
     try {
       const res = await api.failureTestRespond(sessionId, questionId, {
         step_order: probe.step_order,
-        player_response: response,
+        selected_option: option,
       })
-      setResponse('')
-      if (res.complete) {
-        setDiagnosis(res.diagnosis)
-        setSteps(res.solution_steps)
-        setPhase('reveal')
-      } else {
-        setAnswered(res.answered)
-      }
-    } catch (e2) {
-      setError(e2.message)
+      setLastFeedback({ correct: res.correct, correct_option: res.correct_option })
+      setTimeout(() => {
+        setSelected(null)
+        setLastFeedback(null)
+        if (res.complete) {
+          setDiagnosis(res.diagnosis)
+          setSteps(res.solution_steps)
+          setPhase('reveal')
+        } else {
+          setAnswered(res.answered)
+        }
+      }, 900)
+    } catch (e) {
+      setError(e.message)
       setPhase('error')
     }
   }
@@ -91,51 +95,51 @@ export default function Diagnose() {
     )
   }
 
-  if (phase === 'probing' || phase === 'diagnosing') {
+  if (phase === 'probing') {
     const probe = probes[answered]
     return (
       <div className="mt-12">
         <p className="text-xs text-violet-400 uppercase tracking-wide mb-2">
-          Diagnostic · question {answered + 1} of {probes.length}
+          Diagnostic · checkpoint {answered + 1} of {probes.length}
         </p>
-        {phase === 'diagnosing' ? (
-          <motion.p
-            animate={{ opacity: [0.4, 1, 0.4] }}
-            transition={{ repeat: Infinity, duration: 1.6 }}
-            className="mt-12 text-center text-violet-300"
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={answered}
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -24 }}
+            transition={{ duration: 0.25 }}
           >
-            Analyzing your responses…
-          </motion.p>
-        ) : (
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={answered}
-              initial={{ opacity: 0, x: 24 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -24 }}
-              transition={{ duration: 0.25 }}
-            >
-              <h1 className="text-lg leading-relaxed mb-2">{probe.probe_question}</h1>
-              <p className="text-xs text-zinc-600 mb-6">testing: {probe.concept_tested}</p>
-              <form onSubmit={submitResponse}>
-                <textarea
-                  autoFocus
-                  rows={3}
-                  value={response}
-                  onChange={(e) => setResponse(e.target.value)}
-                  placeholder="Answer in a sentence — honest beats polished"
-                  className="w-full bg-zinc-900 border border-zinc-700 rounded p-3 mb-3"
-                />
-                <button
-                  disabled={!response.trim()}
-                  className="bg-violet-600 hover:bg-violet-500 disabled:opacity-40 rounded px-5 py-2 font-semibold"
-                >
-                  {answered + 1 >= probes.length ? 'Submit & analyze' : 'Next'}
-                </button>
-              </form>
-            </motion.div>
-          </AnimatePresence>
-        )}
+            <h1 className="text-lg leading-relaxed mb-2">{probe.probe_question}</h1>
+            <p className="text-xs text-zinc-600 mb-6">testing: {probe.concept_tested}</p>
+
+            <div className="space-y-3">
+              {probe.options.map((opt) => {
+                let cls = 'bg-zinc-900 border-zinc-700 hover:border-violet-500'
+                if (selected) {
+                  if (opt === lastFeedback?.correct_option) {
+                    cls = 'bg-green-900/40 border-green-500'
+                  } else if (opt === selected) {
+                    cls = 'bg-red-900/40 border-red-500'
+                  } else {
+                    cls = 'bg-zinc-900 border-zinc-800 opacity-40'
+                  }
+                }
+                return (
+                  <motion.button
+                    key={opt}
+                    whileTap={{ scale: selected ? 1 : 0.98 }}
+                    onClick={() => choose(opt)}
+                    disabled={!!selected}
+                    className={`w-full text-left border rounded px-4 py-3 transition-colors ${cls}`}
+                  >
+                    {opt}
+                  </motion.button>
+                )
+              })}
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     )
   }
@@ -150,7 +154,7 @@ export default function Diagnose() {
         <h1 className="text-xl font-bold mb-1">
           {diagnosis.gap_step_order
             ? `Your understanding broke down at step ${diagnosis.gap_step_order}`
-            : 'Review the full solution'}
+            : 'No conceptual gap found'}
         </h1>
         <p className="text-zinc-300 mb-2">{diagnosis.gap_description}</p>
         <p className="text-xs text-zinc-500 mb-6">confidence: {diagnosis.confidence}</p>

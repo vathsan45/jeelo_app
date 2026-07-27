@@ -67,7 +67,7 @@ with TestClient(app) as client:
     check("0 failure tests used, max 3",
           r["failure_tests_used"] == 0 and r["failure_tests_max"] == 3)
 
-    print("\n3) failure test: probe generation (REAL LLM call)")
+    print("\n3) failure test: MCQ probe generation (REAL LLM call)")
     target = wrong_qids[0]
     r = client.post(f"/api/reports/{qsid}/failure_test/{target}")
     check("probe endpoint 200", r.status_code == 200)
@@ -78,26 +78,42 @@ with TestClient(app) as client:
     else:
         probes = ft["probes"]
         check("probes non-empty", len(probes) >= 2)
-        check("probes have required fields",
-              all("probe_question" in p and "step_order" in p for p in probes))
+        check("probes have MCQ fields",
+              all("options" in p and "correct_option" in p and "misconceptions" in p
+                  for p in probes))
+        check("every probe has >=2 options, correct_option among them",
+              all(len(p["options"]) >= 2 and p["correct_option"] in p["options"]
+                  for p in probes))
+        check("every wrong option has a tagged misconception",
+              all(all(o in p["misconceptions"] for o in p["options"] if o != p["correct_option"])
+                  for p in probes))
         print("  generated probes:")
         for p in probes:
-            print(f"    step {p['step_order']}: {p['probe_question']}")
+            print(f"    step {p['step_order']}: {p['probe_question']} "
+                  f"(correct: {p['correct_option']!r})")
 
         print("\n4) idempotent restart returns same probes")
         again = client.post(f"/api/reports/{qsid}/failure_test/{target}").json()
         check("same probes returned", again["probes"] == probes)
 
-        print("\5) respond one-at-a-time; last respond triggers diagnosis (REAL LLM call)")
-        # Deliberately break down at step 2: first response right-ish, rest confused
-        canned = ["The motion has constant acceleration and starts from rest."] + \
-                 ["I don't know, I just guessed something here."] * (len(probes) - 1)
+        print("\n5) respond one-at-a-time (MCQ); deliberately break at the 2nd checkpoint")
+        # probes before break_index: answered correctly. break_index onward:
+        # deliberately wrong, to confirm the diagnosis picks the EARLIEST
+        # wrong step (break_index) rather than the last one.
+        break_index = 1 if len(probes) > 1 else 0
         final = None
-        for p, resp_text in zip(probes, canned):
+        for i, p in enumerate(probes):
+            if i < break_index:
+                choice = p["correct_option"]
+            else:
+                wrong_opts = [o for o in p["options"] if o != p["correct_option"]]
+                choice = wrong_opts[0] if wrong_opts else p["correct_option"]
             rr = client.post(
                 f"/api/reports/{qsid}/failure_test/{target}/respond",
-                json={"step_order": p["step_order"], "player_response": resp_text},
+                json={"step_order": p["step_order"], "selected_option": choice},
             ).json()
+            check(f"  probe {i}: correct flag matches choice",
+                  rr["correct"] == (choice == p["correct_option"]))
             final = rr
         check("final respond complete", final["complete"] is True)
         d = final["diagnosis"]
@@ -105,10 +121,14 @@ with TestClient(app) as client:
         print(f"  gap: {d['gap_description']}")
         check("gap_description non-empty", bool(d["gap_description"]))
         check("confidence valid", d["confidence"] in ("high", "medium", "low"))
+        check("gap correctly identifies the EARLIEST wrong step (deterministic, no LLM)",
+              d["gap_step_order"] == probes[break_index]["step_order"])
         check("solution steps included for reveal screen", len(final["solution_steps"]) >= 2)
         check("respond after complete -> 409",
               client.post(f"/api/reports/{qsid}/failure_test/{target}/respond",
-                          json={"step_order": 1, "player_response": "x"}).status_code == 409)
+                          json={"step_order": probes[0]["step_order"],
+                                "selected_option": probes[0]["correct_option"]}
+                          ).status_code == 409)
 
         print("\n6) report reflects diagnostic status")
         r = client.get(f"/api/reports/{qsid}").json()
