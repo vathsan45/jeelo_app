@@ -1,0 +1,602 @@
+[
+  {
+    "question_id": "physics_mechanics_b01_001",
+    "text": "A car starts from rest and accelerates uniformly at 2 m/s² for 5 seconds. Find its final velocity.",
+    "options": ["20 m/s", "7 m/s", "10 m/s", "5 m/s"],
+    "correct_answer": "10 m/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Kinematics",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The car moves with constant (uniform) acceleration starting from rest, so the standard equations of motion apply.", "formula_used": null, "concept_tested": "identifying uniformly accelerated motion"},
+      {"step_order": 2, "step_text": "Select v = u + at to relate final velocity to initial velocity, acceleration, and time.", "formula_used": "v = u + at", "concept_tested": "choosing the correct kinematic equation"},
+      {"step_order": 3, "step_text": "Substitute u = 0, a = 2 m/s², t = 5 s: v = 0 + 2 × 5.", "formula_used": "v = u + at", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute v = 10 m/s, matching the option 10 m/s.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["v = u + at"],
+    "distractor_analysis": {
+      "20 m/s": {"misconception": "used v = 2at instead of v = u + at, effectively doubling the product a×t", "gap_step": 3, "concept": "substitution"},
+      "7 m/s": {"misconception": "added a and t (2 + 5) instead of multiplying them", "gap_step": 3, "concept": "substitution"},
+      "5 m/s": {"misconception": "divided the product at by 2, confusing it with an average-velocity style formula", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_002",
+    "text": "A car moving at 10 m/s applies its brakes, producing a uniform deceleration of 2 m/s². Find the distance it travels before coming to rest.",
+    "options": ["50 m", "25 m", "5 m", "20 m"],
+    "correct_answer": "25 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Kinematics",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The car decelerates uniformly from 10 m/s to rest, so the kinematic equation linking v, u, a, and s applies.", "formula_used": null, "concept_tested": "identifying uniformly decelerated motion"},
+      {"step_order": 2, "step_text": "Select v² = u² − 2as, with final velocity v = 0.", "formula_used": "v² = u² − 2as", "concept_tested": "choosing the correct kinematic equation"},
+      {"step_order": 3, "step_text": "Rearrange to s = u²/(2a) and substitute u = 10 m/s, a = 2 m/s²: s = 100/(2×2).", "formula_used": "v² = u² − 2as", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute s = 100/4 = 25 m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["v² = u² − 2as"],
+    "distractor_analysis": {
+      "50 m": {"misconception": "dropped the factor of 2 in the denominator, computing s = u²/a instead of u²/(2a)", "gap_step": 3, "concept": "substitution"},
+      "5 m": {"misconception": "used the linear relation s = u/a instead of the correct s = u²/(2a)", "gap_step": 2, "concept": "formula selection"},
+      "20 m": {"misconception": "arithmetic slip while dividing 100 by 4, incorrectly getting 20 instead of 25", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_003",
+    "text": "A particle starts from rest and accelerates uniformly at 4 m/s² for 3 seconds. It then decelerates uniformly at 3 m/s² until it comes to rest. Find the total distance covered by the particle.",
+    "options": ["18 m", "24 m", "66 m", "42 m"],
+    "correct_answer": "42 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Kinematics",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The motion has two distinct phases — uniform acceleration followed by uniform deceleration — so each must be analyzed separately and the distances added.", "formula_used": null, "concept_tested": "identifying multi-phase motion"},
+      {"step_order": 2, "step_text": "For phase 1 use v = u + at and s = ut + ½at²; for phase 2 use v² = u² − 2as with the phase-1 final velocity as the new initial velocity.", "formula_used": "v = u + at; s = ut + ½at²; v² = u² − 2as", "concept_tested": "choosing equations for each phase"},
+      {"step_order": 3, "step_text": "Phase 1: v = 0 + 4×3 = 12 m/s, s₁ = ½×4×3² = 18 m. Phase 2: s₂ = 12²/(2×3) = 144/6 = 24 m.", "formula_used": "v = u + at; s = ut + ½at²; v² = u² − 2as", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Total distance = s₁ + s₂ = 18 + 24 = 42 m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["v = u + at", "s = ut + ½at²", "v² = u² − 2as"],
+    "distractor_analysis": {
+      "18 m": {"misconception": "computed only the acceleration-phase distance and forgot to add the deceleration-phase distance", "gap_step": 1, "concept": "concept identification"},
+      "24 m": {"misconception": "computed only the deceleration-phase distance and forgot to add the acceleration-phase distance", "gap_step": 1, "concept": "concept identification"},
+      "66 m": {"misconception": "for phase 2, dropped the factor of ½ implicit in v²=2as and instead used s₂ = v×t (12×4=48), giving an inflated total", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_004",
+    "text": "A ball is projected horizontally from the top of a tower of height 45 m with a speed of 15 m/s. Taking g = 10 m/s², find the time it takes to hit the ground.",
+    "options": ["3 s", "9 s", "4.5 s", "1.5 s"],
+    "correct_answer": "3 s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Projectile Motion",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The horizontal launch speed does not affect the time of flight; only the vertical fall under gravity determines it.", "formula_used": null, "concept_tested": "identifying independence of horizontal and vertical motion"},
+      {"step_order": 2, "step_text": "Select h = ½gt² for the vertical fall, and solve for t.", "formula_used": "h = ½gt²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute h = 45 m, g = 10 m/s²: t² = 2×45/10 = 9.", "formula_used": "h = ½gt²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Take the square root: t = √9 = 3 s.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["h = ½gt²"],
+    "distractor_analysis": {
+      "9 s": {"misconception": "computed 2h/g = 9 correctly but forgot to take the square root", "gap_step": 3, "concept": "substitution"},
+      "4.5 s": {"misconception": "used t = h/g, omitting the factor of 2 entirely instead of t = √(2h/g)", "gap_step": 2, "concept": "formula selection"},
+      "1.5 s": {"misconception": "divided the correct answer by 2, incorrectly assuming a half-time symmetry rule", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_005",
+    "text": "A ball is projected with a speed of 20 m/s at an angle of 30° above the horizontal. Taking g = 10 m/s², sin 30° = 0.5, find the maximum height reached.",
+    "options": ["10 m", "20 m", "5 m", "2.5 m"],
+    "correct_answer": "5 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Projectile Motion",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Maximum height in projectile motion depends only on the vertical component of the initial velocity.", "formula_used": null, "concept_tested": "identifying the vertical component's role"},
+      {"step_order": 2, "step_text": "Select H = u²sin²θ/(2g).", "formula_used": "H = u²sin²θ/(2g)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute u = 20 m/s, sin30° = 0.5 so sin²30° = 0.25, g = 10 m/s²: H = 400×0.25/20.", "formula_used": "H = u²sin²θ/(2g)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute H = 100/20 = 5 m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["H = u²sin²θ/(2g)"],
+    "distractor_analysis": {
+      "10 m": {"misconception": "used sinθ (0.5) instead of sin²θ (0.25) in the height formula", "gap_step": 3, "concept": "substitution"},
+      "20 m": {"misconception": "omitted the sin²θ factor entirely, effectively computing H = u²/(2g)", "gap_step": 2, "concept": "formula selection"},
+      "2.5 m": {"misconception": "arithmetic slip, computing sin²30° as 0.125 instead of 0.25", "gap_step": 3, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_006",
+    "text": "A projectile is launched from level ground with a speed of 50 m/s at an angle of 37° to the horizontal. Taking g = 10 m/s², sin 37° = 0.6, cos 37° = 0.8, find its horizontal range.",
+    "options": ["120 m", "240 m", "90 m", "45 m"],
+    "correct_answer": "240 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Projectile Motion",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For a projectile launched and landing at the same height, the standard range formula applies.", "formula_used": null, "concept_tested": "identifying the range scenario"},
+      {"step_order": 2, "step_text": "Select R = u²sin2θ/g, where sin2θ = 2sinθcosθ.", "formula_used": "R = u²sin2θ/g", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute u = 50 m/s, sin2θ = 2×0.6×0.8 = 0.96, g = 10 m/s²: R = 2500×0.96/10.", "formula_used": "R = u²sin2θ/g", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute R = 2400/10 = 240 m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["R = u²sin2θ/g"],
+    "distractor_analysis": {
+      "120 m": {"misconception": "dropped the factor of 2 in sin2θ = 2sinθcosθ, effectively computing R = u²sinθcosθ/g", "gap_step": 2, "concept": "formula selection"},
+      "90 m": {"misconception": "used sin²θ in place of sin2θ", "gap_step": 2, "concept": "formula selection"},
+      "45 m": {"misconception": "computed the maximum-height formula instead of the range formula", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_007",
+    "text": "A horizontal force of 20 N is applied to a 5 kg block resting on a frictionless surface. Find the resulting acceleration.",
+    "options": ["4 m/s²", "100 m/s²", "0.25 m/s²", "15 m/s²"],
+    "correct_answer": "4 m/s²",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Newton's Laws",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "With no friction, the net force on the block equals the applied force, so Newton's second law applies directly.", "formula_used": null, "concept_tested": "identifying the governing law"},
+      {"step_order": 2, "step_text": "Select a = F/m.", "formula_used": "F = ma", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute F = 20 N, m = 5 kg: a = 20/5.", "formula_used": "F = ma", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute a = 4 m/s².", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["F = ma"],
+    "distractor_analysis": {
+      "100 m/s²": {"misconception": "multiplied force and mass instead of dividing (20×5)", "gap_step": 3, "concept": "substitution"},
+      "0.25 m/s²": {"misconception": "inverted the formula, computing m/F instead of F/m", "gap_step": 2, "concept": "formula selection"},
+      "15 m/s²": {"misconception": "subtracted mass from force (20 − 5) instead of dividing", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_008",
+    "text": "Two blocks of mass 2 kg and 3 kg are connected by a light string over a frictionless pulley (an Atwood machine). Taking g = 10 m/s², find the acceleration of the system.",
+    "options": ["10 m/s²", "5 m/s²", "2 m/s²", "0.5 m/s²"],
+    "correct_answer": "2 m/s²",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Newton's Laws",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The heavier mass falls, pulling the lighter mass up; the whole system shares one common acceleration.", "formula_used": null, "concept_tested": "identifying the connected-system scenario"},
+      {"step_order": 2, "step_text": "Select a = (m2 − m1)g/(m1 + m2), where m2 > m1.", "formula_used": "a = (m2 − m1)g/(m1 + m2)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute m1 = 2 kg, m2 = 3 kg, g = 10 m/s²: a = (3−2)×10/(2+3) = 10/5.", "formula_used": "a = (m2 − m1)g/(m1 + m2)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute a = 2 m/s².", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["a = (m2 − m1)g/(m1 + m2)"],
+    "distractor_analysis": {
+      "10 m/s²": {"misconception": "forgot to divide by the total mass (m1+m2), stopping at (m2−m1)g", "gap_step": 3, "concept": "substitution"},
+      "5 m/s²": {"misconception": "divided by the lighter mass m1 alone instead of the total mass m1+m2", "gap_step": 3, "concept": "substitution"},
+      "0.5 m/s²": {"misconception": "inverted the acceleration formula, computing (m1+m2)/[(m2−m1)g] instead", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_009",
+    "text": "A 4 kg block rests on a frictionless incline of angle 30° and is connected by a string over a pulley at the top of the incline to a 6 kg mass hanging vertically. Taking g = 10 m/s², find the acceleration of the system.",
+    "options": ["10 m/s²", "4 m/s²", "2 m/s²", "5 m/s²"],
+    "correct_answer": "4 m/s²",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Newton's Laws",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The hanging mass's weight drives the system, opposed by the component of the incline block's weight along the incline (m1g sinθ).", "formula_used": null, "concept_tested": "identifying forces along the incline and string"},
+      {"step_order": 2, "step_text": "Select a = (m2g − m1g sinθ)/(m1 + m2), from combining Newton's second law for both masses.", "formula_used": "a = (m2g − m1g sinθ)/(m1 + m2)", "concept_tested": "choosing the correct combined equation"},
+      {"step_order": 3, "step_text": "Substitute m1 = 4 kg, m2 = 6 kg, θ = 30° (sinθ = 0.5), g = 10 m/s²: a = (60 − 20)/(4+6) = 40/10.", "formula_used": "a = (m2g − m1g sinθ)/(m1 + m2)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute a = 4 m/s².", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["a = (m2g − m1g sinθ)/(m1 + m2)"],
+    "distractor_analysis": {
+      "10 m/s²": {"misconception": "divided the net force by m1 alone instead of the total mass (m1+m2)", "gap_step": 3, "concept": "substitution"},
+      "2 m/s²": {"misconception": "forgot the sinθ factor, treating the full weight m1g as resisting the motion instead of its component along the incline", "gap_step": 3, "concept": "substitution"},
+      "5 m/s²": {"misconception": "used sin²θ instead of sinθ for the incline component", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_010",
+    "text": "A 4 kg block rests on a horizontal surface. The coefficient of friction between the block and surface is 0.5. Taking g = 10 m/s², find the maximum static friction force.",
+    "options": ["40 N", "80 N", "2 N", "20 N"],
+    "correct_answer": "20 N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Friction",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The maximum static friction force depends on the normal reaction and the coefficient of friction.", "formula_used": null, "concept_tested": "identifying the friction scenario"},
+      {"step_order": 2, "step_text": "Select f = μmg, since the surface is horizontal so the normal force equals mg.", "formula_used": "f = μmg", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute μ = 0.5, m = 4 kg, g = 10 m/s²: f = 0.5 × 4 × 10.", "formula_used": "f = μmg", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute f = 20 N.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["f = μmg"],
+    "distractor_analysis": {
+      "40 N": {"misconception": "computed only mg, forgetting to multiply by the coefficient of friction μ", "gap_step": 3, "concept": "substitution"},
+      "80 N": {"misconception": "divided mg by μ instead of multiplying by μ", "gap_step": 3, "concept": "substitution"},
+      "2 N": {"misconception": "computed μm but forgot to include g", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_011",
+    "text": "A 5 kg block is pulled by a horizontal force of 25 N on a surface with coefficient of kinetic friction 0.3. Taking g = 10 m/s², find the block's acceleration.",
+    "options": ["2 m/s²", "5 m/s²", "10 m/s²", "8 m/s²"],
+    "correct_answer": "2 m/s²",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Friction",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The block experiences the applied force and an opposing kinetic friction force, so the net force drives the acceleration.", "formula_used": null, "concept_tested": "identifying the net force scenario"},
+      {"step_order": 2, "step_text": "Select friction f = μmg, and net force F_net = F − f, then a = F_net/m.", "formula_used": "f = μmg; a = (F − μmg)/m", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute μ = 0.3, m = 5 kg, g = 10 m/s²: f = 0.3×5×10 = 15 N. Net force = 25 − 15 = 10 N.", "formula_used": "f = μmg; a = (F − μmg)/m", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute a = 10/5 = 2 m/s².", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["f = μmg", "a = (F − μmg)/m"],
+    "distractor_analysis": {
+      "5 m/s²": {"misconception": "ignored friction entirely, computing a = F/m", "gap_step": 2, "concept": "formula selection"},
+      "10 m/s²": {"misconception": "correctly found the net force (10 N) but forgot to divide by the mass", "gap_step": 4, "concept": "substitution"},
+      "8 m/s²": {"misconception": "sign error — added the friction force to the applied force instead of subtracting it", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_012",
+    "text": "A constant force of 10 N acts on a body, producing a displacement of 5 m in the direction of the force. Find the work done.",
+    "options": ["2 J", "50 J", "15 J", "0.5 J"],
+    "correct_answer": "50 J",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Work-Energy Theorem",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Since the force and displacement are in the same direction, work is simply their product.", "formula_used": null, "concept_tested": "identifying the work scenario"},
+      {"step_order": 2, "step_text": "Select W = F × d.", "formula_used": "W = Fd", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute F = 10 N, d = 5 m: W = 10 × 5.", "formula_used": "W = Fd", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute W = 50 J.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["W = Fd"],
+    "distractor_analysis": {
+      "2 J": {"misconception": "divided force by displacement instead of multiplying", "gap_step": 3, "concept": "substitution"},
+      "15 J": {"misconception": "added force and displacement instead of multiplying them", "gap_step": 3, "concept": "substitution"},
+      "0.5 J": {"misconception": "divided displacement by force, inverting the formula", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_013",
+    "text": "A 2 kg block moving at 4 m/s is brought to rest by a constant friction force acting over a distance of 4 m. Use the work-energy theorem to find the friction force.",
+    "options": ["8 N", "2 N", "4 N", "16 N"],
+    "correct_answer": "4 N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Work-Energy Theorem",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The block's entire kinetic energy is removed by the work done against friction.", "formula_used": null, "concept_tested": "identifying the work-energy scenario"},
+      {"step_order": 2, "step_text": "Select KE = ½mv², and equate it to the work done by friction, f×d.", "formula_used": "½mv² = f × d", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute m = 2 kg, v = 4 m/s, d = 4 m: ½×2×16 = f×4, so 16 = 4f.", "formula_used": "½mv² = f × d", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute f = 16/4 = 4 N.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["½mv² = f × d"],
+    "distractor_analysis": {
+      "8 N": {"misconception": "dropped the factor of ½ in KE=½mv², using KE=mv² instead", "gap_step": 2, "concept": "formula selection"},
+      "2 N": {"misconception": "used momentum mv instead of kinetic energy ½mv²", "gap_step": 1, "concept": "concept identification"},
+      "16 N": {"misconception": "computed the kinetic energy correctly (16 J) but forgot to divide by the distance", "gap_step": 4, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_014",
+    "text": "A 1 kg block slides down a frictionless incline from a height of 5 m and then moves along a rough horizontal surface with coefficient of friction 0.2. Taking g = 10 m/s², find the distance it travels on the horizontal surface before stopping.",
+    "options": ["5 m", "25 m", "10 m", "2.5 m"],
+    "correct_answer": "25 m",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Work-Energy Theorem",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The gravitational potential energy at the top converts entirely into kinetic energy at the bottom, which is then dissipated entirely by friction on the horizontal surface.", "formula_used": null, "concept_tested": "identifying the energy conservation and dissipation scenario"},
+      {"step_order": 2, "step_text": "Equate mgh to the work done against friction, μmg × d.", "formula_used": "mgh = μmgd", "concept_tested": "choosing the correct energy balance"},
+      {"step_order": 3, "step_text": "Substitute h = 5 m, μ = 0.2, g = 10 m/s² (mass cancels): 10×5 = 0.2×10×d, so 50 = 2d.", "formula_used": "mgh = μmgd", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute d = 50/2 = 25 m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["mgh = μmgd"],
+    "distractor_analysis": {
+      "5 m": {"misconception": "assumed the sliding distance equals the incline height, ignoring the energy-friction balance entirely", "gap_step": 1, "concept": "concept identification"},
+      "10 m": {"misconception": "used μ = 0.5 instead of the given 0.2", "gap_step": 3, "concept": "substitution"},
+      "2.5 m": {"misconception": "left out g in the energy term, using mh instead of mgh", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_015",
+    "text": "A 3 kg object moving at 4 m/s collides with a stationary 1 kg object and sticks to it. Find the velocity of the combined mass immediately after the collision.",
+    "options": ["12 m/s", "4 m/s", "3 m/s", "6 m/s"],
+    "correct_answer": "3 m/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Momentum & Collisions",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "This is a perfectly inelastic collision, so total momentum is conserved and the two masses move together afterward.", "formula_used": null, "concept_tested": "identifying a perfectly inelastic collision"},
+      {"step_order": 2, "step_text": "Select m1v1 = (m1+m2)v.", "formula_used": "m1v1 = (m1+m2)v", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute m1 = 3 kg, v1 = 4 m/s, m2 = 1 kg: 3×4 = (3+1)×v, so 12 = 4v.", "formula_used": "m1v1 = (m1+m2)v", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute v = 12/4 = 3 m/s.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["m1v1 = (m1+m2)v"],
+    "distractor_analysis": {
+      "12 m/s": {"misconception": "computed the total momentum correctly (12 kg·m/s) but forgot to divide by the combined mass", "gap_step": 4, "concept": "substitution"},
+      "4 m/s": {"misconception": "assumed the moving object's velocity is unchanged after sticking to the stationary one", "gap_step": 1, "concept": "concept identification"},
+      "6 m/s": {"misconception": "used the difference of the masses (m1−m2) instead of their sum in the denominator", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_016",
+    "text": "A 2 kg ball moving at 6 m/s collides head-on elastically with a stationary 2 kg ball. Find the velocity of the first ball (the initially moving one) immediately after the collision.",
+    "options": ["6 m/s", "3 m/s", "12 m/s", "0 m/s"],
+    "correct_answer": "0 m/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Momentum & Collisions",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "This is a perfectly elastic head-on collision between two equal masses, one initially at rest.", "formula_used": null, "concept_tested": "identifying an elastic collision between equal masses"},
+      {"step_order": 2, "step_text": "For an elastic collision between equal masses with one at rest, the velocities are exchanged: the moving ball stops and the stationary ball takes on its velocity.", "formula_used": "v1' = [(m1−m2)/(m1+m2)]v1; v2' = [2m1/(m1+m2)]v1", "concept_tested": "choosing the correct elastic-collision result"},
+      {"step_order": 3, "step_text": "Substitute m1 = m2 = 2 kg into v1' = [(m1−m2)/(m1+m2)]v1 = [(2−2)/4]×6.", "formula_used": "v1' = [(m1−m2)/(m1+m2)]v1", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute v1' = 0 m/s.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["v1' = [(m1−m2)/(m1+m2)]v1", "v2' = [2m1/(m1+m2)]v1"],
+    "distractor_analysis": {
+      "6 m/s": {"misconception": "assumed the first ball keeps its original velocity, not realizing that equal masses in an elastic collision exchange velocities entirely", "gap_step": 1, "concept": "concept identification"},
+      "3 m/s": {"misconception": "averaged the two velocities as if the collision were perfectly inelastic (bodies moving together)", "gap_step": 1, "concept": "concept identification"},
+      "12 m/s": {"misconception": "added the velocities together instead of applying the elastic-collision exchange rule", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_017",
+    "text": "A bullet of mass 0.02 kg moving at 300 m/s embeds itself in a stationary wooden block of mass 1.98 kg. Find the percentage of the initial kinetic energy lost in this perfectly inelastic collision.",
+    "options": ["1%", "50%", "100%", "99%"],
+    "correct_answer": "99%",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Momentum & Collisions",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "This is a perfectly inelastic collision; momentum is conserved but kinetic energy is not, so both the initial and final KE must be found and compared.", "formula_used": null, "concept_tested": "identifying energy loss in an inelastic collision"},
+      {"step_order": 2, "step_text": "Find the common velocity from momentum conservation, m1v1 = (m1+m2)v, then compute KE_initial = ½m1v1² and KE_final = ½(m1+m2)v².", "formula_used": "m1v1 = (m1+m2)v; KE = ½mv²", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute m1 = 0.02 kg, v1 = 300 m/s, total mass = 2 kg: v = 0.02×300/2 = 3 m/s. KE_initial = ½×0.02×300² = 900 J. KE_final = ½×2×3² = 9 J.", "formula_used": "m1v1 = (m1+m2)v; KE = ½mv²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Fraction lost = (900−9)/900 = 891/900 ≈ 0.99, i.e. 99% of the kinetic energy is lost.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["m1v1 = (m1+m2)v", "KE = ½mv²"],
+    "distractor_analysis": {
+      "1%": {"misconception": "computed the fraction of energy retained rather than the fraction lost, reporting (1 − fraction lost) instead", "gap_step": 4, "concept": "substitution"},
+      "50%": {"misconception": "assumed a generic 'half the energy is lost' rule for inelastic collisions instead of computing it from the actual masses and speed", "gap_step": 1, "concept": "concept identification"},
+      "100%": {"misconception": "used only the bullet's mass instead of the combined mass when computing the final kinetic energy, making it look like essentially all the KE vanished", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_018",
+    "text": "A car moves in a circular path of radius 25 m with a constant speed of 10 m/s. Find its centripetal acceleration.",
+    "options": ["4 m/s²", "100 m/s²", "0.4 m/s²", "0.25 m/s²"],
+    "correct_answer": "4 m/s²",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Circular Motion",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The car moves in a circle at constant speed, so it has centripetal acceleration directed toward the center.", "formula_used": null, "concept_tested": "identifying uniform circular motion"},
+      {"step_order": 2, "step_text": "Select a = v²/r.", "formula_used": "a = v²/r", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute v = 10 m/s, r = 25 m: a = 100/25.", "formula_used": "a = v²/r", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute a = 4 m/s².", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["a = v²/r"],
+    "distractor_analysis": {
+      "100 m/s²": {"misconception": "computed v² correctly but forgot to divide by the radius", "gap_step": 3, "concept": "substitution"},
+      "0.4 m/s²": {"misconception": "used v/r instead of v²/r", "gap_step": 2, "concept": "formula selection"},
+      "0.25 m/s²": {"misconception": "inverted the formula, computing r/v² instead of v²/r", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_019",
+    "text": "A 0.5 kg ball attached to a string moves in a horizontal circle of radius 2 m at a constant speed of 4 m/s. Find the tension in the string.",
+    "options": ["8 N", "4 N", "1 N", "16 N"],
+    "correct_answer": "4 N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Circular Motion",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The string provides the centripetal force needed to keep the ball moving in its circular path.", "formula_used": null, "concept_tested": "identifying the source of centripetal force"},
+      {"step_order": 2, "step_text": "Select T = mv²/r.", "formula_used": "T = mv²/r", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute m = 0.5 kg, v = 4 m/s, r = 2 m: T = 0.5×16/2.", "formula_used": "T = mv²/r", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute T = 8/2 = 4 N.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["T = mv²/r"],
+    "distractor_analysis": {
+      "8 N": {"misconception": "computed mv² correctly but forgot to divide by the radius", "gap_step": 4, "concept": "substitution"},
+      "1 N": {"misconception": "used v instead of v² in the tension formula", "gap_step": 2, "concept": "formula selection"},
+      "16 N": {"misconception": "multiplied by the radius instead of dividing by it", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_020",
+    "text": "A solid sphere of mass 2 kg and radius 0.5 m rotates about an axis through its diameter. Find its moment of inertia. (For a solid sphere about its diameter, I = (2/5)MR².)",
+    "options": ["0.5 kg·m²", "0.4 kg·m²", "0.2 kg·m²", "0.1 kg·m²"],
+    "correct_answer": "0.2 kg·m²",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Rotational Dynamics",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The sphere is a standard rigid body with a known moment-of-inertia formula about its diameter.", "formula_used": null, "concept_tested": "identifying the correct rigid-body geometry"},
+      {"step_order": 2, "step_text": "Select I = (2/5)MR².", "formula_used": "I = (2/5)MR²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute M = 2 kg, R = 0.5 m: I = (2/5)×2×0.25.", "formula_used": "I = (2/5)MR²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I = 0.4×0.5 = 0.2 kg·m².", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I = (2/5)MR²"],
+    "distractor_analysis": {
+      "0.5 kg·m²": {"misconception": "used I = MR² as for a point mass or hoop, forgetting the 2/5 factor for a solid sphere", "gap_step": 2, "concept": "formula selection"},
+      "0.4 kg·m²": {"misconception": "used R instead of R² in the formula", "gap_step": 3, "concept": "substitution"},
+      "0.1 kg·m²": {"misconception": "used the coefficient 1/5 instead of 2/5 for a solid sphere", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_021",
+    "text": "A uniform disc of mass 4 kg and radius 0.5 m, free to rotate about its central axis, has a tangential force of 8 N applied at its rim. Find the angular acceleration produced. (For a disc about its central axis, I = ½MR².)",
+    "options": ["8 rad/s²", "4 rad/s²", "16 rad/s²", "2 rad/s²"],
+    "correct_answer": "8 rad/s²",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Rotational Dynamics",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A tangential force at the rim produces a torque about the central axis, which relates to angular acceleration through the rotational analogue of Newton's second law.", "formula_used": null, "concept_tested": "identifying the rotational dynamics scenario"},
+      {"step_order": 2, "step_text": "Select torque τ = F×R, moment of inertia I = ½MR², and α = τ/I.", "formula_used": "τ = FR; I = ½MR²; α = τ/I", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute F = 8 N, R = 0.5 m, M = 4 kg: τ = 8×0.5 = 4 N·m. I = ½×4×0.25 = 0.5 kg·m².", "formula_used": "τ = FR; I = ½MR²; α = τ/I", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute α = τ/I = 4/0.5 = 8 rad/s².", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["τ = FR", "I = ½MR²", "α = τ/I"],
+    "distractor_analysis": {
+      "4 rad/s²": {"misconception": "used I = MR² instead of ½MR², forgetting the disc's moment-of-inertia coefficient", "gap_step": 2, "concept": "formula selection"},
+      "16 rad/s²": {"misconception": "forgot to include the radius in the torque calculation, using τ = F directly instead of τ = FR", "gap_step": 3, "concept": "substitution"},
+      "2 rad/s²": {"misconception": "applied the translational form F = Ma instead of the rotational analogue τ = Iα", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_022",
+    "text": "Find the gravitational force of attraction between two point masses of 3 kg and 4 kg placed 2 m apart. (Take G = 6.67×10⁻¹¹ N·m²/kg².)",
+    "options": ["4 × 10⁻¹⁰ N", "2 × 10⁻¹⁰ N", "1.2 × 10⁻¹⁰ N", "3 N"],
+    "correct_answer": "2 × 10⁻¹⁰ N",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Gravitation",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The two point masses attract each other according to Newton's law of gravitation.", "formula_used": null, "concept_tested": "identifying the gravitation scenario"},
+      {"step_order": 2, "step_text": "Select F = Gm1m2/r².", "formula_used": "F = Gm1m2/r²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute G = 6.67×10⁻¹¹, m1 = 3 kg, m2 = 4 kg, r = 2 m: F = 6.67×10⁻¹¹×12/4.", "formula_used": "F = Gm1m2/r²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute F = 6.67×10⁻¹¹×3 ≈ 2×10⁻¹⁰ N.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["F = Gm1m2/r²"],
+    "distractor_analysis": {
+      "4 × 10⁻¹⁰ N": {"misconception": "used r instead of r² in the denominator", "gap_step": 3, "concept": "substitution"},
+      "1.2 × 10⁻¹⁰ N": {"misconception": "added the two masses instead of multiplying them", "gap_step": 3, "concept": "substitution"},
+      "3 N": {"misconception": "omitted the gravitational constant G entirely from the formula", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_023",
+    "text": "A satellite orbits the Earth at a radius equal to 4 times the Earth's radius R. Given the surface acceleration due to gravity g = 10 m/s² and R = 6.4×10⁶ m, find the orbital speed of the satellite.",
+    "options": ["8 km/s", "2 km/s", "4 km/s", "16 km/s"],
+    "correct_answer": "4 km/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Gravitation",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Gravity supplies the centripetal force for the satellite's circular orbit, and GM can be replaced by gR² using the surface value of g.", "formula_used": null, "concept_tested": "identifying orbital motion and relating GM to surface gravity"},
+      {"step_order": 2, "step_text": "Select v = √(GM/r) = √(gR²/r), with orbital radius r = 4R.", "formula_used": "v = √(gR²/r)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute r = 4R: v = √(gR²/4R) = √(gR/4) = √(gR)/2. With g = 10, R = 6.4×10⁶ m: √(gR) = √(6.4×10⁷) = 8000 m/s.", "formula_used": "v = √(gR²/r)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute v = 8000/2 = 4000 m/s = 4 km/s.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["v = √(gR²/r)"],
+    "distractor_analysis": {
+      "8 km/s": {"misconception": "used the surface orbital velocity √(gR) directly, without adjusting for the increased orbital radius of 4R", "gap_step": 2, "concept": "formula selection"},
+      "2 km/s": {"misconception": "divided the surface orbital velocity by 4 instead of by √4 = 2", "gap_step": 3, "concept": "substitution"},
+      "16 km/s": {"misconception": "multiplied by √4 instead of dividing by it, effectively assuming orbital velocity increases with orbital radius", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_024",
+    "text": "A particle executes simple harmonic motion with amplitude 5 cm and time period 2 s. Find its maximum velocity.",
+    "options": ["5π cm/s", "10π cm/s", "2.5π cm/s", "2.5 cm/s"],
+    "correct_answer": "5π cm/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Simple Harmonic Motion",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In SHM, the maximum speed occurs at the mean position and depends on the angular frequency and amplitude.", "formula_used": null, "concept_tested": "identifying where maximum velocity occurs in SHM"},
+      {"step_order": 2, "step_text": "Select ω = 2π/T and v_max = ωA.", "formula_used": "ω = 2π/T; v_max = ωA", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute T = 2 s: ω = 2π/2 = π rad/s. Substitute A = 5 cm: v_max = π×5.", "formula_used": "ω = 2π/T; v_max = ωA", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute v_max = 5π cm/s.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["ω = 2π/T", "v_max = ωA"],
+    "distractor_analysis": {
+      "10π cm/s": {"misconception": "used the full peak-to-peak displacement (2A) instead of the amplitude A", "gap_step": 3, "concept": "substitution"},
+      "2.5π cm/s": {"misconception": "used half the amplitude by mistake instead of the full amplitude", "gap_step": 3, "concept": "substitution"},
+      "2.5 cm/s": {"misconception": "used ω = 1/T instead of ω = 2π/T, dropping the 2π factor", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_mechanics_b01_025",
+    "text": "A 2 kg block attached to a spring of force constant 200 N/m undergoes simple harmonic motion with amplitude 0.1 m. Find its speed when its displacement from the mean position is 0.06 m.",
+    "options": ["1 m/s", "0.08 m/s", "8 m/s", "0.8 m/s"],
+    "correct_answer": "0.8 m/s",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "sub_topic": "Simple Harmonic Motion",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For a spring-block SHM system, the angular frequency depends on the spring constant and mass, and speed at any displacement follows the standard SHM speed relation.", "formula_used": null, "concept_tested": "identifying the spring-block SHM scenario"},
+      {"step_order": 2, "step_text": "Select ω = √(k/m) and v = ω√(A² − x²).", "formula_used": "ω = √(k/m); v = ω√(A² − x²)", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute k = 200 N/m, m = 2 kg: ω = √(200/2) = √100 = 10 rad/s. With A = 0.1 m, x = 0.06 m: A²−x² = 0.01−0.0036 = 0.0064, so √(A²−x²) = 0.08 m.", "formula_used": "ω = √(k/m); v = ω√(A² − x²)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute v = 10×0.08 = 0.8 m/s.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["ω = √(k/m)", "v = ω√(A² − x²)"],
+    "distractor_analysis": {
+      "1 m/s": {"misconception": "used the maximum velocity formula v = ωA, ignoring the given displacement from the mean position", "gap_step": 1, "concept": "concept identification"},
+      "0.08 m/s": {"misconception": "computed √(A²−x²) correctly but forgot to multiply by ω", "gap_step": 4, "concept": "substitution"},
+      "8 m/s": {"misconception": "used ω = k/m instead of ω = √(k/m)", "gap_step": 2, "concept": "formula selection"}
+    }
+  }
+]

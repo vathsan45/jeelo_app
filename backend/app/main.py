@@ -32,6 +32,7 @@ def seed_questions_if_empty():
                 marking_scheme=q["marking_scheme"],
                 solution_steps=q["solution_steps"],
                 formulas_used=q["formulas_used"],
+                distractor_analysis=q.get("distractor_analysis"),
             ))
         db.commit()
         print(f"Seeded {len(data)} questions from {QUESTIONS_MASTER.name}")

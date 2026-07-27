@@ -58,6 +58,14 @@ def select_next_question(player_id, mode, topic_filter, exclude_ids, db_session)
     if not candidates:
         return None
 
+    # Shuffle before the stable sort below so exact-distance ties break
+    # randomly instead of by DB insertion order. With only 3 seed values
+    # (900/1200/1500) shared across many questions per topic, ties are
+    # common at scale — without this, top_candidates can get stuck entirely
+    # within whichever topic's rows the DB happens to return first,
+    # defeating placement's "span all topics" purpose.
+    random.shuffle(candidates)
+
     target_band = max(rd, 150)  # never collapse below 150, keeps variety
 
     for band in (target_band, target_band * 1.5):

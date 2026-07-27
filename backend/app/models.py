@@ -35,6 +35,9 @@ class Question(Base):
     marking_scheme = Column(JSON, nullable=False)
     solution_steps = Column(JSON, nullable=False)
     formulas_used = Column(JSON, nullable=False)
+    # per-wrong-option misconception map, used for MCQ-based failure diagnosis;
+    # nullable since older/hand-authored questions may not have it yet
+    distractor_analysis = Column(JSON, nullable=True)
 
 
 class Player(Base):

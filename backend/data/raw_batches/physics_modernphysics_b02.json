@@ -1,0 +1,602 @@
+[
+  {
+    "question_id": "physics_modernphysics_b02_001",
+    "text": "The threshold wavelength for photoelectric emission from a metal is 310 nm. Using hc=1240 eV·nm, find the work function of the metal.",
+    "options": ["310 eV", "0.25 eV", "4.0 eV", "8.0 eV"],
+    "correct_answer": "4.0 eV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Photoelectric Effect",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The threshold wavelength corresponds to a photon whose energy exactly equals the metal's work function.", "formula_used": null, "concept_tested": "identifying the threshold wavelength condition"},
+      {"step_order": 2, "step_text": "Select W = hc/λ0.", "formula_used": "W = hc/λ0", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute hc = 1240 eV·nm, λ0 = 310 nm: W = 1240/310.", "formula_used": "W = hc/λ0", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute W = 4.0 eV.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["W = hc/λ0"],
+    "distractor_analysis": {
+      "310 eV": {"misconception": "reported the wavelength value directly as if it were the energy, a unit confusion", "gap_step": 1, "concept": "concept identification"},
+      "0.25 eV": {"misconception": "inverted the formula, computing λ0/hc instead of hc/λ0", "gap_step": 2, "concept": "formula selection"},
+      "8.0 eV": {"misconception": "arithmetic slip, doubling the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_002",
+    "text": "In a photoelectric experiment, light of wavelength 248 nm produces a stopping potential of 2 V. Using hc=1240 eV·nm, find the work function of the metal.",
+    "options": ["3.0 eV", "5.0 eV", "7.0 eV", "2.5 eV"],
+    "correct_answer": "3.0 eV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Photoelectric Effect",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The stopping potential (in volts) numerically equals the maximum kinetic energy (in eV), which relates to the photon energy and the work function.", "formula_used": null, "concept_tested": "identifying the stopping potential relation"},
+      {"step_order": 2, "step_text": "Select E_photon = hc/λ, then W = E_photon − eV0.", "formula_used": "E_photon = hc/λ; W = E_photon − eV0", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute hc = 1240 eV·nm, λ = 248 nm: E_photon = 1240/248 = 5.0 eV. With V0 = 2 V: W = 5.0 − 2.", "formula_used": "E_photon = hc/λ; W = E_photon − eV0", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute W = 3.0 eV.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["E_photon = hc/λ", "W = E_photon − eV0"],
+    "distractor_analysis": {
+      "5.0 eV": {"misconception": "forgot to subtract the stopping-potential energy, reporting the photon energy directly as the work function", "gap_step": 3, "concept": "substitution"},
+      "7.0 eV": {"misconception": "added the photon energy and stopping-potential energy instead of subtracting", "gap_step": 3, "concept": "substitution"},
+      "2.5 eV": {"misconception": "arithmetic slip, incorrectly halving the photon energy instead of properly subtracting", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_003",
+    "text": "Find the de Broglie wavelength of a proton moving with a momentum of 3.3×10⁻²¹ kg·m/s. Use h=6.6×10⁻³⁴ J·s.",
+    "options": ["2 × 10⁻¹³ m", "3.3 × 10⁻²¹ m", "1 × 10⁻¹³ m", "4 × 10⁻¹³ m"],
+    "correct_answer": "2 × 10⁻¹³ m",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "de Broglie Waves",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The de Broglie wavelength of any particle depends inversely on its momentum.", "formula_used": null, "concept_tested": "identifying the de Broglie wavelength-momentum relation"},
+      {"step_order": 2, "step_text": "Select λ = h/p.", "formula_used": "λ = h/p", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute h = 6.6×10⁻³⁴ J·s, p = 3.3×10⁻²¹ kg·m/s: λ = 6.6×10⁻³⁴/3.3×10⁻²¹.", "formula_used": "λ = h/p", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute λ = 2×10⁻¹³ m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["λ = h/p"],
+    "distractor_analysis": {
+      "3.3 × 10⁻²¹ m": {"misconception": "forgot to divide by h entirely, reporting the momentum p directly as if it were the wavelength", "gap_step": 2, "concept": "formula selection"},
+      "1 × 10⁻¹³ m": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"},
+      "4 × 10⁻¹³ m": {"misconception": "arithmetic slip, doubling the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_004",
+    "text": "Find the de Broglie wavelength associated with a body of mass 0.01 kg moving with a speed of 5 m/s. Use h=6.6×10⁻³⁴ J·s.",
+    "options": ["0.05 m", "1.32 × 10⁻³² m", "1.32 × 10⁻³³ m", "2.64 × 10⁻³² m"],
+    "correct_answer": "1.32 × 10⁻³² m",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "de Broglie Waves",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Every moving object has an associated de Broglie wavelength, though it is immeasurably small for macroscopic bodies.", "formula_used": null, "concept_tested": "identifying the de Broglie wavelength relation"},
+      {"step_order": 2, "step_text": "Select λ = h/(mv).", "formula_used": "λ = h/(mv)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute h = 6.6×10⁻³⁴ J·s, m = 0.01 kg, v = 5 m/s: λ = 6.6×10⁻³⁴/(0.01×5) = 6.6×10⁻³⁴/0.05.", "formula_used": "λ = h/(mv)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute λ = 1.32×10⁻³² m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["λ = h/(mv)"],
+    "distractor_analysis": {
+      "0.05 m": {"misconception": "reported the momentum mv directly, confusing it with the wavelength", "gap_step": 2, "concept": "concept identification"},
+      "1.32 × 10⁻³³ m": {"misconception": "decimal slip, dividing by an extra factor of 10", "gap_step": 4, "concept": "arithmetic"},
+      "2.64 × 10⁻³² m": {"misconception": "arithmetic slip, doubling the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_005",
+    "text": "Particles A and B are accelerated through the same potential difference and carry equal charge magnitude. If particle B's mass is 4 times particle A's mass, find the ratio of their de Broglie wavelengths λ_A:λ_B.",
+    "options": ["4:1", "2:1", "1:2", "1:4"],
+    "correct_answer": "2:1",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "de Broglie Waves",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For a charged particle accelerated through a potential difference, the de Broglie wavelength depends on the inverse square root of the mass.", "formula_used": null, "concept_tested": "identifying the mass dependence of accelerated-particle de Broglie wavelength"},
+      {"step_order": 2, "step_text": "Select λ ∝ 1/√m, so λ_A/λ_B = √(m_B/m_A).", "formula_used": "λ ∝ 1/√m", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute m_B/m_A = 4: λ_A/λ_B = √4.", "formula_used": "λ ∝ 1/√m", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute λ_A/λ_B = 2, so the ratio is 2:1.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["λ ∝ 1/√m"],
+    "distractor_analysis": {
+      "4:1": {"misconception": "forgot the square root, using the mass ratio directly instead of its square root", "gap_step": 2, "concept": "formula selection"},
+      "1:2": {"misconception": "inverted the ratio, computing λ_B/λ_A instead of the requested λ_A/λ_B", "gap_step": 4, "concept": "concept identification"},
+      "1:4": {"misconception": "both inverted the ratio and forgot the square root", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_006",
+    "text": "Find the energy of the electron in the second orbit (n=2) of a hydrogen atom, using E_n=−13.6/n² eV.",
+    "options": ["-13.6 eV", "-3.4 eV", "-6.8 eV", "3.4 eV"],
+    "correct_answer": "-3.4 eV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Bohr Model & Atomic Spectra",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The energy of an electron in the nth Bohr orbit follows a standard formula that decreases in magnitude as n increases.", "formula_used": null, "concept_tested": "identifying the Bohr energy level formula"},
+      {"step_order": 2, "step_text": "Select E_n = −13.6/n² eV.", "formula_used": "E_n = −13.6/n²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute n = 2: E_2 = −13.6/4.", "formula_used": "E_n = −13.6/n²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute E_2 = −3.4 eV.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["E_n = −13.6/n²"],
+    "distractor_analysis": {
+      "-13.6 eV": {"misconception": "forgot to divide by n², reporting the ground state energy instead", "gap_step": 3, "concept": "substitution"},
+      "-6.8 eV": {"misconception": "divided by n instead of n²", "gap_step": 3, "concept": "substitution"},
+      "3.4 eV": {"misconception": "forgot the negative sign convention for bound-state energy", "gap_step": 4, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_007",
+    "text": "Find the shortest wavelength in the Balmer series of the hydrogen spectrum (the series limit, n=∞ to n=2). Use 1/λ=R(1/n1²−1/n2²) with R=1.097×10⁷ m⁻¹.",
+    "options": ["91 nm", "365 nm", "820 nm", "1460 nm"],
+    "correct_answer": "365 nm",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Bohr Model & Atomic Spectra",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The Balmer series limit corresponds to a transition from n=∞ down to n=2, giving the shortest (highest-energy) wavelength in that series.", "formula_used": null, "concept_tested": "identifying the Balmer series limit transition"},
+      {"step_order": 2, "step_text": "Select 1/λ = R(1/n1² − 1/n2²), with n1=2, n2=∞ (so 1/n2²=0).", "formula_used": "1/λ = R(1/n1² − 1/n2²)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute n1=2: 1/λ = R(1/4 − 0) = R/4 = 1.097×10⁷/4.", "formula_used": "1/λ = R(1/n1² − 1/n2²)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute 1/λ ≈ 2.74×10⁶ m⁻¹, so λ ≈ 365 nm.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["1/λ = R(1/n1² − 1/n2²)"],
+    "distractor_analysis": {
+      "91 nm": {"misconception": "computed the Lyman series limit instead of the Balmer series limit, using n1=1 instead of n1=2", "gap_step": 3, "concept": "substitution"},
+      "820 nm": {"misconception": "computed the Paschen series limit instead of the Balmer series limit, using n1=3 instead of n1=2", "gap_step": 3, "concept": "substitution"},
+      "1460 nm": {"misconception": "mistakenly multiplied the correct wavelength by an extra factor of 4, double-applying the n1² factor", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_008",
+    "text": "An X-ray photon has energy 12.4 keV. Using hc=1240 eV·nm, find its wavelength.",
+    "options": ["100 nm", "0.1 nm", "1 nm", "0.01 nm"],
+    "correct_answer": "0.1 nm",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "X-rays",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A photon's wavelength relates inversely to its energy.", "formula_used": null, "concept_tested": "identifying the photon energy-wavelength relation"},
+      {"step_order": 2, "step_text": "Select λ = hc/E, converting the energy to eV first.", "formula_used": "λ = hc/E", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute hc = 1240 eV·nm, E = 12.4 keV = 12400 eV: λ = 1240/12400.", "formula_used": "λ = hc/E", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute λ = 0.1 nm.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["λ = hc/E"],
+    "distractor_analysis": {
+      "100 nm": {"misconception": "forgot to convert keV to eV, using E=12.4 instead of the correct 12400", "gap_step": 3, "concept": "substitution"},
+      "1 nm": {"misconception": "misplaced decimal, using E=1240 instead of 12400", "gap_step": 3, "concept": "substitution"},
+      "0.01 nm": {"misconception": "misplaced decimal the other way, using E=124000 instead of 12400", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_009",
+    "text": "In a Coolidge tube, electrons are accelerated through a potential of 24800 V. Using hc=1240 eV·nm, find the minimum wavelength of the continuous X-ray spectrum produced.",
+    "options": ["0.05 nm", "0.5 nm", "0.025 nm", "5 nm"],
+    "correct_answer": "0.05 nm",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "X-rays",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The minimum wavelength of the continuous X-ray spectrum occurs when an electron's full kinetic energy converts into a single photon.", "formula_used": null, "concept_tested": "identifying the minimum wavelength (Duane-Hunt) condition"},
+      {"step_order": 2, "step_text": "Select λ_min = hc/(eV).", "formula_used": "λ_min = hc/(eV)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute hc = 1240 eV·nm, V = 24800 V: λ_min = 1240/24800.", "formula_used": "λ_min = hc/(eV)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute λ_min = 0.05 nm.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["λ_min = hc/(eV)"],
+    "distractor_analysis": {
+      "0.5 nm": {"misconception": "misplaced decimal, using V=2480 instead of 24800", "gap_step": 3, "concept": "substitution"},
+      "0.025 nm": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"},
+      "5 nm": {"misconception": "misplaced decimal further, using V=248 instead of 24800", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_010",
+    "text": "For two elements with atomic numbers Z1=11 and Z2=51, the ratio of their Kα X-ray frequencies is found using Moseley's law √ν=a(Z−1). Find the ratio ν1:ν2.",
+    "options": ["1:5", "1:25", "10:50", "25:1"],
+    "correct_answer": "1:25",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "X-rays",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Moseley's law relates the square root of the X-ray frequency linearly to (Z−1), so the frequency ratio requires squaring the ratio of (Z−1) values.", "formula_used": null, "concept_tested": "identifying Moseley's law and its square relationship"},
+      {"step_order": 2, "step_text": "Select √ν1/√ν2 = (Z1−1)/(Z2−1), then ν1/ν2 = [(Z1−1)/(Z2−1)]².", "formula_used": "ν1/ν2 = [(Z1−1)/(Z2−1)]²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute Z1=11, Z2=51: (Z1−1)/(Z2−1) = 10/50 = 1/5. Then ν1/ν2 = (1/5)².", "formula_used": "ν1/ν2 = [(Z1−1)/(Z2−1)]²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute ν1/ν2 = 1/25, so the ratio is 1:25.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["ν1/ν2 = [(Z1−1)/(Z2−1)]²"],
+    "distractor_analysis": {
+      "1:5": {"misconception": "forgot to square the frequency ratio, reporting the √ν ratio directly as the ν ratio", "gap_step": 3, "concept": "substitution"},
+      "10:50": {"misconception": "reported the (Z−1) values directly as the frequency ratio, skipping the Moseley's law calculation", "gap_step": 1, "concept": "concept identification"},
+      "25:1": {"misconception": "inverted the ratio, computing ν2:ν1 instead of the requested ν1:ν2", "gap_step": 4, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_011",
+    "text": "Find the number of neutrons in a nucleus of ₂₆Fe⁵⁶ (iron-56, atomic number 26, mass number 56).",
+    "options": ["56", "26", "30", "82"],
+    "correct_answer": "30",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Structure & Binding Energy",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The number of neutrons in a nucleus is the mass number minus the atomic number.", "formula_used": null, "concept_tested": "identifying the neutron count formula"},
+      {"step_order": 2, "step_text": "Select N = A − Z.", "formula_used": "N = A − Z", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute A = 56, Z = 26: N = 56 − 26.", "formula_used": "N = A − Z", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute N = 30.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["N = A − Z"],
+    "distractor_analysis": {
+      "56": {"misconception": "reported the mass number A directly instead of subtracting Z", "gap_step": 2, "concept": "concept identification"},
+      "26": {"misconception": "reported the atomic number Z directly, confusing it with the neutron count", "gap_step": 1, "concept": "concept identification"},
+      "82": {"misconception": "added A and Z instead of subtracting", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_012",
+    "text": "The binding energy of a helium nucleus (₂He⁴) is 28 MeV. Find the binding energy per nucleon.",
+    "options": ["112 MeV", "24 MeV", "7 MeV", "3.5 MeV"],
+    "correct_answer": "7 MeV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Structure & Binding Energy",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The binding energy per nucleon is found by dividing the total binding energy by the number of nucleons (mass number).", "formula_used": null, "concept_tested": "identifying the binding energy per nucleon formula"},
+      {"step_order": 2, "step_text": "Select BE/nucleon = BE_total/A.", "formula_used": "BE/nucleon = BE_total/A", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute BE_total = 28 MeV, A = 4: BE/nucleon = 28/4.", "formula_used": "BE/nucleon = BE_total/A", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute BE/nucleon = 7 MeV.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["BE/nucleon = BE_total/A"],
+    "distractor_analysis": {
+      "112 MeV": {"misconception": "multiplied the binding energy by the mass number instead of dividing", "gap_step": 3, "concept": "substitution"},
+      "24 MeV": {"misconception": "subtracted the mass number from the binding energy instead of dividing", "gap_step": 3, "concept": "substitution"},
+      "3.5 MeV": {"misconception": "arithmetic slip, dividing by 8 instead of 4", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_013",
+    "text": "The mass defect of a nucleus is found to be 0.03 u. Using 1 u = 931 MeV, find the binding energy per nucleon if the nucleus has a mass number of 31.",
+    "options": ["27.93 MeV", "9.31 MeV", "0.9 MeV", "0.03 MeV"],
+    "correct_answer": "0.9 MeV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Structure & Binding Energy",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The mass defect converts to total binding energy, which must then be divided by the mass number to get the binding energy per nucleon.", "formula_used": null, "concept_tested": "identifying the two-step mass defect to binding energy per nucleon calculation"},
+      {"step_order": 2, "step_text": "Select BE_total = Δm×931 MeV, then BE/nucleon = BE_total/A.", "formula_used": "BE_total = Δm×931; BE/nucleon = BE_total/A", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute Δm = 0.03 u: BE_total = 0.03×931 = 27.93 MeV. With A = 31: BE/nucleon = 27.93/31.", "formula_used": "BE_total = Δm×931; BE/nucleon = BE_total/A", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute BE/nucleon = 0.9 MeV.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["BE_total = Δm×931", "BE/nucleon = BE_total/A"],
+    "distractor_analysis": {
+      "27.93 MeV": {"misconception": "reported the total binding energy instead of dividing by the mass number to get the binding energy per nucleon", "gap_step": 4, "concept": "concept identification"},
+      "9.31 MeV": {"misconception": "divided by 3 instead of the correct mass number 31, an order-of-magnitude slip", "gap_step": 3, "concept": "substitution"},
+      "0.03 MeV": {"misconception": "reported the mass defect value directly, confusing units of u with MeV per nucleon", "gap_step": 2, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_014",
+    "text": "A radioactive sample initially contains 800 nuclei. After 2 half-lives, find the number of nuclei remaining.",
+    "options": ["400", "100", "200", "0"],
+    "correct_answer": "200",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Radioactive Decay",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "After each half-life, the number of remaining nuclei is halved.", "formula_used": null, "concept_tested": "identifying the half-life decay pattern"},
+      {"step_order": 2, "step_text": "Select N = N0×(1/2)ⁿ, where n is the number of half-lives.", "formula_used": "N = N0(1/2)ⁿ", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute N0 = 800, n = 2: N = 800×(1/2)².", "formula_used": "N = N0(1/2)ⁿ", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute N = 800/4 = 200.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["N = N0(1/2)ⁿ"],
+    "distractor_analysis": {
+      "400": {"misconception": "used only 1 half-life instead of the given 2", "gap_step": 3, "concept": "substitution"},
+      "100": {"misconception": "used 3 half-lives instead of the given 2", "gap_step": 3, "concept": "substitution"},
+      "0": {"misconception": "assumed all nuclei decay after just a couple of half-lives, a conceptual misunderstanding", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_015",
+    "text": "A radioactive substance has an activity of 8000 disintegrations per second. If its half-life is 15 minutes, find its activity after 1 hour.",
+    "options": ["500 dis/s", "2000 dis/s", "4000 dis/s", "1000 dis/s"],
+    "correct_answer": "500 dis/s",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Radioactive Decay",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Activity, like the number of nuclei, halves with each half-life that passes.", "formula_used": null, "concept_tested": "identifying that activity follows the same half-life decay pattern"},
+      {"step_order": 2, "step_text": "Select A = A0×(1/2)ⁿ, where n is the number of half-lives elapsed.", "formula_used": "A = A0(1/2)ⁿ", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute A0 = 8000 dis/s, n = 60/15 = 4: A = 8000×(1/2)⁴.", "formula_used": "A = A0(1/2)ⁿ", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute A = 8000/16 = 500 dis/s.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["A = A0(1/2)ⁿ"],
+    "distractor_analysis": {
+      "2000 dis/s": {"misconception": "mistakenly used 2 half-lives instead of the correct 4", "gap_step": 3, "concept": "substitution"},
+      "4000 dis/s": {"misconception": "mistakenly used only 1 half-life instead of the correct 4", "gap_step": 3, "concept": "substitution"},
+      "1000 dis/s": {"misconception": "mistakenly used 3 half-lives instead of the correct 4", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_016",
+    "text": "In the reaction ₁₃Al²⁷ + ₂He⁴ → ₁₅P³⁰ + X, identify particle X.",
+    "options": ["Proton (₁H¹)", "Electron (₋₁e⁰)", "Neutron (₀n¹)", "Alpha particle (₂He⁴)"],
+    "correct_answer": "Neutron (₀n¹)",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Reactions",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In any nuclear reaction, both the total mass number and total atomic number must balance between reactants and products.", "formula_used": null, "concept_tested": "identifying conservation of mass number and atomic number"},
+      {"step_order": 2, "step_text": "Select A_X = (27+4)−30 and Z_X = (13+2)−15.", "formula_used": "A_X = ΣA_reactants − ΣA_other products; Z_X = ΣZ_reactants − ΣZ_other products", "concept_tested": "choosing the correct approach"},
+      {"step_order": 3, "step_text": "Substitute: A_X = 31−30 = 1. Z_X = 15−15 = 0.", "formula_used": "A_X = ΣA_reactants − ΣA_other products; Z_X = ΣZ_reactants − ΣZ_other products", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "A particle with mass number 1 and atomic number 0 is a neutron, ₀n¹.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["A_X = ΣA_reactants − ΣA_other products", "Z_X = ΣZ_reactants − ΣZ_other products"],
+    "distractor_analysis": {
+      "Proton (₁H¹)": {"misconception": "correctly found the mass number but forgot to balance the atomic number, mistakenly assuming Z_X=1", "gap_step": 3, "concept": "concept identification"},
+      "Electron (₋₁e⁰)": {"misconception": "confused this nuclear reaction with beta decay, where an electron is emitted, but the mass number balance here doesn't support an electron", "gap_step": 1, "concept": "concept identification"},
+      "Alpha particle (₂He⁴)": {"misconception": "confused the product with the reactant alpha particle, assuming it appears unchanged in the products", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_017",
+    "text": "In a nuclear fission process, 9×10¹⁰ J of energy is released. Using E=mc² with c=3×10⁸ m/s, find the mass converted to energy.",
+    "options": ["300 kg", "8.1 × 10²⁷ kg", "1 × 10⁻² kg", "1 × 10⁻⁶ kg"],
+    "correct_answer": "1 × 10⁻⁶ kg",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Reactions",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Mass-energy equivalence relates the energy released to the mass converted, via the speed of light squared.", "formula_used": null, "concept_tested": "identifying mass-energy equivalence"},
+      {"step_order": 2, "step_text": "Select E = mc², rearranged to m = E/c².", "formula_used": "E = mc²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute E = 9×10¹⁰ J, c = 3×10⁸ m/s: m = 9×10¹⁰/(9×10¹⁶).", "formula_used": "E = mc²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute m = 1×10⁻⁶ kg.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["E = mc²"],
+    "distractor_analysis": {
+      "300 kg": {"misconception": "forgot to square the speed of light, using E/c instead of E/c²", "gap_step": 2, "concept": "formula selection"},
+      "8.1 × 10²⁷ kg": {"misconception": "multiplied E and c² instead of dividing", "gap_step": 3, "concept": "substitution"},
+      "1 × 10⁻² kg": {"misconception": "decimal slip in the exponent arithmetic", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_018",
+    "text": "A deuteron (₁H²) and a triton (₁H³) undergo fusion to form a helium nucleus (₂He⁴) and release another particle. Given the mass defect for this reaction is 0.0189 u (1u=931 MeV), identify the released particle and find the energy released.",
+    "options": ["Proton released; energy = 17.6 MeV", "Neutron released; energy = 1.76 MeV", "Neutron released; energy = 0.0189 MeV", "Neutron released; energy = 17.6 MeV"],
+    "correct_answer": "Neutron released; energy = 17.6 MeV",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Nuclear Reactions",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Both mass number and atomic number must balance in this fusion reaction, and the mass defect converts to energy via E=Δm×931 MeV.", "formula_used": null, "concept_tested": "identifying the particle balance and mass-energy conversion together"},
+      {"step_order": 2, "step_text": "Select A_X = (2+3)−4, Z_X = (1+1)−2, and E_released = Δm×931.", "formula_used": "A_X = 5−4; Z_X = 2−2; E = Δm×931", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute: A_X = 1, Z_X = 0, identifying a neutron. With Δm = 0.0189 u: E = 0.0189×931.", "formula_used": "A_X = 5−4; Z_X = 2−2; E = Δm×931", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute E ≈ 17.6 MeV; the released particle is a neutron.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["A_X = 5−4", "Z_X = 2−2", "E = Δm×931"],
+    "distractor_analysis": {
+      "Proton released; energy = 17.6 MeV": {"misconception": "correctly computed the energy but misidentified the particle, forgetting to properly balance the atomic number", "gap_step": 3, "concept": "concept identification"},
+      "Neutron released; energy = 1.76 MeV": {"misconception": "correctly identified the particle but made a decimal slip in the energy calculation", "gap_step": 4, "concept": "arithmetic"},
+      "Neutron released; energy = 0.0189 MeV": {"misconception": "correctly identified the particle but reported the mass defect value directly in MeV without converting using 931 MeV/u", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_019",
+    "text": "A semiconductor has an energy gap of 1.24 eV. Using hc=1240 eV·nm, find the maximum wavelength of light that can be absorbed to excite an electron across the gap.",
+    "options": ["1000 nm", "1.24 nm", "1240 nm", "500 nm"],
+    "correct_answer": "1000 nm",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Semiconductors",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For an electron to be excited across the energy gap, the photon energy must be at least equal to the gap energy; the maximum wavelength corresponds to the minimum sufficient photon energy.", "formula_used": null, "concept_tested": "identifying the energy gap-wavelength threshold relation"},
+      {"step_order": 2, "step_text": "Select λ_max = hc/E_gap.", "formula_used": "λ_max = hc/E_gap", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute hc = 1240 eV·nm, E_gap = 1.24 eV: λ_max = 1240/1.24.", "formula_used": "λ_max = hc/E_gap", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute λ_max = 1000 nm.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["λ_max = hc/E_gap"],
+    "distractor_analysis": {
+      "1.24 nm": {"misconception": "reported the numeric value of the energy gap directly as the wavelength, a unit/conceptual confusion", "gap_step": 1, "concept": "concept identification"},
+      "1240 nm": {"misconception": "forgot to divide by the energy gap, reporting hc directly", "gap_step": 2, "concept": "formula selection"},
+      "500 nm": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_020",
+    "text": "A Zener diode with a breakdown voltage of 6 V is used as a voltage regulator, connected in reverse bias with a series resistor of 100 Ω. Assuming the Zener maintains exactly 6 V across it whenever conducting, find the range of current through the series resistor as the unregulated input voltage varies from 10 V to 14 V.",
+    "options": ["100 mA to 140 mA", "60 mA to 60 mA (constant)", "4 mA to 8 mA", "40 mA to 80 mA"],
+    "correct_answer": "40 mA to 80 mA",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Semiconductors",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Since the Zener voltage stays fixed at 6 V while conducting, the voltage across the series resistor equals the input voltage minus 6 V, and this varies as the input voltage varies.", "formula_used": null, "concept_tested": "identifying the voltage division in a Zener regulator circuit"},
+      {"step_order": 2, "step_text": "Select V_R = V_in − V_zener, then I = V_R/R, evaluated at both extremes of V_in.", "formula_used": "I = (V_in − V_zener)/R", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute V_zener = 6 V, R = 100 Ω: at V_in=10V, I=(10−6)/100=0.04A. At V_in=14V, I=(14−6)/100=0.08A.", "formula_used": "I = (V_in − V_zener)/R", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute the current range as 40 mA to 80 mA.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I = (V_in − V_zener)/R"],
+    "distractor_analysis": {
+      "100 mA to 140 mA": {"misconception": "forgot to subtract the Zener voltage from the input voltage, applying the full input voltage across the resistor", "gap_step": 2, "concept": "formula selection"},
+      "60 mA to 60 mA (constant)": {"misconception": "incorrectly assumed the resistor current stays constant just because the Zener voltage is constant, ignoring that the resistor's voltage still varies with input", "gap_step": 1, "concept": "concept identification"},
+      "4 mA to 8 mA": {"misconception": "unit/decimal slip, reporting the current 10 times too small", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_021",
+    "text": "A junction diode is said to be 'forward biased' when:",
+    "options": ["the p-side is connected to the negative terminal and the n-side to the positive terminal", "both terminals are connected to the same side", "no battery is connected at all", "the p-side is connected to the positive terminal and the n-side to the negative terminal of the battery"],
+    "correct_answer": "the p-side is connected to the positive terminal and the n-side to the negative terminal of the battery",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Diodes & Rectifiers",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Forward biasing a p-n junction means connecting the battery so it reduces the internal potential barrier, allowing current to flow easily.", "formula_used": null, "concept_tested": "identifying the forward bias condition"},
+      {"step_order": 2, "step_text": "Select: p-side to positive terminal, n-side to negative terminal, defines forward bias.", "formula_used": null, "concept_tested": "choosing the correct concept"},
+      {"step_order": 3, "step_text": "Substitute this definition directly, as this is a conceptual identification question.", "formula_used": null, "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Conclude: the p-side connects to the positive terminal and the n-side to the negative terminal.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["forward bias: p to positive, n to negative"],
+    "distractor_analysis": {
+      "the p-side is connected to the negative terminal and the n-side to the positive terminal": {"misconception": "this describes reverse bias, the opposite condition", "gap_step": 1, "concept": "concept identification"},
+      "both terminals are connected to the same side": {"misconception": "nonsensical/conceptual confusion about circuit connections", "gap_step": 1, "concept": "concept identification"},
+      "no battery is connected at all": {"misconception": "conceptual misunderstanding, confusing a biased junction with an unbiased one", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_022",
+    "text": "A half-wave rectifier is used to convert an AC input of peak voltage 20 V into a pulsating DC output. Ignoring the diode's forward voltage drop, find the peak value of the output voltage.",
+    "options": ["20 V", "10 V", "0 V", "40 V"],
+    "correct_answer": "20 V",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Diodes & Rectifiers",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "An ideal diode conducts without any voltage drop during the half-cycle it allows through, so the output peak matches the input peak.", "formula_used": null, "concept_tested": "identifying the ideal diode assumption in a half-wave rectifier"},
+      {"step_order": 2, "step_text": "Select V_out(peak) = V_in(peak), for an ideal diode.", "formula_used": null, "concept_tested": "choosing the correct concept"},
+      {"step_order": 3, "step_text": "Substitute V_in(peak) = 20 V into this equality.", "formula_used": null, "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute V_out(peak) = 20 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["V_out(peak) = V_in(peak) for an ideal diode"],
+    "distractor_analysis": {
+      "10 V": {"misconception": "halved the peak input voltage by mistake, perhaps confusing it with an averaged quantity", "gap_step": 1, "concept": "concept identification"},
+      "0 V": {"misconception": "assumed the diode blocks the entire input signal, a conceptual misunderstanding", "gap_step": 1, "concept": "concept identification"},
+      "40 V": {"misconception": "doubled the peak input voltage by mistake", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_023",
+    "text": "A half-wave rectifier circuit is fed with an AC source of peak voltage 31.4 V (assume ideal diode). Taking π≈3.14, find the average (DC) value of the output voltage, using V_avg=V_peak/π.",
+    "options": ["31.4 V", "62.8 V", "5 V", "10 V"],
+    "correct_answer": "10 V",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Diodes & Rectifiers",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The average value of a half-wave rectified sine wave relates to the peak voltage through a factor involving π.", "formula_used": null, "concept_tested": "identifying the half-wave rectifier average voltage formula"},
+      {"step_order": 2, "step_text": "Select V_avg = V_peak/π.", "formula_used": "V_avg = V_peak/π", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute V_peak = 31.4 V, π ≈ 3.14: V_avg = 31.4/3.14.", "formula_used": "V_avg = V_peak/π", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute V_avg = 10 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["V_avg = V_peak/π"],
+    "distractor_analysis": {
+      "31.4 V": {"misconception": "forgot to divide by π, reporting the peak voltage directly as the average", "gap_step": 2, "concept": "formula selection"},
+      "62.8 V": {"misconception": "confused this with a different rectifier averaging formula and made a multiplication error, doubling the peak voltage instead of dividing by π", "gap_step": 2, "concept": "formula selection"},
+      "5 V": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_024",
+    "text": "Find the output of a NOT gate with input A=0.",
+    "options": ["0", "undefined", "-1", "1"],
+    "correct_answer": "1",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Logic Gates",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A NOT gate inverts its single input, turning 0 into 1 and 1 into 0.", "formula_used": null, "concept_tested": "identifying the NOT gate truth table rule"},
+      {"step_order": 2, "step_text": "Select Y = NOT A.", "formula_used": "Y = NOT A", "concept_tested": "choosing the correct rule"},
+      {"step_order": 3, "step_text": "Substitute A = 0: Y = NOT 0.", "formula_used": "Y = NOT A", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute Y = 1.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["Y = NOT A"],
+    "distractor_analysis": {
+      "0": {"misconception": "forgot that NOT inverts the input, reporting the same value as the input", "gap_step": 3, "concept": "concept identification"},
+      "undefined": {"misconception": "incorrectly assumed a single-input gate cannot be evaluated", "gap_step": 1, "concept": "concept identification"},
+      "-1": {"misconception": "treated NOT as an arithmetic negation instead of a logical inversion", "gap_step": 2, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_modernphysics_b02_025",
+    "text": "Find the output of a NOR gate with inputs A=0 and B=1.",
+    "options": ["1", "undefined", "The output cannot be determined from a NOR gate with these inputs; additional information is needed.", "0"],
+    "correct_answer": "0",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "sub_topic": "Logic Gates",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A NOR gate first computes the OR of its inputs, then inverts the result.", "formula_used": null, "concept_tested": "identifying the NOR gate as NOT(OR)"},
+      {"step_order": 2, "step_text": "Select Y = NOT(A OR B).", "formula_used": "Y = NOT(A OR B)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute A = 0, B = 1: A OR B = 0 OR 1 = 1. So Y = NOT 1.", "formula_used": "Y = NOT(A OR B)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute Y = 0.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["Y = NOT(A OR B)"],
+    "distractor_analysis": {
+      "1": {"misconception": "computed A OR B correctly as 1 but forgot to apply the final NOT to get the NOR output", "gap_step": 3, "concept": "concept identification"},
+      "undefined": {"misconception": "incorrectly assumed the given inputs yield an undefined result", "gap_step": 1, "concept": "concept identification"},
+      "The output cannot be determined from a NOR gate with these inputs; additional information is needed.": {"misconception": "a conceptual misunderstanding, since NOR gate outputs are fully determined by the two given inputs", "gap_step": 1, "concept": "concept identification"}
+    }
+  }
+]

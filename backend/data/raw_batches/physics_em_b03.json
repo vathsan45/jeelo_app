@@ -1,0 +1,602 @@
+[
+  {
+    "question_id": "physics_em_b03_001",
+    "text": "An electric dipole consists of charges +2 μC and −2 μC separated by a distance of 0.01 m. Find the dipole moment.",
+    "options": ["4 × 10⁻⁸ C·m", "2 × 10⁻⁸ C·m", "2 × 10⁻⁶ C·m", "2 × 10⁻¹⁰ C·m"],
+    "correct_answer": "2 × 10⁻⁸ C·m",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electrostatics",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A dipole's moment depends on the magnitude of either charge and the separation between them.", "formula_used": null, "concept_tested": "identifying the dipole moment definition"},
+      {"step_order": 2, "step_text": "Select p = q×d.", "formula_used": "p = qd", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute q = 2×10⁻⁶ C, d = 0.01 m: p = 2×10⁻⁶×0.01.", "formula_used": "p = qd", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute p = 2×10⁻⁸ C·m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["p = qd"],
+    "distractor_analysis": {
+      "4 × 10⁻⁸ C·m": {"misconception": "mistakenly summed both charge magnitudes (2+2) before multiplying by the separation", "gap_step": 3, "concept": "substitution"},
+      "2 × 10⁻⁶ C·m": {"misconception": "forgot to multiply by the separation d, reporting the charge value directly", "gap_step": 3, "concept": "substitution"},
+      "2 × 10⁻¹⁰ C·m": {"misconception": "misplaced a decimal in the separation, using 0.0001 m instead of 0.01 m", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_002",
+    "text": "An electric dipole of dipole moment 4×10⁻⁸ C·m is placed in a uniform electric field of 5×10⁴ N/C, making an angle of 30° with the field. Taking sin30°=0.5, find the torque experienced by the dipole.",
+    "options": ["2 × 10⁻³ N·m", "5 × 10⁻⁴ N·m", "1 × 10⁻³ N·m", "1 × 10⁻⁴ N·m"],
+    "correct_answer": "1 × 10⁻³ N·m",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electrostatics",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A dipole placed at an angle to a uniform field experiences a torque tending to align it with the field.", "formula_used": null, "concept_tested": "identifying the dipole torque scenario"},
+      {"step_order": 2, "step_text": "Select τ = pE sinθ.", "formula_used": "τ = pE sinθ", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute p = 4×10⁻⁸ C·m, E = 5×10⁴ N/C, sinθ = 0.5: τ = 4×10⁻⁸×5×10⁴×0.5.", "formula_used": "τ = pE sinθ", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute τ = 1×10⁻³ N·m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["τ = pE sinθ"],
+    "distractor_analysis": {
+      "2 × 10⁻³ N·m": {"misconception": "forgot to include sinθ, using τ = pE directly instead of pE sinθ", "gap_step": 2, "concept": "formula selection"},
+      "5 × 10⁻⁴ N·m": {"misconception": "arithmetic slip, halving the correct torque", "gap_step": 4, "concept": "arithmetic"},
+      "1 × 10⁻⁴ N·m": {"misconception": "misplaced a decimal in sinθ, using 0.05 instead of the given 0.5", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_003",
+    "text": "A capacitor of capacitance 10 μF is fully charged to 5 V and then disconnected from the battery. Find the charge stored on it.",
+    "options": ["2 μC", "15 μC", "50 μC", "500 μC"],
+    "correct_answer": "50 μC",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Capacitance",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A charged capacitor stores charge proportional to its capacitance and the applied voltage.", "formula_used": null, "concept_tested": "identifying the charge-voltage relation"},
+      {"step_order": 2, "step_text": "Select Q = CV.", "formula_used": "Q = CV", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute C = 10 μF, V = 5 V: Q = 10×5.", "formula_used": "Q = CV", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute Q = 50 μC.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["Q = CV"],
+    "distractor_analysis": {
+      "2 μC": {"misconception": "divided C by V instead of multiplying", "gap_step": 3, "concept": "substitution"},
+      "15 μC": {"misconception": "added C and V instead of multiplying them", "gap_step": 3, "concept": "substitution"},
+      "500 μC": {"misconception": "misplaced a decimal, effectively multiplying by an extra factor of 10", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_004",
+    "text": "Three capacitors of 2 μF, 3 μF, and 5 μF are connected in parallel. Find the equivalent capacitance of the combination.",
+    "options": ["30 μF", "2 μF", "0.97 μF", "10 μF"],
+    "correct_answer": "10 μF",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Capacitance",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For capacitors connected in parallel, the individual capacitances simply add.", "formula_used": null, "concept_tested": "identifying the parallel capacitor combination"},
+      {"step_order": 2, "step_text": "Select C_eq = C1 + C2 + C3.", "formula_used": "C_eq = C1+C2+C3", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute C1 = 2 μF, C2 = 3 μF, C3 = 5 μF: C_eq = 2+3+5.", "formula_used": "C_eq = C1+C2+C3", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute C_eq = 10 μF.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["C_eq = C1+C2+C3"],
+    "distractor_analysis": {
+      "30 μF": {"misconception": "multiplied all three capacitances together instead of adding them", "gap_step": 2, "concept": "formula selection"},
+      "2 μF": {"misconception": "confused the parallel rule for capacitors with the parallel rule for resistors, incorrectly reporting a value smaller than the smallest individual capacitance", "gap_step": 1, "concept": "concept identification"},
+      "0.97 μF": {"misconception": "used the series-capacitor reciprocal formula instead of simple addition", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_005",
+    "text": "A parallel plate capacitor has capacitance C0 in air with plate separation d. If the separation is halved and a dielectric of dielectric constant K=4 completely fills the new gap, find the new capacitance in terms of C0.",
+    "options": ["8C0", "4C0", "2C0", "16C0"],
+    "correct_answer": "8C0",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Capacitance",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Both halving the separation and inserting the dielectric increase the capacitance, and their effects multiply together.", "formula_used": null, "concept_tested": "identifying the combined effect of separation and dielectric changes"},
+      {"step_order": 2, "step_text": "Select C_new = K×ε0A/(d/2) = 2K×(ε0A/d) = 2K×C0.", "formula_used": "C_new = 2K×C0", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute K = 4: C_new = 2×4×C0.", "formula_used": "C_new = 2K×C0", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute C_new = 8C0.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["C_new = 2K×C0"],
+    "distractor_analysis": {
+      "4C0": {"misconception": "forgot to account for halving the plate separation, applying only the dielectric factor K", "gap_step": 2, "concept": "concept identification"},
+      "2C0": {"misconception": "forgot to include the dielectric constant, applying only the effect of halving the separation", "gap_step": 2, "concept": "concept identification"},
+      "16C0": {"misconception": "arithmetic slip, doubling the correctly combined result", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_006",
+    "text": "The drift velocity of electrons in a conductor is 2×10⁻⁴ m/s when a current of 4 A flows through it. Using I=nAqv_d with q=1.6×10⁻¹⁹ C, find the value of nA (in SI units).",
+    "options": ["2 × 10⁴", "1.25 × 10²³", "1.25 × 10²²", "1.25 × 10²⁴"],
+    "correct_answer": "1.25 × 10²³",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Current Electricity",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Current in a conductor relates to the drift velocity, charge carrier density, cross-sectional area, and charge per carrier.", "formula_used": null, "concept_tested": "identifying the microscopic current equation"},
+      {"step_order": 2, "step_text": "Select I = nAqv_d, rearranged to nA = I/(qv_d).", "formula_used": "I = nAqv_d", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute I = 4 A, q = 1.6×10⁻¹⁹ C, v_d = 2×10⁻⁴ m/s: nA = 4/(1.6×10⁻¹⁹×2×10⁻⁴) = 4/(3.2×10⁻²³).", "formula_used": "I = nAqv_d", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute nA = 1.25×10²³.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I = nAqv_d"],
+    "distractor_analysis": {
+      "2 × 10⁴": {"misconception": "forgot to include the charge q entirely, using nA=I/v_d instead of I/(qv_d)", "gap_step": 2, "concept": "formula selection"},
+      "1.25 × 10²²": {"misconception": "misplaced a decimal in the electron charge, using 1.6×10⁻¹⁸ C instead of 1.6×10⁻¹⁹ C", "gap_step": 3, "concept": "substitution"},
+      "1.25 × 10²⁴": {"misconception": "misplaced a decimal in the drift velocity, using 2×10⁻⁵ m/s instead of the given 2×10⁻⁴ m/s", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_007",
+    "text": "A wire of resistance R is cut into 4 equal pieces, and all 4 pieces are then connected in parallel. Find the new equivalent resistance in terms of R.",
+    "options": ["R/4", "4R", "R", "R/16"],
+    "correct_answer": "R/16",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Current Electricity",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Cutting the wire into 4 equal pieces reduces each piece's resistance proportionally, and connecting them in parallel reduces the combined resistance further.", "formula_used": null, "concept_tested": "identifying the cut-and-recombine scenario"},
+      {"step_order": 2, "step_text": "Select each piece's resistance as R/4, then combine 4 equal resistors of R/4 in parallel: R_eq = (R/4)/4.", "formula_used": "R_eq = (R/4)/4", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute the piece resistance R/4 into the parallel combination of 4 equal resistors.", "formula_used": "R_eq = (R/4)/4", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute R_eq = R/16.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["R_eq = (R/4)/4"],
+    "distractor_analysis": {
+      "R/4": {"misconception": "correctly found each piece's resistance as R/4 but forgot to combine the four pieces in parallel", "gap_step": 2, "concept": "concept identification"},
+      "4R": {"misconception": "mistakenly treated the four pieces as if reconnected in series, multiplying instead of dividing", "gap_step": 2, "concept": "formula selection"},
+      "R": {"misconception": "assumed the resistance is unchanged by cutting and reconnecting the wire", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_008",
+    "text": "A wire carries a current of 4 A when a potential difference of 20 V is applied. Find its resistance.",
+    "options": ["80 Ω", "0.2 Ω", "5 Ω", "16 Ω"],
+    "correct_answer": "5 Ω",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Ohm's Law & Resistance",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Ohm's law relates the potential difference, current, and resistance.", "formula_used": null, "concept_tested": "identifying Ohm's law"},
+      {"step_order": 2, "step_text": "Select R = V/I.", "formula_used": "V = IR", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute V = 20 V, I = 4 A: R = 20/4.", "formula_used": "V = IR", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute R = 5 Ω.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["V = IR"],
+    "distractor_analysis": {
+      "80 Ω": {"misconception": "multiplied voltage and current instead of dividing", "gap_step": 3, "concept": "substitution"},
+      "0.2 Ω": {"misconception": "inverted the formula, computing I/V instead of V/I", "gap_step": 2, "concept": "formula selection"},
+      "16 Ω": {"misconception": "subtracted the current from the voltage instead of dividing", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_009",
+    "text": "A resistance wire has a resistance of 20 Ω at 0°C. Its resistance becomes 24 Ω at 100°C. Using R = R0(1+αΔT), find the temperature coefficient of resistance α.",
+    "options": ["0.002 /°C", "0.2 /°C", "0.0002 /°C", "0.004 /°C"],
+    "correct_answer": "0.002 /°C",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Ohm's Law & Resistance",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The resistance of a conductor changes linearly with temperature according to the given relation.", "formula_used": null, "concept_tested": "identifying the temperature-resistance relation"},
+      {"step_order": 2, "step_text": "Select R = R0(1+αΔT), rearranged to α = (R/R0 − 1)/ΔT.", "formula_used": "R = R0(1+αΔT)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute R = 24 Ω, R0 = 20 Ω, ΔT = 100°C: α = (24/20 − 1)/100 = (1.2−1)/100 = 0.2/100.", "formula_used": "R = R0(1+αΔT)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute α = 0.002 /°C.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["R = R0(1+αΔT)"],
+    "distractor_analysis": {
+      "0.2 /°C": {"misconception": "correctly computed (R−R0)/R0 = 0.2 but forgot to divide by ΔT=100", "gap_step": 3, "concept": "substitution"},
+      "0.0002 /°C": {"misconception": "decimal slip, dividing by an extra factor of 10", "gap_step": 4, "concept": "arithmetic"},
+      "0.004 /°C": {"misconception": "mistakenly used ΔT=50°C instead of the correct 100°C, doubling the result", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_010",
+    "text": "Four resistors, each of resistance 4 Ω, are connected to form the four sides of a square loop. Find the equivalent resistance between two adjacent corners of the square (i.e., between the ends of one side).",
+    "options": ["4 Ω", "3 Ω", "12 Ω", "16 Ω"],
+    "correct_answer": "3 Ω",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Ohm's Law & Resistance",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Between two adjacent corners, current can flow either directly through the connecting side, or the long way around through the other three sides — these two paths are in parallel.", "formula_used": null, "concept_tested": "identifying the two parallel current paths"},
+      {"step_order": 2, "step_text": "Select the direct path resistance = R (one side), the other path resistance = 3R (three sides in series), then combine them in parallel: R_eq = (R×3R)/(R+3R).", "formula_used": "R_eq = (R×3R)/(R+3R)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute R = 4 Ω: direct path = 4 Ω, other path = 12 Ω. R_eq = (4×12)/(4+12).", "formula_used": "R_eq = (R×3R)/(R+3R)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute R_eq = 48/16 = 3 Ω.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["R_eq = (R×3R)/(R+3R)"],
+    "distractor_analysis": {
+      "4 Ω": {"misconception": "considered only the direct side connecting the two corners, ignoring the alternate three-side path", "gap_step": 1, "concept": "concept identification"},
+      "12 Ω": {"misconception": "considered only the three-side path, ignoring the direct connecting side", "gap_step": 1, "concept": "concept identification"},
+      "16 Ω": {"misconception": "added the two paths' resistances together instead of combining them as parallel paths", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_011",
+    "text": "At a circuit junction, a current of 12 A flows in, and it splits into two equal outgoing currents. Find the magnitude of each outgoing current.",
+    "options": ["12 A", "24 A", "3 A", "6 A"],
+    "correct_answer": "6 A",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Kirchhoff's Laws",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The incoming current splits equally between the two outgoing branches, with the total incoming current equal to the total outgoing current.", "formula_used": null, "concept_tested": "identifying Kirchhoff's current law with equal splitting"},
+      {"step_order": 2, "step_text": "Select each outgoing current = I_in/2.", "formula_used": "I_each = I_in/2", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute I_in = 12 A: I_each = 12/2.", "formula_used": "I_each = I_in/2", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I_each = 6 A.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I_each = I_in/2"],
+    "distractor_analysis": {
+      "12 A": {"misconception": "forgot that the current splits, reporting the full incoming current for each branch", "gap_step": 1, "concept": "concept identification"},
+      "24 A": {"misconception": "doubled the incoming current instead of halving it", "gap_step": 3, "concept": "substitution"},
+      "3 A": {"misconception": "divided by 4 instead of 2 by mistake", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_012",
+    "text": "A 12 V battery with internal resistance 2 Ω is connected to a single external resistor of 4 Ω. Find the power delivered to the external resistor.",
+    "options": ["16 W", "36 W", "8 W", "24 W"],
+    "correct_answer": "16 W",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Kirchhoff's Laws",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The circuit current is set by the total resistance, including both the internal resistance and the external resistor.", "formula_used": null, "concept_tested": "identifying the full circuit including internal resistance"},
+      {"step_order": 2, "step_text": "Select I = EMF/(R+r), then power in the external resistor P = I²R.", "formula_used": "I = EMF/(R+r); P = I²R", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute EMF = 12 V, r = 2 Ω, R = 4 Ω: I = 12/6 = 2 A. Then P = 2²×4.", "formula_used": "I = EMF/(R+r); P = I²R", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute P = 4×4 = 16 W.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I = EMF/(R+r)", "P = I²R"],
+    "distractor_analysis": {
+      "36 W": {"misconception": "forgot to include the internal resistance in the total resistance, using I=EMF/R instead of EMF/(R+r)", "gap_step": 2, "concept": "formula selection"},
+      "8 W": {"misconception": "forgot to square the current, using P=IR instead of I²R", "gap_step": 2, "concept": "formula selection"},
+      "24 W": {"misconception": "computed the total power delivered by the battery (EMF×I) instead of the power dissipated in just the external resistor", "gap_step": 2, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_013",
+    "text": "A charge of 4 C moves with a velocity of 3 m/s parallel to a magnetic field of 2 T. Find the magnetic force on the charge.",
+    "options": ["24 N", "12 N", "0 N", "6 N"],
+    "correct_answer": "0 N",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Magnetic Force",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The magnetic force on a moving charge depends on the angle between its velocity and the magnetic field; when they are parallel, this angle is zero.", "formula_used": null, "concept_tested": "identifying the angle-dependence of magnetic force"},
+      {"step_order": 2, "step_text": "Select F = qvB sinθ.", "formula_used": "F = qvB sinθ", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute q = 4 C, v = 3 m/s, B = 2 T, θ = 0° (parallel), so sinθ = 0: F = 4×3×2×0.", "formula_used": "F = qvB sinθ", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute F = 0 N.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["F = qvB sinθ"],
+    "distractor_analysis": {
+      "24 N": {"misconception": "forgot that the velocity is parallel to the field (sinθ=0), and simply computed qvB directly", "gap_step": 1, "concept": "concept identification"},
+      "12 N": {"misconception": "computed only q×v, forgetting both B and the angle dependence", "gap_step": 2, "concept": "formula selection"},
+      "6 N": {"misconception": "computed only v×B, forgetting both q and the angle dependence", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_014",
+    "text": "A current-carrying loop of area 0.02 m² carries a current of 5 A and is placed in a magnetic field of 0.4 T. Find the maximum torque experienced by the loop.",
+    "options": ["0.008 N·m", "0.4 N·m", "0.04 N·m", "0.004 N·m"],
+    "correct_answer": "0.04 N·m",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Magnetic Force",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A current loop in a magnetic field has a magnetic moment, and the torque on it is maximum when the loop's plane is parallel to the field.", "formula_used": null, "concept_tested": "identifying the maximum torque condition for a current loop"},
+      {"step_order": 2, "step_text": "Select magnetic moment m = IA, then τ_max = mB.", "formula_used": "m = IA; τ_max = mB", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute I = 5 A, A = 0.02 m²: m = 5×0.02 = 0.1 A·m². With B = 0.4 T: τ_max = 0.1×0.4.", "formula_used": "m = IA; τ_max = mB", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute τ_max = 0.04 N·m.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["m = IA", "τ_max = mB"],
+    "distractor_analysis": {
+      "0.008 N·m": {"misconception": "forgot to include the current I in the magnetic moment formula, using τ=AB instead of IAB", "gap_step": 2, "concept": "formula selection"},
+      "0.4 N·m": {"misconception": "misplaced a decimal in the area, using 0.2 m² instead of the given 0.02 m²", "gap_step": 3, "concept": "substitution"},
+      "0.004 N·m": {"misconception": "misplaced a decimal the other way, using 0.002 m² instead of 0.02 m²", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_015",
+    "text": "A straight wire carries a current of 8 A. Taking μ₀/2π = 2×10⁻⁷ T·m/A, find the magnetic field at a point 0.04 m from the wire.",
+    "options": ["4 × 10⁻⁵ T", "4 × 10⁻⁶ T", "1.6 × 10⁻⁶ T", "8 × 10⁻⁵ T"],
+    "correct_answer": "4 × 10⁻⁵ T",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Biot-Savart & Ampere's Law",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A long straight current-carrying wire produces a magnetic field at a perpendicular distance from it.", "formula_used": null, "concept_tested": "identifying the field due to a long straight wire"},
+      {"step_order": 2, "step_text": "Select B = (μ₀/2π)×(I/r).", "formula_used": "B = (μ₀/2π)(I/r)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute μ₀/2π = 2×10⁻⁷, I = 8 A, r = 0.04 m: B = 2×10⁻⁷×8/0.04.", "formula_used": "B = (μ₀/2π)(I/r)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute B = 2×10⁻⁷×200 = 4×10⁻⁵ T.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["B = (μ₀/2π)(I/r)"],
+    "distractor_analysis": {
+      "4 × 10⁻⁶ T": {"misconception": "misread the distance as 0.4 m instead of the given 0.04 m", "gap_step": 3, "concept": "substitution"},
+      "1.6 × 10⁻⁶ T": {"misconception": "forgot to divide by r entirely, reporting μ₀I/2π directly", "gap_step": 2, "concept": "formula selection"},
+      "8 × 10⁻⁵ T": {"misconception": "arithmetic slip, doubling the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_016",
+    "text": "A long straight solenoid of length 0.5 m has 1000 turns and carries a current of 2 A. Taking μ₀=4π×10⁻⁷ T·m/A, find the magnetic flux through a single turn if the solenoid's cross-sectional area is 0.001 m².",
+    "options": ["1.6π × 10⁻³ Wb", "8π × 10⁻⁷ Wb", "3.2π × 10⁻⁶ Wb", "1.6π × 10⁻⁶ Wb"],
+    "correct_answer": "1.6π × 10⁻⁶ Wb",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Biot-Savart & Ampere's Law",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The field inside the solenoid depends on the turns per unit length, and the flux through one turn is this field times the cross-sectional area.", "formula_used": null, "concept_tested": "identifying the solenoid field and single-turn flux"},
+      {"step_order": 2, "step_text": "Select n = N/L, B = μ₀nI, and flux per turn Φ = B×A.", "formula_used": "n = N/L; B = μ₀nI; Φ = BA", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute N = 1000, L = 0.5 m: n = 2000 turns/m. With μ₀ = 4π×10⁻⁷, I = 2 A: B = 4π×10⁻⁷×2000×2 = 1.6π×10⁻³ T. With A = 0.001 m²: Φ = 1.6π×10⁻³×0.001.", "formula_used": "n = N/L; B = μ₀nI; Φ = BA", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute Φ = 1.6π×10⁻⁶ Wb.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["n = N/L", "B = μ₀nI", "Φ = BA"],
+    "distractor_analysis": {
+      "1.6π × 10⁻³ Wb": {"misconception": "forgot to multiply by the cross-sectional area A, reporting the magnetic field B directly as the flux", "gap_step": 3, "concept": "substitution"},
+      "8π × 10⁻⁷ Wb": {"misconception": "forgot to divide the number of turns by the solenoid's length when computing turns per unit length n, using N directly instead of N/L", "gap_step": 3, "concept": "substitution"},
+      "3.2π × 10⁻⁶ Wb": {"misconception": "arithmetic slip, doubling the correct flux", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_017",
+    "text": "The magnetic flux through a coil changes from 2 Wb to 6 Wb in 2 seconds. Find the magnitude of the induced EMF.",
+    "options": ["4 V", "8 V", "2 V", "1 V"],
+    "correct_answer": "2 V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electromagnetic Induction",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A changing magnetic flux through a coil induces an EMF proportional to the rate of change of flux.", "formula_used": null, "concept_tested": "identifying Faraday's law of induction"},
+      {"step_order": 2, "step_text": "Select EMF = ΔΦ/Δt.", "formula_used": "EMF = ΔΦ/Δt", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute ΔΦ = 6−2 = 4 Wb, Δt = 2 s: EMF = 4/2.", "formula_used": "EMF = ΔΦ/Δt", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute EMF = 2 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["EMF = ΔΦ/Δt"],
+    "distractor_analysis": {
+      "4 V": {"misconception": "forgot to divide the change in flux by the time interval, reporting ΔΦ directly", "gap_step": 3, "concept": "substitution"},
+      "8 V": {"misconception": "added the two flux values instead of subtracting them", "gap_step": 3, "concept": "substitution"},
+      "1 V": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_018",
+    "text": "A coil of 200 turns has a magnetic flux of 0.01 Wb linking each turn. If this flux is reduced to zero uniformly in 0.5 s, find the magnitude of the average induced EMF.",
+    "options": ["0.02 V", "2 V", "1 V", "4 V"],
+    "correct_answer": "4 V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electromagnetic Induction",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For a multi-turn coil, the induced EMF depends on the number of turns and the rate of change of flux per turn.", "formula_used": null, "concept_tested": "identifying Faraday's law for a multi-turn coil"},
+      {"step_order": 2, "step_text": "Select EMF = N×(ΔΦ/Δt).", "formula_used": "EMF = N(ΔΦ/Δt)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute N = 200, ΔΦ = 0.01 Wb, Δt = 0.5 s: EMF = 200×(0.01/0.5).", "formula_used": "EMF = N(ΔΦ/Δt)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute EMF = 200×0.02 = 4 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["EMF = N(ΔΦ/Δt)"],
+    "distractor_analysis": {
+      "0.02 V": {"misconception": "forgot to multiply by the number of turns N, using just ΔΦ/Δt", "gap_step": 2, "concept": "formula selection"},
+      "2 V": {"misconception": "forgot to divide by the time interval, using N×ΔΦ directly", "gap_step": 3, "concept": "substitution"},
+      "1 V": {"misconception": "mistakenly halved the number of turns, using 100 instead of the given 200", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_019",
+    "text": "A circular coil of 50 turns and radius 0.05 m rotates with an angular speed of 100 rad/s in a uniform magnetic field of 0.2 T, with the rotation axis perpendicular to the field. Find the peak EMF induced in the coil.",
+    "options": ["50π V", "2.5π V", "0.05π V", "1.25π V"],
+    "correct_answer": "2.5π V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electromagnetic Induction",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A coil rotating in a magnetic field generates a sinusoidal EMF whose peak value depends on the number of turns, field, area, and angular speed.", "formula_used": null, "concept_tested": "identifying the rotating-coil EMF generator scenario"},
+      {"step_order": 2, "step_text": "Select EMF_peak = NBAω, with A = πr².", "formula_used": "EMF_peak = NBAω", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute N = 50, B = 0.2 T, r = 0.05 m so A = 0.0025π m², ω = 100 rad/s: EMF_peak = 50×0.2×0.0025π×100.", "formula_used": "EMF_peak = NBAω", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute EMF_peak = 2.5π V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["EMF_peak = NBAω"],
+    "distractor_analysis": {
+      "50π V": {"misconception": "forgot to square the radius, using A=πr instead of πr², making the area 20 times too large", "gap_step": 2, "concept": "formula selection"},
+      "0.05π V": {"misconception": "forgot to include the number of turns N in the formula", "gap_step": 2, "concept": "formula selection"},
+      "1.25π V": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_020",
+    "text": "An AC voltage is given by V = 100sin(200t) V. Find its peak value.",
+    "options": ["100 V", "200 V", "70.7 V", "50 V"],
+    "correct_answer": "100 V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Alternating Current",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A sinusoidal AC voltage of the form V = V0 sin(ωt) has its peak value as the coefficient multiplying the sine function.", "formula_used": null, "concept_tested": "identifying the peak voltage from the equation"},
+      {"step_order": 2, "step_text": "Select V_peak = V0, the coefficient of the sine term.", "formula_used": "V = V0 sin(ωt)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute the given equation V = 100 sin(200t): identify V0 = 100.", "formula_used": "V = V0 sin(ωt)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute V_peak = 100 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["V = V0 sin(ωt)"],
+    "distractor_analysis": {
+      "200 V": {"misconception": "confused the angular frequency coefficient (200) with the peak voltage", "gap_step": 3, "concept": "concept identification"},
+      "70.7 V": {"misconception": "computed the RMS value instead of the peak value", "gap_step": 1, "concept": "concept identification"},
+      "50 V": {"misconception": "arithmetic slip, halving the peak value", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_021",
+    "text": "An AC circuit has a resistance of 6 Ω and a capacitive reactance of 8 Ω connected in series. If the RMS voltage of the source is 100 V, find the RMS current in the circuit.",
+    "options": ["100 A", "7.14 A", "1 A", "10 A"],
+    "correct_answer": "10 A",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Alternating Current",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In a series R-C AC circuit, the resistance and capacitive reactance combine as perpendicular phasors to give the impedance.", "formula_used": null, "concept_tested": "identifying the phasor combination of R and X_C"},
+      {"step_order": 2, "step_text": "Select Z = √(R²+X_C²), then I = V/Z.", "formula_used": "Z = √(R²+X_C²); I = V/Z", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute R = 6 Ω, X_C = 8 Ω: Z = √(36+64) = √100 = 10 Ω. With V = 100 V: I = 100/10.", "formula_used": "Z = √(R²+X_C²); I = V/Z", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I = 10 A.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["Z = √(R²+X_C²)", "I = V/Z"],
+    "distractor_analysis": {
+      "100 A": {"misconception": "forgot to divide the voltage by the impedance, reporting the voltage value directly as the current", "gap_step": 4, "concept": "substitution"},
+      "7.14 A": {"misconception": "added R and X_C directly instead of combining them via the Pythagorean formula, resulting in too large an impedance", "gap_step": 2, "concept": "formula selection"},
+      "1 A": {"misconception": "forgot to take the square root when finding the impedance, using R²+X_C²=100 directly as Z instead of √100", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_022",
+    "text": "A series LCR circuit has R=30 Ω, inductive reactance X_L=70 Ω, and capacitive reactance X_C=30 Ω, connected to an AC source of RMS voltage 150 V. Find the RMS current in the circuit.",
+    "options": ["5 A", "0.06 A", "3 A", "1.5 A"],
+    "correct_answer": "3 A",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Alternating Current",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In a series LCR circuit, the inductive and capacitive reactances oppose each other, so the net reactance is their difference, which then combines with R to give the impedance.", "formula_used": null, "concept_tested": "identifying the net reactance in an LCR circuit"},
+      {"step_order": 2, "step_text": "Select net reactance X = X_L−X_C, then Z = √(R²+X²), and I = V/Z.", "formula_used": "X = X_L−X_C; Z = √(R²+X²); I = V/Z", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute X_L = 70 Ω, X_C = 30 Ω: X = 40 Ω. With R = 30 Ω: Z = √(900+1600) = √2500 = 50 Ω. With V = 150 V: I = 150/50.", "formula_used": "X = X_L−X_C; Z = √(R²+X²); I = V/Z", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I = 3 A.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["X = X_L−X_C", "Z = √(R²+X²)", "I = V/Z"],
+    "distractor_analysis": {
+      "5 A": {"misconception": "forgot to include the net reactance entirely, using Z=R directly instead of √(R²+X²)", "gap_step": 2, "concept": "concept identification"},
+      "0.06 A": {"misconception": "forgot to take the square root when finding the impedance, using R²+X² directly as Z", "gap_step": 3, "concept": "substitution"},
+      "1.5 A": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_023",
+    "text": "A transformer has a turns ratio (primary:secondary) of 1:10. If the primary voltage is 15 V, find the secondary voltage.",
+    "options": ["1.5 V", "150 V", "25 V", "1500 V"],
+    "correct_answer": "150 V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Transformers",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In an ideal transformer, the secondary voltage relates to the primary voltage through the turns ratio.", "formula_used": null, "concept_tested": "identifying the transformer turns-voltage ratio"},
+      {"step_order": 2, "step_text": "Select V_s = V_p×(N_s/N_p).", "formula_used": "V_s = V_p(N_s/N_p)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute V_p = 15 V, N_s/N_p = 10: V_s = 15×10.", "formula_used": "V_s = V_p(N_s/N_p)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute V_s = 150 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["V_s = V_p(N_s/N_p)"],
+    "distractor_analysis": {
+      "1.5 V": {"misconception": "inverted the turns ratio, dividing instead of multiplying by 10", "gap_step": 2, "concept": "formula selection"},
+      "25 V": {"misconception": "added the voltage and the turns ratio number instead of multiplying them", "gap_step": 3, "concept": "substitution"},
+      "1500 V": {"misconception": "misplaced a decimal, multiplying by an extra factor of 10", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_024",
+    "text": "An ideal transformer has a primary coil of 400 turns and is connected to a 220 V source. If the secondary voltage is 440 V, find the number of turns in the secondary coil.",
+    "options": ["800 turns", "200 turns", "1600 turns", "440 turns"],
+    "correct_answer": "800 turns",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Transformers",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In an ideal transformer, the number of turns is proportional to the voltage on each side.", "formula_used": null, "concept_tested": "identifying the transformer turns-voltage ratio"},
+      {"step_order": 2, "step_text": "Select N_s = N_p×(V_s/V_p).", "formula_used": "N_s = N_p(V_s/V_p)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute N_p = 400, V_s = 440 V, V_p = 220 V: N_s = 400×(440/220).", "formula_used": "N_s = N_p(V_s/V_p)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute N_s = 400×2 = 800 turns.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["N_s = N_p(V_s/V_p)"],
+    "distractor_analysis": {
+      "200 turns": {"misconception": "inverted the ratio, using N_p×(V_p/V_s) instead of N_p×(V_s/V_p)", "gap_step": 2, "concept": "formula selection"},
+      "1600 turns": {"misconception": "squared the voltage ratio by mistake instead of using it directly", "gap_step": 3, "concept": "substitution"},
+      "440 turns": {"misconception": "conceptual mix-up, directly reporting the secondary voltage value as if it were the number of turns", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_em_b03_025",
+    "text": "An ideal transformer steps down 11000 V to 220 V for a power distribution line delivering 44 kW of power to the secondary side. Find the primary current.",
+    "options": ["200 A", "0.25 A", "0.004 A", "4 A"],
+    "correct_answer": "4 A",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Transformers",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For an ideal transformer, the power delivered is the same on both the primary and secondary sides.", "formula_used": null, "concept_tested": "identifying power conservation in an ideal transformer"},
+      {"step_order": 2, "step_text": "Select P = V_p×I_p, rearranged to I_p = P/V_p.", "formula_used": "P = V_p I_p", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute P = 44 kW = 44000 W, V_p = 11000 V: I_p = 44000/11000.", "formula_used": "P = V_p I_p", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I_p = 4 A.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["P = V_p I_p"],
+    "distractor_analysis": {
+      "200 A": {"misconception": "computed the secondary current instead of the primary current", "gap_step": 3, "concept": "concept identification"},
+      "0.25 A": {"misconception": "inverted the power formula, computing V_p/P instead of P/V_p", "gap_step": 2, "concept": "formula selection"},
+      "0.004 A": {"misconception": "forgot to convert kW to W, using P=44 directly instead of 44000", "gap_step": 3, "concept": "substitution"}
+    }
+  }
+]

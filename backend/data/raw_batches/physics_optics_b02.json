@@ -1,0 +1,602 @@
+[
+  {
+    "question_id": "physics_optics_b02_001",
+    "text": "Two plane mirrors are inclined at an angle of 90° to each other. Find the number of images formed of an object placed between them.",
+    "options": ["4", "3", "2", "8"],
+    "correct_answer": "3",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Reflection & Plane Mirrors",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For two inclined plane mirrors, the number of images formed depends on the angle between them.", "formula_used": null, "concept_tested": "identifying the multiple-image formula for inclined mirrors"},
+      {"step_order": 2, "step_text": "Select number of images = (360°/θ) − 1.", "formula_used": "n = (360°/θ) − 1", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute θ = 90°: n = (360/90) − 1 = 4 − 1.", "formula_used": "n = (360°/θ) − 1", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute n = 3.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["n = (360°/θ) − 1"],
+    "distractor_analysis": {
+      "4": {"misconception": "forgot to subtract 1 from 360°/θ", "gap_step": 3, "concept": "substitution"},
+      "2": {"misconception": "mistakenly used 120° instead of the given 90° in the formula", "gap_step": 3, "concept": "substitution"},
+      "8": {"misconception": "arithmetic slip, doubling the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_002",
+    "text": "A plane mirror rotates by an angle of 15° while a fixed incident ray remains unchanged. Find the angle by which the reflected ray rotates.",
+    "options": ["15°", "7.5°", "30°", "45°"],
+    "correct_answer": "30°",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Reflection & Plane Mirrors",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "When a mirror rotates while the incident ray stays fixed, the reflected ray rotates by twice the mirror's rotation angle.", "formula_used": null, "concept_tested": "identifying the mirror-rotation reflected-ray relation"},
+      {"step_order": 2, "step_text": "Select reflected ray rotation = 2×(mirror rotation angle).", "formula_used": "θ_reflected = 2θ_mirror", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute θ_mirror = 15°: θ_reflected = 2×15.", "formula_used": "θ_reflected = 2θ_mirror", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute θ_reflected = 30°.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["θ_reflected = 2θ_mirror"],
+    "distractor_analysis": {
+      "15°": {"misconception": "forgot the factor of 2, assuming the reflected ray rotates by the same angle as the mirror", "gap_step": 2, "concept": "formula selection"},
+      "7.5°": {"misconception": "halved the mirror's rotation instead of doubling it", "gap_step": 2, "concept": "formula selection"},
+      "45°": {"misconception": "mistakenly tripled the mirror's rotation angle instead of doubling it", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_003",
+    "text": "An object moves with a velocity of 3 m/s at an angle of 37° to the plane of a stationary mirror (sin37°=0.6, cos37°=0.8). Find the velocity of the image relative to the object, along the direction perpendicular to the mirror.",
+    "options": ["1.8 m/s", "2.4 m/s", "6 m/s", "3.6 m/s"],
+    "correct_answer": "3.6 m/s",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Reflection & Plane Mirrors",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Only the velocity component perpendicular to the mirror is relevant for the object-image separation along the normal, and both object and image approach the mirror at this same rate, closing the gap at twice that rate.", "formula_used": null, "concept_tested": "identifying the perpendicular-component approach for plane mirror image motion"},
+      {"step_order": 2, "step_text": "Select perpendicular component v_perp = v sinθ, then relative velocity along the normal = 2×v_perp.", "formula_used": "v_perp = v sinθ; v_relative = 2v_perp", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute v = 3 m/s, sinθ = 0.6: v_perp = 3×0.6 = 1.8 m/s. Then v_relative = 2×1.8.", "formula_used": "v_perp = v sinθ; v_relative = 2v_perp", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute v_relative = 3.6 m/s.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["v_perp = v sinθ", "v_relative = 2v_perp"],
+    "distractor_analysis": {
+      "1.8 m/s": {"misconception": "forgot that the image also moves toward the mirror at the same rate, only counting the object's own perpendicular velocity component", "gap_step": 2, "concept": "concept identification"},
+      "2.4 m/s": {"misconception": "used the parallel component (v cosθ) instead of the perpendicular component (v sinθ) for the relative velocity along the normal", "gap_step": 2, "concept": "formula selection"},
+      "6 m/s": {"misconception": "forgot to resolve the velocity into components, doubling the full velocity instead of just the perpendicular component", "gap_step": 2, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_004",
+    "text": "A convex mirror has a focal length of 15 cm. Find its radius of curvature.",
+    "options": ["15 cm", "7.5 cm", "30 cm", "60 cm"],
+    "correct_answer": "30 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Spherical Mirrors",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The radius of curvature of a spherical mirror is related to its focal length.", "formula_used": null, "concept_tested": "identifying the radius-focal length relation"},
+      {"step_order": 2, "step_text": "Select R = 2f.", "formula_used": "R = 2f", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute f = 15 cm: R = 2×15.", "formula_used": "R = 2f", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute R = 30 cm.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["R = 2f"],
+    "distractor_analysis": {
+      "15 cm": {"misconception": "forgot to multiply by 2, reporting the focal length directly as the radius", "gap_step": 2, "concept": "formula selection"},
+      "7.5 cm": {"misconception": "divided by 2 instead of multiplying", "gap_step": 3, "concept": "substitution"},
+      "60 cm": {"misconception": "multiplied by 4 instead of 2", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_005",
+    "text": "An object is placed 10 cm in front of a convex mirror of focal length 15 cm. Find the image distance.",
+    "options": ["6 cm", "25 cm", "9 cm", "30 cm"],
+    "correct_answer": "6 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Spherical Mirrors",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A convex mirror always forms a virtual image behind the mirror for a real object, following the mirror formula.", "formula_used": null, "concept_tested": "identifying the convex mirror image formation"},
+      {"step_order": 2, "step_text": "Select 1/v = 1/f − 1/u using Cartesian sign convention, with u negative (real object) and f positive (convex mirror).", "formula_used": "1/v = 1/f − 1/u", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute f = +15 cm, u = −10 cm: 1/v = 1/15 − 1/(−10) = 2/30 + 3/30 = 5/30.", "formula_used": "1/v = 1/f − 1/u", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute v = 30/5 = 6 cm (virtual image, behind the mirror).", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["1/v = 1/f − 1/u"],
+    "distractor_analysis": {
+      "25 cm": {"misconception": "added the object distance and focal length directly instead of properly combining their reciprocals", "gap_step": 2, "concept": "formula selection"},
+      "9 cm": {"misconception": "arithmetic slip while combining the fractions 1/15+1/10, incorrectly arriving at 1/9 instead of 1/6", "gap_step": 3, "concept": "arithmetic"},
+      "30 cm": {"misconception": "used the object distance with the wrong sign in the mirror formula, leading to an incorrect magnitude", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_006",
+    "text": "A ray of light passes from air (n=1) into a medium of refractive index 1.5 at an angle of incidence of 30°. Taking sin30°=0.5, find sin(angle of refraction).",
+    "options": ["1/3", "0.75", "1.5", "3"],
+    "correct_answer": "1/3",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Refraction",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Light bending at the air-medium interface follows Snell's law.", "formula_used": null, "concept_tested": "identifying Snell's law"},
+      {"step_order": 2, "step_text": "Select n1 sinθ1 = n2 sinθ2, rearranged to sinθ2 = n1 sinθ1/n2.", "formula_used": "n1 sinθ1 = n2 sinθ2", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute n1 = 1, sinθ1 = 0.5, n2 = 1.5: sinθ2 = 1×0.5/1.5.", "formula_used": "n1 sinθ1 = n2 sinθ2", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute sinθ2 = 0.5/1.5 = 1/3.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["n1 sinθ1 = n2 sinθ2"],
+    "distractor_analysis": {
+      "0.75": {"misconception": "multiplied n2 by sinθ1 instead of dividing", "gap_step": 3, "concept": "substitution"},
+      "1.5": {"misconception": "reported the refractive index n2 directly instead of solving for sinθ2", "gap_step": 1, "concept": "concept identification"},
+      "3": {"misconception": "inverted the fraction, computing n2/sinθ1 instead of n1 sinθ1/n2", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_007",
+    "text": "A ray of light travels from medium A (n=1.4) to medium B (n=2.1). If the angle of incidence in medium A is 45°, find sin(angle of refraction) in medium B.",
+    "options": ["3√2/4", "√2/3", "2/3", "1/√2"],
+    "correct_answer": "√2/3",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Refraction",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Light bending between two media follows Snell's law relating the refractive indices and the sines of the angles.", "formula_used": null, "concept_tested": "identifying Snell's law between two media"},
+      {"step_order": 2, "step_text": "Select n_A sinθ_A = n_B sinθ_B, rearranged to sinθ_B = (n_A/n_B)×sinθ_A.", "formula_used": "n_A sinθ_A = n_B sinθ_B", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute n_A = 1.4, n_B = 2.1, sinθ_A = 1/√2: sinθ_B = (1.4/2.1)×(1/√2) = (2/3)×(1/√2).", "formula_used": "n_A sinθ_A = n_B sinθ_B", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute sinθ_B = 2/(3√2) = √2/3.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["n_A sinθ_A = n_B sinθ_B"],
+    "distractor_analysis": {
+      "3√2/4": {"misconception": "inverted the refractive index ratio, using n_B/n_A instead of n_A/n_B", "gap_step": 2, "concept": "formula selection"},
+      "2/3": {"misconception": "reported the refractive index ratio n_A/n_B directly, forgetting to multiply by sin45°", "gap_step": 3, "concept": "substitution"},
+      "1/√2": {"misconception": "assumed the angle of refraction equals the angle of incidence, ignoring Snell's law entirely", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_008",
+    "text": "A small object is placed at the center of a glass sphere (refractive index 1.5) of radius 10 cm. Find the apparent position of the object as seen by an observer outside the sphere.",
+    "options": ["6.67 cm", "15 cm", "10 cm (no shift)", "0 cm"],
+    "correct_answer": "10 cm (no shift)",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Refraction",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Since the object is at the center of the sphere, every ray from it strikes the spherical surface exactly along the normal direction, so no refraction (bending) occurs at all.", "formula_used": null, "concept_tested": "identifying that rays through the center of a sphere are undeviated"},
+      {"step_order": 2, "step_text": "Select: with no bending of any ray, the image appears exactly at the object's true position.", "formula_used": null, "concept_tested": "choosing the correct principle (no refraction for radial rays)"},
+      {"step_order": 3, "step_text": "Substitute the given radius (10 cm) as the unchanged apparent position from the surface.", "formula_used": null, "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute: the image appears at 10 cm from the surface, with no shift.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["no refraction for rays along the normal"],
+    "distractor_analysis": {
+      "6.67 cm": {"misconception": "mistakenly applied the flat-surface apparent-depth formula (real depth/n), not realizing that rays from the center hit the spherical surface along the normal and are undeviated", "gap_step": 1, "concept": "concept identification"},
+      "15 cm": {"misconception": "mistakenly multiplied the real depth by n instead of recognizing there's no refraction at all for rays through the center", "gap_step": 1, "concept": "concept identification"},
+      "0 cm": {"misconception": "incorrectly assumed the curvature makes the image appear exactly at the surface, ignoring that central rays pass through undeviated", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_009",
+    "text": "The critical angle for a certain medium-air interface is 45°. Taking sin45°=1/√2, find the refractive index of the medium.",
+    "options": ["1/√2", "√2", "2", "0.5"],
+    "correct_answer": "√2",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Total Internal Reflection",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The critical angle relates to the refractive index of the denser medium relative to air.", "formula_used": null, "concept_tested": "identifying the critical angle-refractive index relation"},
+      {"step_order": 2, "step_text": "Select sinC = 1/n, rearranged to n = 1/sinC.", "formula_used": "sinC = 1/n", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute sinC = 1/√2: n = 1/(1/√2).", "formula_used": "sinC = 1/n", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute n = √2.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["sinC = 1/n"],
+    "distractor_analysis": {
+      "1/√2": {"misconception": "reported sinC directly instead of taking its reciprocal to find n", "gap_step": 2, "concept": "formula selection"},
+      "2": {"misconception": "squared the correct answer by mistake, perhaps confusing with n² relations", "gap_step": 4, "concept": "arithmetic"},
+      "0.5": {"misconception": "reported sin²C=0.5 directly instead of computing n=1/sinC", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_010",
+    "text": "Light originates in a denser medium of refractive index 1.5 and reaches the interface with a rarer medium of refractive index 1.2. Taking sin53°=0.8, find the critical angle for total internal reflection.",
+    "options": ["37°", "45°", "60°", "53°"],
+    "correct_answer": "53°",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Total Internal Reflection",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The critical angle is measured in the denser medium, and relates to the ratio of the two refractive indices.", "formula_used": null, "concept_tested": "identifying the critical angle formula for two general media"},
+      {"step_order": 2, "step_text": "Select sinC = n2/n1, where n1 is the denser medium and n2 is the rarer medium.", "formula_used": "sinC = n2/n1", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute n1 = 1.5, n2 = 1.2: sinC = 1.2/1.5 = 0.8.", "formula_used": "sinC = n2/n1", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute C = 53° (since sin53°=0.8).", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["sinC = n2/n1"],
+    "distractor_analysis": {
+      "37°": {"misconception": "swapped sine and cosine, giving the complementary standard angle", "gap_step": 4, "concept": "concept identification"},
+      "45°": {"misconception": "used the special value sinC=1/√2≈0.707 instead of the correctly computed 0.8", "gap_step": 3, "concept": "substitution"},
+      "60°": {"misconception": "inverted the ratio to n1/n2=1.25, which is invalid for a sine value, then mistakenly rounded to the nearest standard angle", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_011",
+    "text": "A thin prism of angle 4° made of glass with refractive index 1.5 is placed in the path of a light beam. Find the angle of deviation produced.",
+    "options": ["2°", "6°", "4°", "1°"],
+    "correct_answer": "2°",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Prism",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For a thin prism, the deviation depends on the refractive index and the prism angle in a simplified linear relation.", "formula_used": null, "concept_tested": "identifying the thin prism deviation formula"},
+      {"step_order": 2, "step_text": "Select δ = (n−1)A.", "formula_used": "δ = (n−1)A", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute n = 1.5, A = 4°: δ = (1.5−1)×4.", "formula_used": "δ = (n−1)A", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute δ = 0.5×4 = 2°.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["δ = (n−1)A"],
+    "distractor_analysis": {
+      "6°": {"misconception": "forgot to subtract 1 from n before multiplying by A, using nA instead of (n−1)A", "gap_step": 2, "concept": "formula selection"},
+      "4°": {"misconception": "reported the prism angle directly, forgetting to apply the thin-prism deviation formula", "gap_step": 1, "concept": "concept identification"},
+      "1°": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_012",
+    "text": "White light is incident on a thin prism of angle 5°. The refractive indices for red and violet light are 1.51 and 1.53 respectively. Find the angular dispersion between the red and violet rays produced by the prism.",
+    "options": ["0.02°", "0.1°", "2.65°", "0.2°"],
+    "correct_answer": "0.1°",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Prism",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Angular dispersion is the difference in deviation between the two extreme colors, arising from their different refractive indices.", "formula_used": null, "concept_tested": "identifying angular dispersion for a thin prism"},
+      {"step_order": 2, "step_text": "Select angular dispersion = (n_violet − n_red)×A.", "formula_used": "dispersion = (n_v − n_r)A", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute n_v = 1.53, n_r = 1.51, A = 5°: dispersion = (1.53−1.51)×5.", "formula_used": "dispersion = (n_v − n_r)A", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute dispersion = 0.02×5 = 0.1°.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["dispersion = (n_v − n_r)A"],
+    "distractor_analysis": {
+      "0.02°": {"misconception": "forgot to multiply by the prism angle A, reporting just the difference in refractive indices", "gap_step": 2, "concept": "formula selection"},
+      "2.65°": {"misconception": "computed the violet ray's total deviation instead of the angular dispersion between red and violet", "gap_step": 1, "concept": "concept identification"},
+      "0.2°": {"misconception": "arithmetic slip, doubling the correct dispersion", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_013",
+    "text": "A concave lens has a focal length of magnitude 25 cm. Find its power.",
+    "options": ["4 D", "0.04 D", "-0.04 D", "-4 D"],
+    "correct_answer": "-4 D",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Lenses",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A concave (diverging) lens has a negative focal length by sign convention, and its power carries the same sign.", "formula_used": null, "concept_tested": "identifying the sign convention for a diverging lens"},
+      {"step_order": 2, "step_text": "Select P = 1/f, with f in meters and negative for a concave lens.", "formula_used": "P = 1/f", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute f = −25 cm = −0.25 m: P = 1/(−0.25).", "formula_used": "P = 1/f", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute P = −4 D.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["P = 1/f"],
+    "distractor_analysis": {
+      "4 D": {"misconception": "forgot the negative sign convention for a diverging (concave) lens", "gap_step": 2, "concept": "concept identification"},
+      "0.04 D": {"misconception": "forgot to convert the focal length from cm to m before taking the reciprocal, and also dropped the sign", "gap_step": 3, "concept": "substitution"},
+      "-0.04 D": {"misconception": "kept the correct negative sign but forgot to convert cm to m before taking the reciprocal", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_014",
+    "text": "A concave lens of focal length 20 cm forms a virtual image of an object placed 30 cm in front of it. Find the image distance.",
+    "options": ["50 cm", "60 cm", "12 cm", "6 cm"],
+    "correct_answer": "12 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Lenses",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A concave lens always forms a virtual, diminished image on the same side as the object, following the lens formula.", "formula_used": null, "concept_tested": "identifying the concave lens image formation"},
+      {"step_order": 2, "step_text": "Select 1/v = 1/f + 1/u using Cartesian sign convention, with u negative (real object) and f negative (concave lens).", "formula_used": "1/v = 1/f + 1/u", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute f = −20 cm, u = −30 cm: 1/v = 1/(−20) + 1/(−30) = −3/60 − 2/60 = −5/60.", "formula_used": "1/v = 1/f + 1/u", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute v = −60/5 = −12 cm, so the image is 12 cm in front of the lens (virtual).", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["1/v = 1/f + 1/u"],
+    "distractor_analysis": {
+      "50 cm": {"misconception": "added the object distance and focal length magnitudes directly instead of combining their reciprocals", "gap_step": 2, "concept": "formula selection"},
+      "60 cm": {"misconception": "arithmetic slip while combining the fractions, forgetting to properly reduce −5/60 to −1/12", "gap_step": 3, "concept": "arithmetic"},
+      "6 cm": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_015",
+    "text": "A convex lens of focal length 10 cm is used to form a real image of an object on a screen. If the object and screen are kept fixed 45 cm apart, and the lens is moved between them, find the two possible distances of the lens from the object at which a sharp image forms on the screen.",
+    "options": ["22.5 cm (midpoint only)", "15 cm and 30 cm", "10 cm and 35 cm", "30 cm and 60 cm"],
+    "correct_answer": "15 cm and 30 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Lenses",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For a fixed object-screen distance greater than 4f, there are generally two lens positions (the displacement method) that produce a sharp image on the screen, symmetric about the midpoint.", "formula_used": null, "concept_tested": "identifying the displacement method for conjugate lens positions"},
+      {"step_order": 2, "step_text": "Select the separation between the two positions x = √(D(D−4f)), then the two object distances are (D−x)/2 and (D+x)/2.", "formula_used": "x = √(D(D−4f))", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute D = 45 cm, f = 10 cm: x = √(45×(45−40)) = √(45×5) = √225 = 15 cm. Then positions = (45−15)/2 and (45+15)/2.", "formula_used": "x = √(D(D−4f))", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute the two object distances as 15 cm and 30 cm.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["x = √(D(D−4f))"],
+    "distractor_analysis": {
+      "22.5 cm (midpoint only)": {"misconception": "assumed the lens must be exactly at the midpoint, not realizing there are generally two distinct positions", "gap_step": 1, "concept": "concept identification"},
+      "10 cm and 35 cm": {"misconception": "incorrectly assumed one position is simply the focal length and the other is the remaining distance, without using the proper displacement formula", "gap_step": 2, "concept": "formula selection"},
+      "30 cm and 60 cm": {"misconception": "forgot to divide by 2 when finding the two object distances, using (D−x) and (D+x) directly instead of (D−x)/2 and (D+x)/2", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_016",
+    "text": "An astronomical telescope has an objective lens of focal length 100 cm and an eyepiece of focal length 5 cm. Find its magnifying power in normal adjustment.",
+    "options": ["20", "0.05", "105", "500"],
+    "correct_answer": "20",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Optical Instruments",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "An astronomical telescope's magnifying power in normal adjustment depends on the ratio of the objective's to eyepiece's focal length.", "formula_used": null, "concept_tested": "identifying the astronomical telescope magnification formula"},
+      {"step_order": 2, "step_text": "Select M = f_o/f_e.", "formula_used": "M = f_o/f_e", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute f_o = 100 cm, f_e = 5 cm: M = 100/5.", "formula_used": "M = f_o/f_e", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute M = 20.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["M = f_o/f_e"],
+    "distractor_analysis": {
+      "0.05": {"misconception": "inverted the ratio, computing f_e/f_o instead of f_o/f_e", "gap_step": 2, "concept": "formula selection"},
+      "105": {"misconception": "added the two focal lengths instead of dividing", "gap_step": 3, "concept": "substitution"},
+      "500": {"misconception": "multiplied the two focal lengths instead of dividing", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_017",
+    "text": "An astronomical telescope in normal adjustment has a magnifying power of 25, and the length of the telescope tube is 104 cm. Find the focal lengths of the objective and eyepiece.",
+    "options": ["f_o = 104 cm, f_e = 0 cm", "f_o = 96 cm, f_e = 8 cm", "f_o = 4 cm, f_e = 100 cm", "f_o = 100 cm, f_e = 4 cm"],
+    "correct_answer": "f_o = 100 cm, f_e = 4 cm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Optical Instruments",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In normal adjustment, the telescope's tube length equals the sum of the objective and eyepiece focal lengths, and the magnification equals their ratio — two equations for two unknowns.", "formula_used": null, "concept_tested": "identifying the two governing relations for the telescope"},
+      {"step_order": 2, "step_text": "Select M = f_o/f_e and L = f_o + f_e, and solve simultaneously.", "formula_used": "M = f_o/f_e; L = f_o+f_e", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute M = 25, L = 104 cm: f_o = 25f_e, so 25f_e + f_e = 104, giving 26f_e = 104.", "formula_used": "M = f_o/f_e; L = f_o+f_e", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute f_e = 4 cm, and f_o = 25×4 = 100 cm.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["M = f_o/f_e", "L = f_o+f_e"],
+    "distractor_analysis": {
+      "f_o = 104 cm, f_e = 0 cm": {"misconception": "incorrectly assigned the entire tube length to the objective, ignoring the eyepiece's contribution to the length", "gap_step": 1, "concept": "concept identification"},
+      "f_o = 96 cm, f_e = 8 cm": {"misconception": "used an incorrect magnification value in the ratio, arriving at the wrong split of the tube length", "gap_step": 3, "concept": "substitution"},
+      "f_o = 4 cm, f_e = 100 cm": {"misconception": "inverted the magnification ratio, swapping which lens has the larger focal length", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_018",
+    "text": "In a YDSE setup, the distance between the slits is 0.5 mm and the screen is 1 m away. If the third bright fringe is observed at a distance of 3 mm from the central maximum, find the wavelength of light used.",
+    "options": ["500 nm", "1500 nm", "167 nm", "5 × 10⁵ nm"],
+    "correct_answer": "500 nm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Interference (YDSE)",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The position of the nth bright fringe in a YDSE pattern relates to the wavelength, slit separation, and screen distance.", "formula_used": null, "concept_tested": "identifying the nth bright fringe position formula"},
+      {"step_order": 2, "step_text": "Select y_n = nλD/d, rearranged to λ = y_n×d/(n×D).", "formula_used": "y_n = nλD/d", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute y_n = 3×10⁻³ m, d = 0.5×10⁻³ m, n = 3, D = 1 m: λ = (3×10⁻³×0.5×10⁻³)/(3×1).", "formula_used": "y_n = nλD/d", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute λ = 5×10⁻⁷ m = 500 nm.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["y_n = nλD/d"],
+    "distractor_analysis": {
+      "1500 nm": {"misconception": "forgot to divide by n=3, using y_n×d/D directly instead of y_n×d/(nD)", "gap_step": 2, "concept": "formula selection"},
+      "167 nm": {"misconception": "divided by n²=9 instead of n=3", "gap_step": 3, "concept": "substitution"},
+      "5 × 10⁵ nm": {"misconception": "forgot to convert the slit separation d from mm to m before substituting", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_019",
+    "text": "In a YDSE experiment, a thin transparent film of thickness 4 μm and refractive index 1.5 is placed in front of one of the slits. Find the number of fringes that shift due to the film, if the wavelength of light used is 500 nm.",
+    "options": ["12 fringes", "4 fringes", "8 fringes", "0.5 fringes"],
+    "correct_answer": "4 fringes",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Interference (YDSE)",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Inserting a thin film in front of one slit introduces an extra optical path, causing the entire fringe pattern to shift by a number of fringes.", "formula_used": null, "concept_tested": "identifying the fringe-shift effect of a thin film"},
+      {"step_order": 2, "step_text": "Select number of fringes shifted = (n−1)t/λ.", "formula_used": "shift = (n−1)t/λ", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute n = 1.5, t = 4×10⁻⁶ m, λ = 500×10⁻⁹ m: shift = (0.5×4×10⁻⁶)/(500×10⁻⁹) = (2×10⁻⁶)/(5×10⁻⁷).", "formula_used": "shift = (n−1)t/λ", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute shift = 4 fringes.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["shift = (n−1)t/λ"],
+    "distractor_analysis": {
+      "12 fringes": {"misconception": "forgot to subtract 1 from n before multiplying by the thickness, using n×t/λ instead of (n−1)×t/λ", "gap_step": 2, "concept": "formula selection"},
+      "8 fringes": {"misconception": "arithmetic slip, doubling the correct answer", "gap_step": 4, "concept": "arithmetic"},
+      "0.5 fringes": {"misconception": "reported (n−1) directly as the answer, forgetting to include the thickness and wavelength in the calculation", "gap_step": 2, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_020",
+    "text": "In a YDSE setup, light of wavelength 600 nm produces a fringe pattern. Find the path difference at a point on the screen where the phase difference between the two interfering waves is 120°.",
+    "options": ["1800 nm", "100 nm", "200 nm", "400 nm"],
+    "correct_answer": "200 nm",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Interference (YDSE)",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Path difference and phase difference are proportional, with a full wavelength corresponding to a full 360° phase difference.", "formula_used": null, "concept_tested": "identifying the path difference-phase difference relation"},
+      {"step_order": 2, "step_text": "Select path difference = (φ/360°)×λ.", "formula_used": "path difference = (φ/360°)λ", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute φ = 120°, λ = 600 nm: path difference = (120/360)×600.", "formula_used": "path difference = (φ/360°)λ", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute path difference = (1/3)×600 = 200 nm.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["path difference = (φ/360°)λ"],
+    "distractor_analysis": {
+      "1800 nm": {"misconception": "inverted the ratio, using 360°/φ instead of φ/360°", "gap_step": 2, "concept": "formula selection"},
+      "100 nm": {"misconception": "arithmetic slip, halving the correct answer", "gap_step": 4, "concept": "arithmetic"},
+      "400 nm": {"misconception": "arithmetic slip, mistakenly using a fraction of 2/3 instead of the correct 1/3 of the wavelength", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_021",
+    "text": "In a single-slit diffraction pattern, the angular width of the central maximum is given by 2λ/a. If λ=500 nm and a=0.5 mm, find this angular width.",
+    "options": ["2 × 10⁻³", "1 × 10⁻³", "4 × 10⁻³", "2 × 10⁻⁴"],
+    "correct_answer": "2 × 10⁻³",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Diffraction",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The angular width of the central maximum in single-slit diffraction depends on the wavelength and the slit width.", "formula_used": null, "concept_tested": "identifying the central maximum angular width formula"},
+      {"step_order": 2, "step_text": "Select angular width = 2λ/a.", "formula_used": "angular width = 2λ/a", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute λ = 500×10⁻⁹ m, a = 0.5×10⁻³ m: angular width = 2×500×10⁻⁹/(0.5×10⁻³).", "formula_used": "angular width = 2λ/a", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute angular width = 2×10⁻³.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["angular width = 2λ/a"],
+    "distractor_analysis": {
+      "1 × 10⁻³": {"misconception": "forgot the factor of 2, using λ/a directly instead of 2λ/a", "gap_step": 2, "concept": "formula selection"},
+      "4 × 10⁻³": {"misconception": "arithmetic slip, doubling the correct answer", "gap_step": 4, "concept": "arithmetic"},
+      "2 × 10⁻⁴": {"misconception": "decimal slip, dividing by an extra factor of 10", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_022",
+    "text": "In a single-slit diffraction experiment, the slit width is halved while keeping the wavelength and screen distance the same. Find the factor by which the angular width of the central maximum changes.",
+    "options": ["halves (factor of 1/2)", "doubles (factor of 2)", "quadruples (factor of 4)", "stays the same (factor of 1)"],
+    "correct_answer": "doubles (factor of 2)",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Diffraction",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The angular width of the central maximum is inversely proportional to the slit width.", "formula_used": null, "concept_tested": "identifying the inverse proportionality between angular width and slit width"},
+      {"step_order": 2, "step_text": "Select angular width ∝ 1/a.", "formula_used": "angular width ∝ 1/a", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute a_new = a/2: angular width_new ∝ 1/(a/2) = 2/a.", "formula_used": "angular width ∝ 1/a", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute: the angular width doubles.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["angular width ∝ 1/a"],
+    "distractor_analysis": {
+      "halves (factor of 1/2)": {"misconception": "inverted the proportionality, assuming angular width ∝ a instead of the correct 1/a", "gap_step": 2, "concept": "formula selection"},
+      "quadruples (factor of 4)": {"misconception": "assumed angular width ∝ 1/a², squaring the relationship by mistake", "gap_step": 2, "concept": "formula selection"},
+      "stays the same (factor of 1)": {"misconception": "assumed the angular width doesn't depend on the slit width at all", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_023",
+    "text": "Light polarized along the vertical direction is incident on a polarizer whose transmission axis is also vertical (0° angle between them). Find the fraction of light intensity transmitted.",
+    "options": ["50%", "0%", "25%", "100% (all of it)"],
+    "correct_answer": "100% (all of it)",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Polarization",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "When the incident light's polarization already aligns exactly with the polarizer's transmission axis, Malus's law predicts full transmission.", "formula_used": null, "concept_tested": "identifying the zero-angle case of Malus's law"},
+      {"step_order": 2, "step_text": "Select I = I0 cos²θ, with θ = 0°.", "formula_used": "I = I0 cos²θ", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute θ = 0°: I = I0×cos²(0°) = I0×1.", "formula_used": "I = I0 cos²θ", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I = I0, i.e. 100% of the light is transmitted.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I = I0 cos²θ"],
+    "distractor_analysis": {
+      "50%": {"misconception": "mistakenly applied the 'unpolarized light through a polarizer' halving rule, which doesn't apply here since the light is already polarized along the transmission axis", "gap_step": 1, "concept": "concept identification"},
+      "0%": {"misconception": "confused this scenario with the case of crossed polarizers, where the axes are perpendicular", "gap_step": 1, "concept": "concept identification"},
+      "25%": {"misconception": "mistakenly assumed some angle-dependent reduction like cos²(60°) applies here, when the angle between the light's polarization and the axis is actually 0°", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_024",
+    "text": "Two polarizers are placed with their transmission axes at 90° to each other (crossed polarizers). A third polarizer is inserted between them with its axis at 45° to both. If unpolarized light of intensity I0 is incident on the first polarizer, find the intensity of light emerging from the last polarizer.",
+    "options": ["0", "I0/4", "I0/8", "I0/2"],
+    "correct_answer": "I0/8",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Polarization",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Unpolarized light is first halved by the first polarizer, then Malus's law must be applied twice more (through the middle and final polarizers), each at 45° to the previous one.", "formula_used": null, "concept_tested": "identifying the three-polarizer sequence with Malus's law applied twice"},
+      {"step_order": 2, "step_text": "Select I1 = I0/2, I2 = I1 cos²(45°), I3 = I2 cos²(45°).", "formula_used": "I1 = I0/2; I2 = I1cos²45°; I3 = I2cos²45°", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute: I1 = I0/2. I2 = (I0/2)×0.5 = I0/4. I3 = (I0/4)×0.5.", "formula_used": "I1 = I0/2; I2 = I1cos²45°; I3 = I2cos²45°", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I3 = I0/8.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I1 = I0/2", "I2 = I1cos²45°", "I3 = I2cos²45°"],
+    "distractor_analysis": {
+      "0": {"misconception": "assumed no light passes through crossed polarizers regardless of what's inserted between them, missing the key effect of the middle polarizer", "gap_step": 1, "concept": "concept identification"},
+      "I0/4": {"misconception": "correctly applied Malus's law once (through the middle polarizer) but forgot to apply it again for the final polarizer", "gap_step": 3, "concept": "substitution"},
+      "I0/2": {"misconception": "only accounted for the initial halving from unpolarized light, forgetting to apply Malus's law at either the middle or final polarizer", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_optics_b02_025",
+    "text": "Unpolarized light of intensity I0 passes through a stack of two polarizers, the second at an angle θ to the first. If the intensity of the emergent light is I0/8, find the angle θ.",
+    "options": ["45°", "30°", "0°", "60°"],
+    "correct_answer": "60°",
+    "subject": "Physics",
+    "topic": "Optics",
+    "sub_topic": "Polarization",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The first polarizer halves the unpolarized light's intensity, and the second polarizer then applies Malus's law at angle θ.", "formula_used": null, "concept_tested": "identifying the two-polarizer sequence starting from unpolarized light"},
+      {"step_order": 2, "step_text": "Select I1 = I0/2, I2 = I1 cos²θ, and set I2 = I0/8 to solve for θ.", "formula_used": "I2 = (I0/2)cos²θ", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute I2 = I0/8: (I0/2)cos²θ = I0/8, so cos²θ = 1/4, giving cosθ = 1/2.", "formula_used": "I2 = (I0/2)cos²θ", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute θ = 60° (since cos60°=1/2).", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I2 = (I0/2)cos²θ"],
+    "distractor_analysis": {
+      "45°": {"misconception": "mistakenly solved cos²θ=1/2 instead of the correct cos²θ=1/4", "gap_step": 3, "concept": "substitution"},
+      "30°": {"misconception": "swapped sine and cosine, solving sinθ=1/2 instead of cosθ=1/2, giving the complementary angle", "gap_step": 4, "concept": "concept identification"},
+      "0°": {"misconception": "assumed no reduction occurs regardless of angle, ignoring Malus's law's angle dependence entirely", "gap_step": 1, "concept": "concept identification"}
+    }
+  }
+]

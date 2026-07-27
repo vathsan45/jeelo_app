@@ -6,6 +6,9 @@ Scratch DB via ELO_DB_PATH. Run: python scripts/test_phase3.py
 import json
 import os
 import sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import tempfile
 from pathlib import Path
 

@@ -1,0 +1,138 @@
+[
+  {
+    "topic": "Optics",
+    "similarity": 0.966,
+    "question_id_a": "physics_optics_b01_004",
+    "text_a": "An object is placed 30 cm in front of a concave mirror of focal length 10 cm. Find the image distance.",
+    "question_id_b": "physics_optics_b02_005",
+    "text_b": "An object is placed 10 cm in front of a convex mirror of focal length 15 cm. Find the image distance."
+  },
+  {
+    "topic": "Modern Physics",
+    "similarity": 0.963,
+    "question_id_a": "physics_modernphysics_b02_025",
+    "text_a": "Find the output of a NOR gate with inputs A=0 and B=1.",
+    "question_id_b": "physics_modernphysics_b03_023",
+    "text_b": "Find the output of an OR gate with inputs A=0 and B=0."
+  },
+  {
+    "topic": "Modern Physics",
+    "similarity": 0.936,
+    "question_id_a": "physics_modernphysics_b01_023",
+    "text_a": "Find the output of an AND gate with inputs A=1 and B=0.",
+    "question_id_b": "physics_modernphysics_b03_023",
+    "text_b": "Find the output of an OR gate with inputs A=0 and B=0."
+  },
+  {
+    "topic": "Optics",
+    "similarity": 0.934,
+    "question_id_a": "physics_optics_b01_009",
+    "text_a": "The refractive index of a medium with respect to air is 2. Taking sin30°=0.5, find the critical angle for total internal reflection at the medium-air interface.",
+    "question_id_b": "physics_optics_b03_008",
+    "text_b": "The refractive index of a medium relative to air is 1.25. Taking sin53°=0.8, find the critical angle for total internal reflection at the medium-air interface."
+  },
+  {
+    "topic": "Modern Physics",
+    "similarity": 0.899,
+    "question_id_a": "physics_modernphysics_b01_023",
+    "text_a": "Find the output of an AND gate with inputs A=1 and B=0.",
+    "question_id_b": "physics_modernphysics_b02_025",
+    "text_b": "Find the output of a NOR gate with inputs A=0 and B=1."
+  },
+  {
+    "topic": "Electricity and Magnetism",
+    "similarity": 0.897,
+    "question_id_a": "physics_em_b01_009",
+    "text_a": "A resistor carries a current of 3 A when a potential difference of 12 V is applied across it. Find its resistance.",
+    "question_id_b": "physics_em_b03_008",
+    "text_b": "A wire carries a current of 4 A when a potential difference of 20 V is applied. Find its resistance."
+  },
+  {
+    "topic": "Modern Physics",
+    "similarity": 0.889,
+    "question_id_a": "physics_modernphysics_b02_024",
+    "text_a": "Find the output of a NOT gate with input A=0.",
+    "question_id_b": "physics_modernphysics_b02_025",
+    "text_b": "Find the output of a NOR gate with inputs A=0 and B=1."
+  },
+  {
+    "topic": "Optics",
+    "similarity": 0.882,
+    "question_id_a": "physics_optics_b01_013",
+    "text_a": "A convex lens has a focal length of 20 cm. Find its power.",
+    "question_id_b": "physics_optics_b02_013",
+    "text_b": "A concave lens has a focal length of magnitude 25 cm. Find its power."
+  },
+  {
+    "topic": "Optics",
+    "similarity": 0.881,
+    "question_id_a": "physics_optics_b01_014",
+    "text_a": "An object is placed 15 cm from a convex lens of focal length 10 cm. Find the image distance.",
+    "question_id_b": "physics_optics_b02_005",
+    "text_b": "An object is placed 10 cm in front of a convex mirror of focal length 15 cm. Find the image distance."
+  },
+  {
+    "topic": "Electricity and Magnetism",
+    "similarity": 0.878,
+    "question_id_a": "physics_em_b01_017",
+    "text_a": "A long straight wire carries a current of 5 A. Taking μ₀/2π = 2×10⁻⁷ T·m/A, find the magnetic field at a perpendicular distance of 0.1 m from the wire.",
+    "question_id_b": "physics_em_b03_015",
+    "text_b": "A straight wire carries a current of 8 A. Taking μ₀/2π = 2×10⁻⁷ T·m/A, find the magnetic field at a point 0.04 m from the wire."
+  },
+  {
+    "topic": "Modern Physics",
+    "similarity": 0.871,
+    "question_id_a": "physics_modernphysics_b01_016",
+    "text_a": "In the nuclear reaction ₇N¹⁴ + ₂He⁴ → ₈O¹⁷ + X, identify the particle X.",
+    "question_id_b": "physics_modernphysics_b03_016",
+    "text_b": "In the nuclear reaction ₄Be⁹ + ₂He⁴ → ₆C¹² + X, identify particle X."
+  },
+  {
+    "topic": "Modern Physics",
+    "similarity": 0.869,
+    "question_id_a": "physics_modernphysics_b02_024",
+    "text_a": "Find the output of a NOT gate with input A=0.",
+    "question_id_b": "physics_modernphysics_b03_023",
+    "text_b": "Find the output of an OR gate with inputs A=0 and B=0."
+  },
+  {
+    "topic": "Optics",
+    "similarity": 0.866,
+    "question_id_a": "physics_optics_b01_004",
+    "text_a": "An object is placed 30 cm in front of a concave mirror of focal length 10 cm. Find the image distance.",
+    "question_id_b": "physics_optics_b01_014",
+    "text_b": "An object is placed 15 cm from a convex lens of focal length 10 cm. Find the image distance."
+  },
+  {
+    "topic": "Modern Physics",
+    "similarity": 0.848,
+    "question_id_a": "physics_modernphysics_b01_010",
+    "text_a": "In an X-ray tube, electrons are accelerated through a potential of 12400 V. Using hc=1240 eV·nm, find the minimum wavelength of the emitted X-rays.",
+    "question_id_b": "physics_modernphysics_b02_009",
+    "text_b": "In a Coolidge tube, electrons are accelerated through a potential of 24800 V. Using hc=1240 eV·nm, find the minimum wavelength of the continuous X-ray spectrum produced."
+  },
+  {
+    "topic": "Modern Physics",
+    "similarity": 0.84,
+    "question_id_a": "physics_modernphysics_b01_023",
+    "text_a": "Find the output of an AND gate with inputs A=1 and B=0.",
+    "question_id_b": "physics_modernphysics_b02_024",
+    "text_b": "Find the output of a NOT gate with input A=0."
+  },
+  {
+    "topic": "Electricity and Magnetism",
+    "similarity": 0.827,
+    "question_id_a": "physics_em_b01_010",
+    "text_a": "Two resistors of 6 Ω and 3 Ω are connected in parallel. Find the equivalent resistance of the combination.",
+    "question_id_b": "physics_em_b03_004",
+    "text_b": "Three capacitors of 2 μF, 3 μF, and 5 μF are connected in parallel. Find the equivalent capacitance of the combination."
+  },
+  {
+    "topic": "Mechanics",
+    "similarity": 0.824,
+    "question_id_a": "physics_mechanics_b02_019",
+    "text_a": "A uniform rod of mass 3 kg and length 2 m rotates about an axis passing through its center, perpendicular to its length. Find its moment of inertia. (For a rod about its center, I = ML²/12.)",
+    "question_id_b": "physics_mechanics_b03_018",
+    "text_b": "A thin uniform ring of mass 2 kg and radius 0.5 m rotates about an axis through its center, perpendicular to its plane. Find its moment of inertia. (For a ring about this axis, I = MR².)"
+  }
+]

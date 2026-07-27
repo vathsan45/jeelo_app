@@ -1,13 +1,22 @@
-"""Phase 0: consolidate 12 raw question batch files into
+"""Phase 0: consolidate raw question batch files into
 backend/data/questions_master.json.
 
-- Normalizes common key-name variants from separate LLM generation calls.
+- Normalizes common key-name variants from separate LLM generation calls,
+  including topic name aliases (e.g. "E&M" -> "Electricity and Magnetism").
 - Validates strictly against the target schema; failures are logged to
   backend/data/discarded_questions_log.json and excluded (never auto-fixed).
 - Deduplicates question_ids across files by regenerating the ID of the
   second occurrence (rename logged, question kept).
+- Carries through an optional distractor_analysis field (misconception per
+  wrong option) used by the MCQ-based failure-diagnosis feature; nulls it
+  out with a logged warning if its keys don't exactly match the question's
+  wrong options, rather than discarding an otherwise-good question over it.
+- Flags likely near-duplicate questions (same topic, high text similarity)
+  in a separate report for manual review — never auto-discarded, since
+  templated-but-distinct questions are expected and fine.
 """
 
+import difflib
 import json
 import re
 from collections import Counter, defaultdict
@@ -18,10 +27,26 @@ DATA_DIR = ROOT / "backend" / "data"
 RAW_DIR = DATA_DIR / "raw_batches"
 MASTER_PATH = DATA_DIR / "questions_master.json"
 DISCARD_LOG_PATH = DATA_DIR / "discarded_questions_log.json"
+NEAR_DUP_REPORT_PATH = DATA_DIR / "near_duplicates_report.json"
 
 VALID_DIFFICULTIES = {"easy", "medium", "hard"}
 THETA_SEED_BY_DIFFICULTY = {"easy": 900, "medium": 1200, "hard": 1500}
 CANONICAL_MARKING_SCHEME = {"correct": 4, "incorrect": -1, "unattempted": 0}
+NEAR_DUP_SIMILARITY_THRESHOLD = 0.82
+
+# topic names seen across separate LLM generation calls -> canonical topic.
+# The app's four topics are fixed (used for topic ratings + frontend filter
+# list), so any variant spelling has to be normalized here or it silently
+# becomes an invisible 5th topic bucket.
+TOPIC_ALIASES = {
+    "e&m": "Electricity and Magnetism",
+    "electricity and magnetism": "Electricity and Magnetism",
+    "electricity & magnetism": "Electricity and Magnetism",
+    "electromagnetism": "Electricity and Magnetism",
+    "mechanics": "Mechanics",
+    "optics": "Optics",
+    "modern physics": "Modern Physics",
+}
 
 # key-name variants seen across separate LLM generation calls -> canonical key
 KEY_ALIASES = {
@@ -37,6 +62,7 @@ KEY_ALIASES = {
     "marking_scheme": ["marking_scheme", "marks", "scoring"],
     "solution_steps": ["solution_steps", "steps", "solution"],
     "formulas_used": ["formulas_used", "formulas", "formula_list"],
+    "distractor_analysis": ["distractor_analysis", "distractor_map", "misconceptions"],
 }
 
 REQUIRED_FIELDS = [
@@ -52,6 +78,8 @@ def normalize_keys(raw: dict) -> dict:
             if alias in raw:
                 out[canonical] = raw[alias]
                 break
+    if "topic" in out and isinstance(out["topic"], str):
+        out["topic"] = TOPIC_ALIASES.get(out["topic"].strip().lower(), out["topic"].strip())
     return out
 
 
@@ -92,8 +120,46 @@ def validate(q: dict) -> list:
     return reasons
 
 
-def canonicalize(q: dict) -> dict:
-    """Build final schema object from a validated, key-normalized question."""
+def validate_distractor_analysis(q: dict) -> tuple:
+    """Return (cleaned_distractor_analysis_or_None, warning_or_None).
+
+    Never rejects the question over this — a good physics question with a
+    malformed annotation is still worth keeping for quizzing; the annotation
+    just gets dropped (with a logged reason) rather than shipping bad data
+    for the MCQ-diagnosis feature to trip over later.
+    """
+    da = q.get("distractor_analysis")
+    if not da:
+        return None, None
+    if not isinstance(da, dict):
+        return None, "distractor_analysis is not an object"
+
+    wrong_options = [o for o in q["options"] if o != q["correct_answer"]]
+    if sorted(da.keys()) != sorted(wrong_options):
+        return None, (
+            f"distractor_analysis keys {sorted(da.keys())!r} don't exactly "
+            f"match wrong options {sorted(wrong_options)!r}"
+        )
+
+    cleaned = {}
+    for option, info in da.items():
+        if not isinstance(info, dict) or not info.get("misconception"):
+            return None, f"distractor_analysis[{option!r}] missing 'misconception'"
+        cleaned[option] = {
+            "misconception": str(info["misconception"]),
+            "gap_step": info.get("gap_step"),
+            "concept": info.get("concept", ""),
+        }
+    return cleaned, None
+
+
+def canonicalize(q: dict) -> tuple:
+    """Build final schema object from a validated, key-normalized question.
+
+    Returns (final_question_dict, warning_or_None) — the warning covers
+    non-fatal issues (currently just a malformed distractor_analysis) that
+    don't disqualify the question but are worth surfacing.
+    """
     difficulty = q["difficulty_tag"]
     steps = []
     for i, step in enumerate(q["solution_steps"]):
@@ -103,7 +169,10 @@ def canonicalize(q: dict) -> dict:
             "formula_used": step.get("formula_used"),
             "concept_tested": step.get("concept_tested", ""),
         })
-    return {
+
+    distractor_analysis, warning = validate_distractor_analysis(q)
+
+    final = {
         "question_id": q["question_id"],
         "text": q["text"],
         "options": q["options"],
@@ -117,7 +186,41 @@ def canonicalize(q: dict) -> dict:
         "marking_scheme": CANONICAL_MARKING_SCHEME,
         "solution_steps": steps,
         "formulas_used": q.get("formulas_used", []),
+        "distractor_analysis": distractor_analysis,
     }
+    return final, warning
+
+
+def normalized_text(text: str) -> str:
+    return re.sub(r"\s+", " ", text.strip().lower())
+
+
+def find_near_duplicates(accepted: list) -> list:
+    """Flag same-topic question pairs with high text similarity for manual
+    review. Never blocks consolidation — templated-but-distinct questions
+    (same setup, different numbers) are expected and fine; this just
+    surfaces likely true clones for a human to glance at."""
+    by_topic = defaultdict(list)
+    for q in accepted:
+        by_topic[q["topic"]].append(q)
+
+    near_dups = []
+    for topic, qlist in by_topic.items():
+        normed = [normalized_text(q["text"]) for q in qlist]
+        for i in range(len(qlist)):
+            for j in range(i + 1, len(qlist)):
+                ratio = difflib.SequenceMatcher(None, normed[i], normed[j]).ratio()
+                if ratio >= NEAR_DUP_SIMILARITY_THRESHOLD:
+                    near_dups.append({
+                        "topic": topic,
+                        "similarity": round(ratio, 3),
+                        "question_id_a": qlist[i]["question_id"],
+                        "text_a": qlist[i]["text"],
+                        "question_id_b": qlist[j]["question_id"],
+                        "text_b": qlist[j]["text"],
+                    })
+    near_dups.sort(key=lambda d: d["similarity"], reverse=True)
+    return near_dups
 
 
 def main():
@@ -127,6 +230,7 @@ def main():
     total_raw = 0
     discarded = []
     renames = []
+    warnings = []
     accepted = []
     seen_ids = set()
     seq_by_slug = defaultdict(int)  # for regenerated IDs
@@ -161,7 +265,13 @@ def main():
                 })
                 continue
 
-            final = canonicalize(q)
+            final, warning = canonicalize(q)
+            if warning:
+                warnings.append({
+                    "source_file": path.name,
+                    "question_id": final["question_id"],
+                    "warning": warning,
+                })
 
             if final["question_id"] in seen_ids:
                 slug = slugify(final["sub_topic"])
@@ -180,13 +290,21 @@ def main():
             seen_ids.add(final["question_id"])
             accepted.append(final)
 
+    near_duplicates = find_near_duplicates(accepted)
+
     MASTER_PATH.write_text(
         json.dumps(accepted, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     DISCARD_LOG_PATH.write_text(
-        json.dumps({"discarded": discarded, "id_renames": renames}, indent=2,
-                   ensure_ascii=False),
+        json.dumps(
+            {"discarded": discarded, "id_renames": renames,
+             "distractor_analysis_warnings": warnings},
+            indent=2, ensure_ascii=False,
+        ),
         encoding="utf-8",
+    )
+    NEAR_DUP_REPORT_PATH.write_text(
+        json.dumps(near_duplicates, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
     # ---- summary ----
@@ -203,6 +321,15 @@ def main():
     for r in renames:
         print(f"    {r['old_id']} -> {r['new_id']}  ({r['source_file']})")
     print(f"Final validated count      : {len(accepted)}")
+    print(f"distractor_analysis present: "
+          f"{sum(1 for q in accepted if q['distractor_analysis'])} / {len(accepted)}")
+    print(f"distractor_analysis dropped (bad shape): {len(warnings)}")
+    for w in warnings[:10]:
+        print(f"    {w['question_id']}: {w['warning']}")
+    print(f"Near-duplicate pairs flagged: {len(near_duplicates)} "
+          f"(see {NEAR_DUP_REPORT_PATH.name}, not auto-discarded)")
+    for d in near_duplicates[:5]:
+        print(f"    [{d['similarity']}] {d['question_id_a']} ~ {d['question_id_b']}")
 
     print("\nBy topic:")
     for topic, n in sorted(Counter(q["topic"] for q in accepted).items()):

@@ -1,0 +1,602 @@
+[
+  {
+    "question_id": "physics_em_b02_001",
+    "text": "Two point charges of +4 μC and +6 μC are placed 2 m apart in vacuum. Taking k = 9×10⁹ N·m²/C², find the electrostatic force between them.",
+    "options": ["2.16 × 10⁻¹ N", "1.08 × 10⁻¹ N", "5.4 × 10⁻² N", "5.4 × 10⁻³ N"],
+    "correct_answer": "5.4 × 10⁻² N",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electrostatics",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Two point charges exert an electrostatic force on each other given by Coulomb's law.", "formula_used": null, "concept_tested": "identifying Coulomb's law scenario"},
+      {"step_order": 2, "step_text": "Select F = kq1q2/r².", "formula_used": "F = kq1q2/r²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute k = 9×10⁹, q1 = 4×10⁻⁶ C, q2 = 6×10⁻⁶ C, r = 2 m: F = 9×10⁹×24×10⁻¹²/4.", "formula_used": "F = kq1q2/r²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute F = 216×10⁻³/4 = 5.4×10⁻² N.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["F = kq1q2/r²"],
+    "distractor_analysis": {
+      "2.16 × 10⁻¹ N": {"misconception": "forgot to divide by r², reporting kq1q2 directly", "gap_step": 3, "concept": "substitution"},
+      "1.08 × 10⁻¹ N": {"misconception": "used r instead of r² in the denominator, dividing by 2 instead of 4", "gap_step": 3, "concept": "substitution"},
+      "5.4 × 10⁻³ N": {"misconception": "decimal slip, dividing by 40 instead of 4", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_002",
+    "text": "Two point charges +q and −4q are separated by a distance d on a line. Find the point on this line, expressed as a distance from +q, where the net electric field is zero.",
+    "options": ["A distance d from +q, on the side away from −4q", "A distance d/3 from +q, between the two charges", "A distance 2d from +q, on the side away from −4q", "A distance d/2 from −4q, beyond the −4q charge"],
+    "correct_answer": "A distance d from +q, on the side away from −4q",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electrostatics",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Since the charges have opposite signs, their fields cannot cancel between them or beyond the larger charge; the null point must lie beyond the smaller-magnitude charge (+q), on the side away from −4q.", "formula_used": null, "concept_tested": "identifying the null-point region for unlike charges"},
+      {"step_order": 2, "step_text": "Select the balance condition kq/x² = k(4q)/(x+d)², where x is the distance from +q on the far side.", "formula_used": "kq/x² = k(4q)/(x+d)²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Simplify: (x+d)² = 4x², so x+d = 2x (taking the positive root), giving x = d.", "formula_used": "kq/x² = k(4q)/(x+d)²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute x = d, so the null point is a distance d from +q, on the side away from −4q.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["kq/x² = k(4q)/(x+d)²"],
+    "distractor_analysis": {
+      "A distance d/3 from +q, between the two charges": {"misconception": "assumed the null point lies between the two charges, which is only valid for like charges, not for charges of opposite sign", "gap_step": 1, "concept": "concept identification"},
+      "A distance 2d from +q, on the side away from −4q": {"misconception": "algebra slip solving x+d=2x, obtaining x=2d instead of x=d", "gap_step": 3, "concept": "substitution"},
+      "A distance d/2 from −4q, beyond the −4q charge": {"misconception": "incorrectly placed the null point beyond the larger-magnitude charge instead of beyond the smaller one, reversing which side has the null point", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_003",
+    "text": "A capacitor of capacitance 5 μF is charged to a potential difference of 20 V. Find the energy stored in the capacitor.",
+    "options": ["2 × 10⁻³ J", "5 × 10⁻⁵ J", "1 × 10⁻³ J", "1 × 10⁻⁴ J"],
+    "correct_answer": "1 × 10⁻³ J",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Capacitance",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A charged capacitor stores electrical energy that depends on its capacitance and the potential difference across it.", "formula_used": null, "concept_tested": "identifying the capacitor energy formula"},
+      {"step_order": 2, "step_text": "Select U = ½CV².", "formula_used": "U = ½CV²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute C = 5×10⁻⁶ F, V = 20 V: U = ½×5×10⁻⁶×400.", "formula_used": "U = ½CV²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute U = 1×10⁻³ J.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["U = ½CV²"],
+    "distractor_analysis": {
+      "2 × 10⁻³ J": {"misconception": "forgot the factor of ½, using CV² instead of ½CV²", "gap_step": 2, "concept": "formula selection"},
+      "5 × 10⁻⁵ J": {"misconception": "forgot to square V, using ½CV instead of ½CV²", "gap_step": 2, "concept": "formula selection"},
+      "1 × 10⁻⁴ J": {"misconception": "decimal slip, dividing the correct answer by an extra factor of 10", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_004",
+    "text": "A 3 μF capacitor charged to 12 V and a 6 μF capacitor charged to 6 V are connected together with plates of like polarity joined (positive to positive, negative to negative). Find the common potential difference across them after connection.",
+    "options": ["9 V", "6 V", "12 V", "8 V"],
+    "correct_answer": "8 V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Capacitance",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "When two charged capacitors are connected with like polarities joined, charge redistributes until both reach a common potential, with total charge conserved.", "formula_used": null, "concept_tested": "identifying charge conservation upon connection"},
+      {"step_order": 2, "step_text": "Select the common potential V = (C1V1 + C2V2)/(C1 + C2).", "formula_used": "V = (C1V1 + C2V2)/(C1 + C2)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute C1 = 3 μF, V1 = 12 V, C2 = 6 μF, V2 = 6 V: V = (3×12 + 6×6)/(3+6) = (36+36)/9.", "formula_used": "V = (C1V1 + C2V2)/(C1 + C2)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute V = 72/9 = 8 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["V = (C1V1 + C2V2)/(C1 + C2)"],
+    "distractor_analysis": {
+      "9 V": {"misconception": "averaged the two voltages directly, using (V1+V2)/2 instead of the charge-weighted formula", "gap_step": 2, "concept": "formula selection"},
+      "6 V": {"misconception": "mistakenly reported one of the original voltages, forgetting that charge redistributes when the capacitors are connected", "gap_step": 1, "concept": "concept identification"},
+      "12 V": {"misconception": "assumed the common voltage equals the higher original voltage, ignoring charge redistribution entirely", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_005",
+    "text": "A copper wire has a resistance of 5 Ω. Find its new resistance if its length is doubled while its cross-sectional area is kept constant.",
+    "options": ["2.5 Ω", "10 Ω", "25 Ω", "20 Ω"],
+    "correct_answer": "10 Ω",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Current Electricity",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "With the cross-sectional area held constant, resistance is directly proportional to length.", "formula_used": null, "concept_tested": "identifying the resistance-length proportionality"},
+      {"step_order": 2, "step_text": "Select R ∝ L, so R_new = R_old × (L_new/L_old).", "formula_used": "R ∝ L", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute R_old = 5 Ω, L_new/L_old = 2: R_new = 5×2.", "formula_used": "R ∝ L", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute R_new = 10 Ω.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["R ∝ L"],
+    "distractor_analysis": {
+      "2.5 Ω": {"misconception": "halved the resistance instead of doubling it, inverting the proportionality", "gap_step": 3, "concept": "substitution"},
+      "25 Ω": {"misconception": "squared the length factor instead of applying it linearly (5×5 instead of 5×2)", "gap_step": 2, "concept": "formula selection"},
+      "20 Ω": {"misconception": "mistakenly used R ∝ L², applying the squared proportionality that only applies when volume (not area) is held constant", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_006",
+    "text": "A wire of resistance 8 Ω is stretched uniformly so that its length becomes 2 times its original length, with its volume remaining constant (so its area decreases accordingly). Find the new resistance.",
+    "options": ["16 Ω", "2 Ω", "64 Ω", "32 Ω"],
+    "correct_answer": "32 Ω",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Current Electricity",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "When volume is conserved during stretching, the cross-sectional area decreases as the length increases, so resistance scales with the square of the length ratio.", "formula_used": null, "concept_tested": "identifying the volume-conserved stretching scenario"},
+      {"step_order": 2, "step_text": "Select R ∝ L² (since A ∝ 1/L when volume is constant), so R_new = R_old × (L_new/L_old)².", "formula_used": "R ∝ L²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute R_old = 8 Ω, L_new/L_old = 2: R_new = 8×2².", "formula_used": "R ∝ L²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute R_new = 8×4 = 32 Ω.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["R ∝ L²"],
+    "distractor_analysis": {
+      "16 Ω": {"misconception": "used R ∝ L, forgetting that the cross-sectional area also changes when volume is conserved", "gap_step": 2, "concept": "formula selection"},
+      "2 Ω": {"misconception": "inverted the relationship, using R ∝ 1/L² instead of R ∝ L²", "gap_step": 2, "concept": "formula selection"},
+      "64 Ω": {"misconception": "used R ∝ L³, an extra unwarranted power of the length ratio", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_007",
+    "text": "A cell of EMF 6 V and internal resistance 1 Ω is connected to an external resistor of 5 Ω. Find the terminal voltage of the cell.",
+    "options": ["6 V", "1 V", "5 V", "30 V"],
+    "correct_answer": "5 V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Current Electricity",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The cell's terminal voltage is less than its EMF due to the voltage drop across its internal resistance.", "formula_used": null, "concept_tested": "identifying the effect of internal resistance on terminal voltage"},
+      {"step_order": 2, "step_text": "Select I = EMF/(R+r), then terminal voltage V = EMF − Ir.", "formula_used": "I = EMF/(R+r); V = EMF − Ir", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute EMF = 6 V, R = 5 Ω, r = 1 Ω: I = 6/6 = 1 A. Then V = 6 − 1×1.", "formula_used": "I = EMF/(R+r); V = EMF − Ir", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute V = 5 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I = EMF/(R+r)", "V = EMF − Ir"],
+    "distractor_analysis": {
+      "6 V": {"misconception": "ignored internal resistance entirely, reporting the EMF directly as the terminal voltage", "gap_step": 1, "concept": "concept identification"},
+      "1 V": {"misconception": "computed the voltage drop across the internal resistance instead of the terminal voltage", "gap_step": 4, "concept": "substitution"},
+      "30 V": {"misconception": "multiplied the EMF by the external resistance directly instead of first finding the current", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_008",
+    "text": "A 200 V, 100 W bulb is connected to its rated voltage. Find the current flowing through it.",
+    "options": ["20000 A", "2 A", "100 A", "0.5 A"],
+    "correct_answer": "0.5 A",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Ohm's Law & Resistance",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Electrical power relates the current, voltage, and power rating of the bulb.", "formula_used": null, "concept_tested": "identifying the power-current-voltage relation"},
+      {"step_order": 2, "step_text": "Select I = P/V.", "formula_used": "P = VI", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute P = 100 W, V = 200 V: I = 100/200.", "formula_used": "P = VI", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I = 0.5 A.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["P = VI"],
+    "distractor_analysis": {
+      "20000 A": {"misconception": "multiplied power and voltage instead of dividing", "gap_step": 3, "concept": "substitution"},
+      "2 A": {"misconception": "inverted the formula, computing V/P instead of P/V", "gap_step": 2, "concept": "formula selection"},
+      "100 A": {"misconception": "forgot to divide by V, reporting the power value directly as the current", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_009",
+    "text": "Two bulbs rated 100 W and 200 W are both designed for operation at 200 V. Find the ratio of their resistances, R100 : R200.",
+    "options": ["1:2", "4:1", "1:4", "2:1"],
+    "correct_answer": "2:1",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Ohm's Law & Resistance",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For bulbs operating at the same rated voltage, resistance is inversely proportional to the power rating.", "formula_used": null, "concept_tested": "identifying the resistance-power relation at fixed voltage"},
+      {"step_order": 2, "step_text": "Select R = V²/P, so R100/R200 = P200/P100.", "formula_used": "R = V²/P", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute P100 = 100 W, P200 = 200 W: R100/R200 = 200/100.", "formula_used": "R = V²/P", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute R100 : R200 = 2 : 1.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["R = V²/P"],
+    "distractor_analysis": {
+      "1:2": {"misconception": "used R ∝ P directly instead of R ∝ 1/P at fixed voltage, inverting the ratio", "gap_step": 2, "concept": "formula selection"},
+      "4:1": {"misconception": "squared the correct ratio by mistake", "gap_step": 4, "concept": "arithmetic"},
+      "1:4": {"misconception": "both inverted and squared the ratio, taking the reciprocal of the squared value", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_010",
+    "text": "At a circuit junction, currents of 6 A and 4 A flow in, and a single current flows out. Find the outgoing current.",
+    "options": ["2 A", "10 A", "24 A", "5 A"],
+    "correct_answer": "10 A",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Kirchhoff's Laws",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "At any junction, the total current flowing in must equal the total current flowing out.", "formula_used": null, "concept_tested": "identifying Kirchhoff's current law"},
+      {"step_order": 2, "step_text": "Select I_out = I1 + I2.", "formula_used": "ΣI_in = ΣI_out", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute I1 = 6 A, I2 = 4 A: I_out = 6 + 4.", "formula_used": "ΣI_in = ΣI_out", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I_out = 10 A.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["ΣI_in = ΣI_out"],
+    "distractor_analysis": {
+      "2 A": {"misconception": "subtracted the two incoming currents instead of adding them", "gap_step": 3, "concept": "substitution"},
+      "24 A": {"misconception": "multiplied the two incoming currents instead of adding them", "gap_step": 3, "concept": "substitution"},
+      "5 A": {"misconception": "averaged the two incoming currents instead of adding them", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_011",
+    "text": "In a series circuit, a 10 V battery drives current through three resistors of 1 Ω, 2 Ω, and 2 Ω connected in series. Find the current in the circuit.",
+    "options": ["2 A", "10 A", "5 A", "50 A"],
+    "correct_answer": "2 A",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Kirchhoff's Laws",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In a series circuit, the same current flows through all resistors, determined by the total resistance and the battery voltage.", "formula_used": null, "concept_tested": "identifying the series circuit"},
+      {"step_order": 2, "step_text": "Select total R = R1+R2+R3, then I = V/R.", "formula_used": "I = V/(R1+R2+R3)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute V = 10 V, R1 = 1 Ω, R2 = 2 Ω, R3 = 2 Ω: total R = 5 Ω, I = 10/5.", "formula_used": "I = V/(R1+R2+R3)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I = 2 A.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I = V/(R1+R2+R3)"],
+    "distractor_analysis": {
+      "10 A": {"misconception": "forgot to divide by the total resistance, reporting the battery voltage directly as the current", "gap_step": 4, "concept": "substitution"},
+      "5 A": {"misconception": "used only one resistor (2 Ω) instead of the total resistance", "gap_step": 3, "concept": "substitution"},
+      "50 A": {"misconception": "multiplied the voltage by the total resistance instead of dividing", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_012",
+    "text": "A battery of EMF 20 V with internal resistance 1 Ω is connected in series with two external resistors of 4 Ω and 5 Ω. Find the power dissipated in the 4 Ω resistor.",
+    "options": ["8 W", "100 W", "16 W", "20 W"],
+    "correct_answer": "16 W",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Kirchhoff's Laws",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The circuit current is set by the total resistance, which includes the internal resistance and both external resistors in series.", "formula_used": null, "concept_tested": "identifying the full series circuit including internal resistance"},
+      {"step_order": 2, "step_text": "Select I = EMF/(r+R1+R2), then power in R1: P = I²R1.", "formula_used": "I = EMF/(r+R1+R2); P = I²R1", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute EMF = 20 V, r = 1 Ω, R1 = 4 Ω, R2 = 5 Ω: total R = 10 Ω, I = 20/10 = 2 A. Then P = 2²×4.", "formula_used": "I = EMF/(r+R1+R2); P = I²R1", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute P = 4×4 = 16 W.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I = EMF/(r+R1+R2)", "P = I²R1"],
+    "distractor_analysis": {
+      "8 W": {"misconception": "forgot to square the current, using I×R1 instead of I²×R1", "gap_step": 2, "concept": "formula selection"},
+      "100 W": {"misconception": "used only the 4 Ω resistor as the total circuit resistance to find the current, instead of the full circuit resistance including r and R2", "gap_step": 2, "concept": "concept identification"},
+      "20 W": {"misconception": "computed the power dissipated in the 5 Ω resistor instead of the 4 Ω resistor", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_013",
+    "text": "A proton of charge 1.6×10⁻¹⁹ C moves with a speed of 2×10⁶ m/s perpendicular to a magnetic field of 0.5 T. Find the magnetic force on the proton.",
+    "options": ["3.2 × 10⁻¹³ N", "1.6 × 10⁻¹³ N", "8 × 10⁻¹⁴ N", "1.6 × 10⁻¹⁹ N"],
+    "correct_answer": "1.6 × 10⁻¹³ N",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Magnetic Force",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A moving charge in a magnetic field, with velocity perpendicular to the field, experiences a magnetic force given by the Lorentz force law.", "formula_used": null, "concept_tested": "identifying the magnetic force on a moving charge"},
+      {"step_order": 2, "step_text": "Select F = qvB.", "formula_used": "F = qvB", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute q = 1.6×10⁻¹⁹ C, v = 2×10⁶ m/s, B = 0.5 T: F = 1.6×10⁻¹⁹×2×10⁶×0.5.", "formula_used": "F = qvB", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute F = 1.6×10⁻¹³ N.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["F = qvB"],
+    "distractor_analysis": {
+      "3.2 × 10⁻¹³ N": {"misconception": "forgot to include B, using qv directly", "gap_step": 2, "concept": "formula selection"},
+      "8 × 10⁻¹⁴ N": {"misconception": "mistakenly halved the velocity before substituting", "gap_step": 3, "concept": "substitution"},
+      "1.6 × 10⁻¹⁹ N": {"misconception": "forgot to include both v and B, reporting just the charge value", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_014",
+    "text": "A long straight wire carries a current of 10 A. A second parallel wire, 0.2 m away, carries a current of 5 A in the same direction. Taking μ₀/2π = 2×10⁻⁷ T·m/A, find the force per unit length between the two wires, and state whether it is attractive or repulsive.",
+    "options": ["5 × 10⁻⁵ N/m, attractive", "5 × 10⁻⁵ N/m, repulsive", "1 × 10⁻⁴ N/m, attractive", "2.5 × 10⁻⁵ N/m, attractive"],
+    "correct_answer": "5 × 10⁻⁵ N/m, attractive",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Magnetic Force",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "Two parallel wires carrying current in the same direction attract each other, with the force per unit length given by Ampere's force law.", "formula_used": null, "concept_tested": "identifying the force between parallel currents and its direction"},
+      {"step_order": 2, "step_text": "Select F/L = (μ₀/2π)×(I1I2/r).", "formula_used": "F/L = (μ₀/2π)(I1I2/r)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute μ₀/2π = 2×10⁻⁷, I1 = 10 A, I2 = 5 A, r = 0.2 m: F/L = 2×10⁻⁷×(50/0.2).", "formula_used": "F/L = (μ₀/2π)(I1I2/r)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute F/L = 2×10⁻⁷×250 = 5×10⁻⁵ N/m, attractive since the currents are parallel and in the same direction.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["F/L = (μ₀/2π)(I1I2/r)"],
+    "distractor_analysis": {
+      "5 × 10⁻⁵ N/m, repulsive": {"misconception": "got the correct magnitude but reversed the direction rule — parallel currents flowing in the same direction attract, not repel", "gap_step": 1, "concept": "concept identification"},
+      "1 × 10⁻⁴ N/m, attractive": {"misconception": "misread the separation as 0.1 m instead of the given 0.2 m, doubling the result", "gap_step": 3, "concept": "substitution"},
+      "2.5 × 10⁻⁵ N/m, attractive": {"misconception": "arithmetic slip, halving the correct magnitude", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_015",
+    "text": "A circular loop of radius 0.1 m carries a current of 5 A. Taking μ₀ = 4π×10⁻⁷ T·m/A, find the magnetic field at the center of the loop.",
+    "options": ["π × 10⁻⁶ T", "2π × 10⁻⁵ T", "π × 10⁻⁵ T", "π × 10⁻⁴ T"],
+    "correct_answer": "π × 10⁻⁵ T",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Biot-Savart & Ampere's Law",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A circular current loop produces a magnetic field at its center, as given by the Biot-Savart law integrated around the loop.", "formula_used": null, "concept_tested": "identifying the field at the center of a circular loop"},
+      {"step_order": 2, "step_text": "Select B = μ₀I/(2r).", "formula_used": "B = μ₀I/(2r)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute μ₀ = 4π×10⁻⁷, I = 5 A, r = 0.1 m: B = 4π×10⁻⁷×5/(2×0.1).", "formula_used": "B = μ₀I/(2r)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute B = 4π×10⁻⁷×25 = π × 10⁻⁵ T.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["B = μ₀I/(2r)"],
+    "distractor_analysis": {
+      "π × 10⁻⁶ T": {"misconception": "misread the radius as 1 m instead of 0.1 m", "gap_step": 3, "concept": "substitution"},
+      "2π × 10⁻⁵ T": {"misconception": "forgot the factor of 2 in the denominator, using B=μ₀I/r instead of μ₀I/(2r)", "gap_step": 2, "concept": "formula selection"},
+      "π × 10⁻⁴ T": {"misconception": "misread the radius as 0.01 m instead of 0.1 m", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_016",
+    "text": "A toroid has 500 turns and carries a current of 2 A. If the mean radius of the toroid is 0.1 m, taking μ₀ = 4π×10⁻⁷ T·m/A, find the magnetic field inside the toroid.",
+    "options": ["4π × 10⁻³ T", "2 × 10⁻³ T", "4 × 10⁻⁶ T", "4 × 10⁻³ T"],
+    "correct_answer": "2 × 10⁻³ T",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Biot-Savart & Ampere's Law",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A toroid's magnetic field inside its core depends on the number of turns, the current, and the mean radius, following Ampere's law.", "formula_used": null, "concept_tested": "identifying the field inside a toroid"},
+      {"step_order": 2, "step_text": "Select B = μ₀NI/(2πr).", "formula_used": "B = μ₀NI/(2πr)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute μ₀ = 4π×10⁻⁷, N = 500, I = 2 A, r = 0.1 m: B = 4π×10⁻⁷×1000/(2π×0.1) = 4π×10⁻⁴/(0.2π).", "formula_used": "B = μ₀NI/(2πr)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute B = 4×10⁻⁴/0.2 = 2×10⁻³ T.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["B = μ₀NI/(2πr)"],
+    "distractor_analysis": {
+      "4π × 10⁻³ T": {"misconception": "forgot to include the factor of 2π in the denominator, using B=μ₀NI/r instead of μ₀NI/(2πr)", "gap_step": 2, "concept": "formula selection"},
+      "4 × 10⁻⁶ T": {"misconception": "forgot to include the number of turns N in the formula", "gap_step": 2, "concept": "formula selection"},
+      "4 × 10⁻³ T": {"misconception": "arithmetic slip, doubling the correct answer", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_017",
+    "text": "A long straight wire carries a current of 10 A. Find the ratio of the magnetic field at a point 0.05 m from the wire to the magnetic field at a point 0.2 m from the wire.",
+    "options": ["1:4", "16:1", "2:1", "4:1"],
+    "correct_answer": "4:1",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Biot-Savart & Ampere's Law",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The magnetic field due to a long straight wire falls off as 1/r (not 1/r² as for a point charge), so the ratio of fields at two distances is the inverse ratio of the distances.", "formula_used": null, "concept_tested": "identifying the 1/r dependence of the field from a long wire"},
+      {"step_order": 2, "step_text": "Select B ∝ 1/r, so B1/B2 = r2/r1.", "formula_used": "B ∝ 1/r", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute r1 = 0.05 m, r2 = 0.2 m: B1/B2 = 0.2/0.05.", "formula_used": "B ∝ 1/r", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute B1/B2 = 4, so the ratio is 4:1.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["B ∝ 1/r"],
+    "distractor_analysis": {
+      "1:4": {"misconception": "inverted the ratio, mixing up which point has the stronger field", "gap_step": 3, "concept": "substitution"},
+      "16:1": {"misconception": "squared the ratio by mistake, incorrectly treating B ∝ 1/r² as in Coulomb's law instead of the correct B ∝ 1/r", "gap_step": 2, "concept": "formula selection"},
+      "2:1": {"misconception": "mistakenly took the square root of the correct ratio", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_018",
+    "text": "A square loop of side 0.5 m is placed perpendicular to a magnetic field of 0.4 T. If the field is switched off uniformly in 0.2 s, find the magnitude of the average EMF induced in the loop.",
+    "options": ["0.5 V", "2 V", "1 V", "0.1 V"],
+    "correct_answer": "0.5 V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electromagnetic Induction",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A changing magnetic field through the loop induces an EMF proportional to the rate of change of flux, per Faraday's law.", "formula_used": null, "concept_tested": "identifying Faraday's law of induction"},
+      {"step_order": 2, "step_text": "Select EMF = A×(ΔB/Δt), with A = side².", "formula_used": "EMF = A(ΔB/Δt)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute side = 0.5 m so A = 0.25 m², ΔB = 0.4 T, Δt = 0.2 s: EMF = 0.25×(0.4/0.2).", "formula_used": "EMF = A(ΔB/Δt)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute EMF = 0.25×2 = 0.5 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["EMF = A(ΔB/Δt)"],
+    "distractor_analysis": {
+      "2 V": {"misconception": "forgot to include the loop's area, reporting ΔB/Δt directly as the EMF", "gap_step": 2, "concept": "formula selection"},
+      "1 V": {"misconception": "forgot to square the side length, using A = side instead of side²", "gap_step": 3, "concept": "substitution"},
+      "0.1 V": {"misconception": "arithmetic slip, dividing the correct answer by an extra factor of 5", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_019",
+    "text": "A rod of length 2 m rotates with an angular speed of 5 rad/s about an axis through one end, perpendicular to its length, in a uniform magnetic field of 0.2 T parallel to the rotation axis. Find the EMF induced between the two ends of the rod.",
+    "options": ["4 V", "1 V", "2 V", "8 V"],
+    "correct_answer": "2 V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electromagnetic Induction",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "A rod rotating about one end in a magnetic field parallel to the rotation axis generates an EMF because different points along the rod move at different speeds.", "formula_used": null, "concept_tested": "identifying the rotating-rod EMF scenario"},
+      {"step_order": 2, "step_text": "Select EMF = ½Bωl².", "formula_used": "EMF = ½Bωl²", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute B = 0.2 T, ω = 5 rad/s, l = 2 m: EMF = ½×0.2×5×4.", "formula_used": "EMF = ½Bωl²", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute EMF = ½×4 = 2 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["EMF = ½Bωl²"],
+    "distractor_analysis": {
+      "4 V": {"misconception": "forgot the factor of ½ in the rotating-rod EMF formula", "gap_step": 2, "concept": "formula selection"},
+      "1 V": {"misconception": "forgot to square the length l, using l instead of l²", "gap_step": 2, "concept": "formula selection"},
+      "8 V": {"misconception": "mistakenly doubled the rod's length before squaring, as if measuring from the center of rotation instead of the actual pivot-to-end length", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_020",
+    "text": "A conducting rod of length 0.5 m slides on two parallel horizontal rails connected by a resistor of 2 Ω at one end, in a uniform vertical magnetic field of 1 T. The rod is pulled so that it moves at a constant velocity of 4 m/s. Assuming the rod and rails have negligible resistance, find the power delivered by the external force pulling the rod.",
+    "options": ["8 W", "2 W", "4 W", "1 W"],
+    "correct_answer": "2 W",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Electromagnetic Induction",
+    "difficulty_tag": "hard",
+    "theta_q_seed": 1500,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "At constant velocity, the external force balances the opposing magnetic force on the rod, so the power delivered by the external force equals the electrical power dissipated in the resistor.", "formula_used": null, "concept_tested": "identifying the power balance for a rod moving at constant velocity"},
+      {"step_order": 2, "step_text": "Select EMF = Bvl, then I = EMF/R, and power P = EMF×I.", "formula_used": "EMF = Bvl; I = EMF/R; P = EMF×I", "concept_tested": "choosing the correct formulas"},
+      {"step_order": 3, "step_text": "Substitute B = 1 T, v = 4 m/s, l = 0.5 m: EMF = 1×4×0.5 = 2 V. With R = 2 Ω: I = 2/2 = 1 A. Then P = 2×1.", "formula_used": "EMF = Bvl; I = EMF/R; P = EMF×I", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute P = 2 W.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["EMF = Bvl", "I = EMF/R", "P = EMF×I"],
+    "distractor_analysis": {
+      "8 W": {"misconception": "forgot to include the rod's length l in the EMF formula, using EMF=Bv instead of Bvl", "gap_step": 2, "concept": "formula selection"},
+      "4 W": {"misconception": "computed EMF² directly as the power, forgetting to divide by the resistance R", "gap_step": 2, "concept": "formula selection"},
+      "1 W": {"misconception": "arithmetic slip, reporting half the correct value", "gap_step": 4, "concept": "arithmetic"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_021",
+    "text": "An alternating current is given by I = 5√2 sin(100πt) A. Find its RMS value.",
+    "options": ["5√2 A", "5 A", "10 A", "2.5 A"],
+    "correct_answer": "5 A",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Alternating Current",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For a sinusoidal alternating current, the RMS value relates to the peak value by a fixed factor.", "formula_used": null, "concept_tested": "identifying the RMS-peak relation for AC"},
+      {"step_order": 2, "step_text": "Select I_rms = I_peak/√2.", "formula_used": "I_rms = I_peak/√2", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute I_peak = 5√2 A: I_rms = 5√2/√2.", "formula_used": "I_rms = I_peak/√2", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I_rms = 5 A.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["I_rms = I_peak/√2"],
+    "distractor_analysis": {
+      "5√2 A": {"misconception": "forgot to divide by √2, reporting the peak value as the rms value", "gap_step": 3, "concept": "substitution"},
+      "10 A": {"misconception": "multiplied by √2 instead of dividing by it", "gap_step": 2, "concept": "formula selection"},
+      "2.5 A": {"misconception": "divided by 2 instead of √2", "gap_step": 2, "concept": "formula selection"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_022",
+    "text": "A pure inductor of inductance 0.1 H is connected to an AC source of frequency 50/π Hz. Find the inductive reactance.",
+    "options": ["10 Ω", "5 Ω", "100 Ω", "1000 Ω"],
+    "correct_answer": "10 Ω",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Alternating Current",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "The inductive reactance of a pure inductor depends on the angular frequency of the AC source and the inductance.", "formula_used": null, "concept_tested": "identifying inductive reactance"},
+      {"step_order": 2, "step_text": "Select ω = 2πf, then X_L = ωL.", "formula_used": "X_L = ωL = 2πfL", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute f = 50/π Hz: ω = 2π×(50/π) = 100 rad/s. With L = 0.1 H: X_L = 100×0.1.", "formula_used": "X_L = ωL = 2πfL", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute X_L = 10 Ω.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["X_L = ωL = 2πfL"],
+    "distractor_analysis": {
+      "5 Ω": {"misconception": "forgot the factor of 2 in ω = 2πf, using ω = πf instead", "gap_step": 3, "concept": "substitution"},
+      "100 Ω": {"misconception": "forgot to multiply by the inductance L, reporting ω directly as the reactance", "gap_step": 2, "concept": "formula selection"},
+      "1000 Ω": {"misconception": "misplaced decimal, using L = 1 H instead of the given 0.1 H", "gap_step": 3, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_023",
+    "text": "A series R-C AC circuit has a resistance of 8 Ω and a capacitive reactance of 6 Ω. Find the impedance of the circuit.",
+    "options": ["14 Ω", "2 Ω", "10 Ω", "100 Ω"],
+    "correct_answer": "10 Ω",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Alternating Current",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In a series R-C AC circuit, the resistance and capacitive reactance combine as perpendicular phasors, not by simple addition.", "formula_used": null, "concept_tested": "identifying the phasor combination of R and X_C"},
+      {"step_order": 2, "step_text": "Select Z = √(R² + X_C²).", "formula_used": "Z = √(R² + X_C²)", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute R = 8 Ω, X_C = 6 Ω: Z = √(64 + 36) = √100.", "formula_used": "Z = √(R² + X_C²)", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute Z = 10 Ω.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["Z = √(R² + X_C²)"],
+    "distractor_analysis": {
+      "14 Ω": {"misconception": "added R and X_C directly instead of combining them using the Pythagorean formula", "gap_step": 2, "concept": "formula selection"},
+      "2 Ω": {"misconception": "subtracted X_C from R instead of combining them properly", "gap_step": 2, "concept": "formula selection"},
+      "100 Ω": {"misconception": "forgot to take the square root, reporting R²+X_C² directly", "gap_step": 4, "concept": "substitution"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_024",
+    "text": "A transformer has 50 turns in the primary coil and 250 turns in the secondary coil. If the secondary voltage is 500 V, find the primary voltage.",
+    "options": ["2500 V", "100 V", "20 V", "450 V"],
+    "correct_answer": "100 V",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Transformers",
+    "difficulty_tag": "easy",
+    "theta_q_seed": 900,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "In an ideal transformer, the ratio of primary to secondary voltage equals the ratio of primary to secondary turns.", "formula_used": null, "concept_tested": "identifying the transformer turns-voltage ratio"},
+      {"step_order": 2, "step_text": "Select V_p/V_s = N_p/N_s.", "formula_used": "V_p/V_s = N_p/N_s", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute V_s = 500 V, N_p = 50, N_s = 250: V_p = 500×(50/250).", "formula_used": "V_p/V_s = N_p/N_s", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute V_p = 500×0.2 = 100 V.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["V_p/V_s = N_p/N_s"],
+    "distractor_analysis": {
+      "2500 V": {"misconception": "inverted the turns ratio, using N_s/N_p instead of N_p/N_s", "gap_step": 2, "concept": "formula selection"},
+      "20 V": {"misconception": "squared the turns ratio by mistake instead of using it directly", "gap_step": 3, "concept": "substitution"},
+      "450 V": {"misconception": "conceptual mix-up, subtracting the primary turns count directly from the secondary voltage", "gap_step": 1, "concept": "concept identification"}
+    }
+  },
+  {
+    "question_id": "physics_em_b02_025",
+    "text": "An ideal transformer with 100% efficiency steps up the voltage from 100 V to 1000 V. If the secondary current is 2 A, find the primary current.",
+    "options": ["20 A", "0.2 A", "2 A", "200 A"],
+    "correct_answer": "20 A",
+    "subject": "Physics",
+    "topic": "E&M",
+    "sub_topic": "Transformers",
+    "difficulty_tag": "medium",
+    "theta_q_seed": 1200,
+    "marking_scheme": {"correct": 4, "incorrect": -1, "unattempted": 0},
+    "solution_steps": [
+      {"step_order": 1, "step_text": "For an ideal transformer, input and output power are equal, so voltage and current are inversely related between primary and secondary.", "formula_used": null, "concept_tested": "identifying power conservation in an ideal transformer"},
+      {"step_order": 2, "step_text": "Select V_p×I_p = V_s×I_s, rearranged to I_p = V_s×I_s/V_p.", "formula_used": "V_p I_p = V_s I_s", "concept_tested": "choosing the correct formula"},
+      {"step_order": 3, "step_text": "Substitute V_s = 1000 V, I_s = 2 A, V_p = 100 V: I_p = 1000×2/100.", "formula_used": "V_p I_p = V_s I_s", "concept_tested": "substitution"},
+      {"step_order": 4, "step_text": "Compute I_p = 2000/100 = 20 A.", "formula_used": null, "concept_tested": "final computation"}
+    ],
+    "formulas_used": ["V_p I_p = V_s I_s"],
+    "distractor_analysis": {
+      "0.2 A": {"misconception": "inverted the ratio, computing V_p×I_s/V_s instead of V_s×I_s/V_p", "gap_step": 2, "concept": "formula selection"},
+      "2 A": {"misconception": "assumed the current is unchanged across the transformer, not realizing that stepping up the voltage steps down the current", "gap_step": 1, "concept": "concept identification"},
+      "200 A": {"misconception": "misplaced decimal, using V_p = 10 V instead of the given 100 V", "gap_step": 3, "concept": "substitution"}
+    }
+  }
+]

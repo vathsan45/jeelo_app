@@ -40,10 +40,19 @@ and restart — it reseeds automatically. Deleting `app.db` does **not** touch
 ```
 GROQ_API_KEYS=key1,key2,key3,...
 GROQ_MODEL=llama-3.3-70b-versatile
+DATABASE_URL=postgresql://user:pass@your-project.neon.tech/dbname?sslmode=require
 ```
 
 `llm.py` reads a comma-separated list so it can rotate across multiple free-tier
 keys if one gets rate-limited. A single `GROQ_API_KEY` also works.
+
+`DATABASE_URL` is optional locally — omit it and the app falls back to the
+SQLite file at `backend/data/app.db`, same as before. Set it once you want a
+real persistent, globally-shared database (required for production — see
+`database.py`'s priority order: `ELO_DB_PATH` (test isolation) always wins
+over `DATABASE_URL`, which always wins over the local SQLite default). Tables
+are created automatically on first startup via `Base.metadata.create_all()` —
+no separate migration step needed for this schema.
 
 ## Deploying to Vercel
 
