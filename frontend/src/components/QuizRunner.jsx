@@ -1,26 +1,30 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { api } from '../api.js'
+import { useApi } from '../useApi.js'
 import AnimatedNumber from './AnimatedNumber.jsx'
-
-const ENDPOINTS = {
-  placement: {
-    next: api.placementNext,
-    submit: api.placementSubmit,
-    summaryPath: (sid) => `/placement/summary/${sid}`,
-  },
-  practice: {
-    next: api.quizNext,
-    submit: api.quizSubmit,
-    summaryPath: (sid) => `/quiz/summary/${sid}`,
-  },
-}
 
 export default function QuizRunner({ mode }) {
   const { sessionId } = useParams()
   const navigate = useNavigate()
-  const ep = ENDPOINTS[mode]
+  const api = useApi()
+  // memoized so identity is stable across renders — without this, fetchNext
+  // (below) would be rebuilt every render, retriggering its effect forever
+  const ep = useMemo(
+    () =>
+      mode === 'placement'
+        ? {
+            next: api.placementNext,
+            submit: api.placementSubmit,
+            summaryPath: (sid) => `/placement/summary/${sid}`,
+          }
+        : {
+            next: api.quizNext,
+            submit: api.quizSubmit,
+            summaryPath: (sid) => `/quiz/summary/${sid}`,
+          },
+    [mode, api],
+  )
 
   const [question, setQuestion] = useState(null)
   const [reveal, setReveal] = useState(null)

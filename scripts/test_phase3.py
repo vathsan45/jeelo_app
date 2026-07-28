@@ -1,6 +1,7 @@
-"""End-to-end test of Phase 3: detailed report + failure testing (REAL Groq calls).
+"""End-to-end test of Phase 3 + auth: detailed report + MCQ failure testing
+(REAL Groq calls). Scratch DB via ELO_DB_PATH.
 
-Scratch DB via ELO_DB_PATH. Run: python scripts/test_phase3.py
+Run: python scripts/test_phase3.py
 """
 
 import json
@@ -16,12 +17,18 @@ tmp_db = Path(tempfile.gettempdir()) / "phase3_test_scratch.db"
 if tmp_db.exists():
     tmp_db.unlink()
 os.environ["ELO_DB_PATH"] = str(tmp_db)
+os.environ.setdefault("CLERK_ISSUER", "https://test-instance.clerk.accounts.dev")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from fastapi.testclient import TestClient  # noqa: E402
 
+from app import auth  # noqa: E402
 from app.main import app  # noqa: E402
+from _auth_helper import auth_headers, patch_jwks  # noqa: E402
+
+patch_jwks(auth)
 
 failures = []
 
@@ -33,16 +40,17 @@ def check(label, cond):
 
 
 with TestClient(app) as client:
-    pid = client.post("/api/players/create", json={"name": "TestKid"}).json()["player_id"]
+    headers = auth_headers("user_testkid", "TestKid", auth_module=auth)
 
     print("1) run a 4-question quiz: 2 right, 2 deliberately wrong")
-    qsid = client.post(f"/api/quiz/{pid}/start", json={"num_questions": 4}).json()["session_id"]
+    qsid = client.post("/api/quiz/start", headers=headers,
+                      json={"num_questions": 4}).json()["session_id"]
     from app.database import SessionLocal
     from app.models import Question
 
     wrong_qids = []
     for i in range(4):
-        nxt = client.get(f"/api/quiz/{qsid}/next").json()
+        nxt = client.get(f"/api/quiz/{qsid}/next", headers=headers).json()
         db = SessionLocal()
         correct = db.get(Question, nxt["question_id"]).correct_answer
         db.close()
@@ -51,13 +59,13 @@ with TestClient(app) as client:
         else:
             answer = next(o for o in nxt["options"] if o != correct)
             wrong_qids.append(nxt["question_id"])
-        client.post(f"/api/quiz/{qsid}/submit", json={
+        client.post(f"/api/quiz/{qsid}/submit", headers=headers, json={
             "question_id": nxt["question_id"], "selected_answer": answer,
             "reaction_time_ms": 5000})
     check("2 wrong answers recorded", len(wrong_qids) == 2)
 
     print("\n2) detailed report")
-    r = client.get(f"/api/reports/{qsid}").json()
+    r = client.get(f"/api/reports/{qsid}", headers=headers).json()
     check("total_score 6 (2*4 - 2*1)", r["total_score"] == 6)
     check("accuracy 50%", r["accuracy_pct"] == 50.0)
     check("wrong_answers has 2 entries", len(r["wrong_answers"]) == 2)
@@ -67,9 +75,14 @@ with TestClient(app) as client:
     check("0 failure tests used, max 3",
           r["failure_tests_used"] == 0 and r["failure_tests_max"] == 3)
 
+    print("\n2b) another authenticated player cannot read this report (IDOR check)")
+    other_headers = auth_headers("user_snooper", "Snooper", auth_module=auth)
+    snoop = client.get(f"/api/reports/{qsid}", headers=other_headers)
+    check("cross-player report access -> 403", snoop.status_code == 403)
+
     print("\n3) failure test: MCQ probe generation (REAL LLM call)")
     target = wrong_qids[0]
-    r = client.post(f"/api/reports/{qsid}/failure_test/{target}")
+    r = client.post(f"/api/reports/{qsid}/failure_test/{target}", headers=headers)
     check("probe endpoint 200", r.status_code == 200)
     ft = r.json()
     if ft.get("fallback"):
@@ -93,7 +106,8 @@ with TestClient(app) as client:
                   f"(correct: {p['correct_option']!r})")
 
         print("\n4) idempotent restart returns same probes")
-        again = client.post(f"/api/reports/{qsid}/failure_test/{target}").json()
+        again = client.post(f"/api/reports/{qsid}/failure_test/{target}",
+                           headers=headers).json()
         check("same probes returned", again["probes"] == probes)
 
         print("\n5) respond one-at-a-time (MCQ); deliberately break at the 2nd checkpoint")
@@ -110,6 +124,7 @@ with TestClient(app) as client:
                 choice = wrong_opts[0] if wrong_opts else p["correct_option"]
             rr = client.post(
                 f"/api/reports/{qsid}/failure_test/{target}/respond",
+                headers=headers,
                 json={"step_order": p["step_order"], "selected_option": choice},
             ).json()
             check(f"  probe {i}: correct flag matches choice",
@@ -126,26 +141,25 @@ with TestClient(app) as client:
         check("solution steps included for reveal screen", len(final["solution_steps"]) >= 2)
         check("respond after complete -> 409",
               client.post(f"/api/reports/{qsid}/failure_test/{target}/respond",
+                          headers=headers,
                           json={"step_order": probes[0]["step_order"],
                                 "selected_option": probes[0]["correct_option"]}
                           ).status_code == 409)
 
         print("\n6) report reflects diagnostic status")
-        r = client.get(f"/api/reports/{qsid}").json()
+        r = client.get(f"/api/reports/{qsid}", headers=headers).json()
         target_entry = next(w for w in r["wrong_answers"] if w["question_id"] == target)
         check("status = diagnosed", target_entry["diagnostic_status"] == "diagnosed")
         check("failure_tests_used = 1", r["failure_tests_used"] == 1)
 
     print("\n7) guard rails")
-    ok_q = [w["question_id"] for w in client.get(f"/api/reports/{qsid}").json()["wrong_answers"]]
-    r = client.post(f"/api/reports/{qsid}/failure_test/physics_kinematics_nonexistent")
+    r = client.post(f"/api/reports/{qsid}/failure_test/physics_kinematics_nonexistent",
+                    headers=headers)
     check("failure test on unattempted question -> 404", r.status_code == 404)
     # a correctly-answered question can't be failure-tested
-    all_attempted = client.get(f"/api/reports/{qsid}").json()
-    correct_qid = None
-    summary = client.get(f"/api/quiz/{qsid}/summary").json()
+    summary = client.get(f"/api/quiz/{qsid}/summary", headers=headers).json()
     correct_qid = next(q["question_id"] for q in summary["questions"] if q["was_correct"])
-    r = client.post(f"/api/reports/{qsid}/failure_test/{correct_qid}")
+    r = client.post(f"/api/reports/{qsid}/failure_test/{correct_qid}", headers=headers)
     check("failure test on correct answer -> 404", r.status_code == 404)
 
 print("\n" + ("ALL CHECKS PASSED" if not failures else f"{len(failures)} FAILURES: {failures}"))

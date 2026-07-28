@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { SignedIn, SignedOut, SignIn, UserButton } from '@clerk/clerk-react'
 import Home from './pages/Home.jsx'
 import QuizRunner from './components/QuizRunner.jsx'
 import PlacementSummary from './pages/PlacementSummary.jsx'
@@ -10,16 +11,29 @@ import CoachReport from './pages/CoachReport.jsx'
 export default function App() {
   return (
     <div className="min-h-screen max-w-3xl mx-auto px-4 py-8">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/placement/run/:sessionId" element={<QuizRunner mode="placement" />} />
-        <Route path="/placement/summary/:sessionId" element={<PlacementSummary />} />
-        <Route path="/quiz/run/:sessionId" element={<QuizRunner mode="practice" />} />
-        <Route path="/quiz/summary/:sessionId" element={<QuizSummary />} />
-        <Route path="/diagnose/:sessionId/:questionId" element={<Diagnose />} />
-        <Route path="/arena/run/:sessionId" element={<Arena />} />
-        <Route path="/arena/report/:sessionId" element={<CoachReport />} />
-      </Routes>
+      <SignedOut>
+        <div className="mt-24 flex flex-col items-center">
+          <h1 className="text-3xl font-bold mb-2">JEE Physics Arena</h1>
+          <p className="text-zinc-400 mb-8">Adaptive practice, rated like chess.</p>
+          <SignIn routing="hash" />
+        </div>
+      </SignedOut>
+
+      <SignedIn>
+        <div className="flex justify-end mb-2">
+          <UserButton afterSignOutUrl="/" />
+        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/placement/run/:sessionId" element={<QuizRunner mode="placement" />} />
+          <Route path="/placement/summary/:sessionId" element={<PlacementSummary />} />
+          <Route path="/quiz/run/:sessionId" element={<QuizRunner mode="practice" />} />
+          <Route path="/quiz/summary/:sessionId" element={<QuizSummary />} />
+          <Route path="/diagnose/:sessionId/:questionId" element={<Diagnose />} />
+          <Route path="/arena/run/:sessionId" element={<Arena />} />
+          <Route path="/arena/report/:sessionId" element={<CoachReport />} />
+        </Routes>
+      </SignedIn>
     </div>
   )
 }

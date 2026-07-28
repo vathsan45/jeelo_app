@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { api } from '../api.js'
+import { useApi } from '../useApi.js'
 
 export default function Diagnose() {
   const { sessionId, questionId } = useParams()
   const navigate = useNavigate()
+  const api = useApi()
 
   const [phase, setPhase] = useState('loading') // loading | probing | reveal | fallback | error
   const [probes, setProbes] = useState([])
@@ -36,6 +37,7 @@ export default function Diagnose() {
         setError(e.message)
         setPhase('error')
       })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sessionId, questionId])
 
   const goBack = () => navigate(-1) // return to whichever summary launched this

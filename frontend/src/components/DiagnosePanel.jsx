@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { api } from '../api.js'
+import { useApi } from '../useApi.js'
 
 /** "Diagnose My Mistakes" section — works for any session (placement or practice). */
 export default function DiagnosePanel({ sessionId }) {
   const navigate = useNavigate()
+  const api = useApi()
   const [report, setReport] = useState(null)
 
   useEffect(() => {
     api.getReport(sessionId).then(setReport).catch(() => {})
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sessionId])
 
   if (!report || report.wrong_answers.length === 0) return null

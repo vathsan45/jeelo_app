@@ -1,7 +1,6 @@
-from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel
-from sqlalchemy.orm import Session as DBSession
+from fastapi import APIRouter, Depends
 
+from ..auth import get_current_player
 from ..database import get_db
 from ..elo import get_effective_rating
 from ..models import Player, PlayerModeRating, PlayerTopicRating, Question
@@ -9,39 +8,14 @@ from ..models import Player, PlayerModeRating, PlayerTopicRating, Question
 router = APIRouter(prefix="/players", tags=["players"])
 
 
-class CreatePlayerBody(BaseModel):
-    name: str
-
-
-@router.post("/create")
-def create_player(body: CreatePlayerBody, db: DBSession = Depends(get_db)):
-    name = body.name.strip()
-    if not name:
-        raise HTTPException(status_code=422, detail="name must be non-empty")
-    player = Player(name=name)
-    db.add(player)
-    db.commit()
-    db.refresh(player)
-    return {
-        "player_id": player.player_id,
-        "name": player.name,
-        "theta_overall": player.theta_overall,
-        "rd_overall": player.rd_overall,
-    }
-
-
-@router.get("/{player_id}")
-def get_player(player_id: str, db: DBSession = Depends(get_db)):
-    player = db.get(Player, player_id)
-    if player is None:
-        raise HTTPException(status_code=404, detail="player not found")
-
+@router.get("/me")
+def get_me(player: Player = Depends(get_current_player), db=Depends(get_db)):
     topics = [t[0] for t in db.query(Question.topic).distinct().all()]
     topic_ratings = {}
     for topic in topics:
         row = (
             db.query(PlayerTopicRating)
-            .filter_by(player_id=player_id, topic=topic)
+            .filter_by(player_id=player.player_id, topic=topic)
             .first()
         )
         if row is None:
@@ -59,7 +33,7 @@ def get_player(player_id: str, db: DBSession = Depends(get_db)):
                 "attempts_count": row.attempts_count,
             }
 
-    mode_rows = db.query(PlayerModeRating).filter_by(player_id=player_id).all()
+    mode_rows = db.query(PlayerModeRating).filter_by(player_id=player.player_id).all()
     mode_ratings = {
         r.mode: {
             "theta_effective": get_effective_rating(

@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { api } from '../api.js'
+import { useApi } from '../useApi.js'
 import AnimatedNumber from '../components/AnimatedNumber.jsx'
 
 export default function CoachReport() {
   const { sessionId } = useParams()
+  const api = useApi()
   const [report, setReport] = useState(null)
   const [error, setError] = useState(null)
   const [showLog, setShowLog] = useState(false)
 
   useEffect(() => {
     api.arenaCoachReport(sessionId).then(setReport).catch((e) => setError(e.message))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sessionId])
 
   if (error) return <p className="mt-24 text-center text-red-400">{error}</p>

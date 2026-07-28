@@ -1,57 +1,30 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useUser } from '@clerk/clerk-react'
 import { motion } from 'framer-motion'
-import { api, TOPICS } from '../api.js'
+import { TOPICS } from '../api.js'
+import { useApi } from '../useApi.js'
 import AnimatedNumber from '../components/AnimatedNumber.jsx'
-
-export function getStoredPlayer() {
-  try {
-    return JSON.parse(localStorage.getItem('player'))
-  } catch {
-    return null
-  }
-}
 
 export default function Home() {
   const navigate = useNavigate()
-  const [player, setPlayer] = useState(getStoredPlayer())
+  const api = useApi()
+  const { user } = useUser()
   const [profile, setProfile] = useState(null)
-  const [name, setName] = useState('')
   const [topicFilter, setTopicFilter] = useState('')
   const [numQuestions, setNumQuestions] = useState(10)
   const [error, setError] = useState(null)
   const [busy, setBusy] = useState(false)
 
   useEffect(() => {
-    if (!player) return
-    api.getPlayer(player.player_id)
-      .then(setProfile)
-      .catch(() => {
-        // stale localStorage (e.g. DB was reset) — force re-creation
-        localStorage.removeItem('player')
-        setPlayer(null)
-      })
-  }, [player])
-
-  async function handleCreate(e) {
-    e.preventDefault()
-    setBusy(true)
-    setError(null)
-    try {
-      const p = await api.createPlayer(name)
-      localStorage.setItem('player', JSON.stringify(p))
-      setPlayer(p)
-    } catch (err) {
-      setError(err.message)
-    } finally {
-      setBusy(false)
-    }
-  }
+    api.getMe().then(setProfile).catch((e) => setError(e.message))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   async function startPlacement() {
     setBusy(true)
     try {
-      const { session_id } = await api.placementStart(player.player_id)
+      const { session_id } = await api.placementStart()
       navigate(`/placement/run/${session_id}`)
     } catch (err) {
       setError(err.message)
@@ -62,10 +35,7 @@ export default function Home() {
   async function startArena() {
     setBusy(true)
     try {
-      const { session_id } = await api.arenaStart(player.player_id, {
-        num_rounds: 8,
-        first_session: true,
-      })
+      const { session_id } = await api.arenaStart({ num_rounds: 8, first_session: true })
       navigate(`/arena/run/${session_id}`)
     } catch (err) {
       setError(err.message)
@@ -76,7 +46,7 @@ export default function Home() {
   async function startQuiz() {
     setBusy(true)
     try {
-      const { session_id } = await api.quizStart(player.player_id, {
+      const { session_id } = await api.quizStart({
         topic_filter: topicFilter || null,
         num_questions: Number(numQuestions),
       })
@@ -87,57 +57,21 @@ export default function Home() {
     }
   }
 
-  if (!player) {
-    return (
-      <div className="mt-24 text-center">
-        <h1 className="text-3xl font-bold mb-2">JEE Physics Arena</h1>
-        <p className="text-zinc-400 mb-8">Adaptive practice, rated like chess.</p>
-        <form onSubmit={handleCreate} className="flex gap-2 justify-center">
-          <input
-            className="bg-zinc-900 border border-zinc-700 rounded px-4 py-2 w-64"
-            placeholder="Your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <button
-            disabled={busy || !name.trim()}
-            className="bg-violet-600 hover:bg-violet-500 disabled:opacity-40 rounded px-5 py-2 font-semibold"
-          >
-            Start
-          </button>
-        </form>
-        {error && <p className="text-red-400 mt-4">{error}</p>}
-      </div>
-    )
-  }
-
   return (
     <div className="mt-12">
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h1 className="text-2xl font-bold">Hi, {player.name}</h1>
-          {profile && (
-            <p className="text-zinc-400">
-              Overall rating:{' '}
-              <AnimatedNumber
-                value={Math.round(profile.theta_overall)}
-                from={1200}
-                className="text-violet-400 font-mono font-bold"
-              />{' '}
-              <span className="text-zinc-500">(±{Math.round(profile.rd_overall)})</span>
-            </p>
-          )}
-        </div>
-        <button
-          className="text-sm text-zinc-500 hover:text-zinc-300"
-          onClick={() => {
-            localStorage.removeItem('player')
-            setPlayer(null)
-            setProfile(null)
-          }}
-        >
-          switch player
-        </button>
+      <div className="mb-8">
+        <h1 className="text-2xl font-bold">Hi, {user?.firstName || profile?.name || 'there'}</h1>
+        {profile && (
+          <p className="text-zinc-400">
+            Overall rating:{' '}
+            <AnimatedNumber
+              value={Math.round(profile.theta_overall)}
+              from={1200}
+              className="text-violet-400 font-mono font-bold"
+            />{' '}
+            <span className="text-zinc-500">(±{Math.round(profile.rd_overall)})</span>
+          </p>
+        )}
       </div>
 
       {profile && (

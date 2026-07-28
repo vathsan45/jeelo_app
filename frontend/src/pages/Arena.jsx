@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { api } from '../api.js'
+import { useApi } from '../useApi.js'
 import AnimatedNumber from '../components/AnimatedNumber.jsx'
 
 const DECIDE_SECONDS = 10
@@ -10,6 +10,7 @@ const ANSWER_SECONDS = 15
 export default function Arena() {
   const { sessionId } = useParams()
   const navigate = useNavigate()
+  const api = useApi()
 
   const [round, setRound] = useState(null)
   const [roundNum, setRoundNum] = useState(1)

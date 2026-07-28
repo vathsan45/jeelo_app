@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { api } from '../api.js'
+import { useApi } from '../useApi.js'
 import DiagnosePanel from '../components/DiagnosePanel.jsx'
 
 export default function QuizSummary() {
   const { sessionId } = useParams()
+  const api = useApi()
   const [report, setReport] = useState(null)
   const [error, setError] = useState(null)
 
   useEffect(() => {
     api.getReport(sessionId).then(setReport).catch((e) => setError(e.message))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sessionId])
 
   if (error) return <p className="mt-24 text-center text-red-400">{error}</p>

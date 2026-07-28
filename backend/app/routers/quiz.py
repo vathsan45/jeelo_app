@@ -6,6 +6,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session as DBSession
 
+from ..auth import get_current_player
 from ..database import get_db
 from ..elo import apply_attempt_result, get_effective_rating
 from ..models import (
@@ -33,10 +34,12 @@ class QuizStartBody(BaseModel):
     num_questions: int = 10
 
 
-def _get_session(db, session_id, expected_mode):
+def _get_owned_session(db, session_id, expected_mode, player):
     session = db.get(Session, session_id)
     if session is None or session.mode != expected_mode:
         raise HTTPException(status_code=404, detail=f"{expected_mode} session not found")
+    if session.player_id != player.player_id:
+        raise HTTPException(status_code=403, detail="this session belongs to another player")
     return session
 
 
@@ -150,11 +153,9 @@ def _submit(db, session, body: SubmitBody, scored: bool):
 
 # ---------- PLACEMENT ----------
 
-@router.post("/placement/{player_id}/start")
-def placement_start(player_id: str, db: DBSession = Depends(get_db)):
-    if db.get(Player, player_id) is None:
-        raise HTTPException(status_code=404, detail="player not found")
-    session = Session(player_id=player_id, mode="placement",
+@router.post("/placement/start")
+def placement_start(player: Player = Depends(get_current_player), db: DBSession = Depends(get_db)):
+    session = Session(player_id=player.player_id, mode="placement",
                       config={"num_questions": PLACEMENT_NUM_QUESTIONS})
     db.add(session)
     db.commit()
@@ -163,21 +164,24 @@ def placement_start(player_id: str, db: DBSession = Depends(get_db)):
 
 
 @router.get("/placement/{session_id}/next")
-def placement_next(session_id: str, db: DBSession = Depends(get_db)):
-    session = _get_session(db, session_id, "placement")
+def placement_next(session_id: str, player: Player = Depends(get_current_player),
+                   db: DBSession = Depends(get_db)):
+    session = _get_owned_session(db, session_id, "placement", player)
     return _next_question(db, session, PLACEMENT_NUM_QUESTIONS)
 
 
 @router.post("/placement/{session_id}/submit")
-def placement_submit(session_id: str, body: SubmitBody, db: DBSession = Depends(get_db)):
-    session = _get_session(db, session_id, "placement")
+def placement_submit(session_id: str, body: SubmitBody,
+                     player: Player = Depends(get_current_player),
+                     db: DBSession = Depends(get_db)):
+    session = _get_owned_session(db, session_id, "placement", player)
     return _submit(db, session, body, scored=False)
 
 
 @router.get("/placement/{session_id}/summary")
-def placement_summary(session_id: str, db: DBSession = Depends(get_db)):
-    session = _get_session(db, session_id, "placement")
-    player = db.get(Player, session.player_id)
+def placement_summary(session_id: str, player: Player = Depends(get_current_player),
+                      db: DBSession = Depends(get_db)):
+    session = _get_owned_session(db, session_id, "placement", player)
     attempts = _session_attempts(db, session_id)
 
     topics = [t[0] for t in db.query(Question.topic).distinct().all()]
@@ -216,17 +220,16 @@ def placement_summary(session_id: str, db: DBSession = Depends(get_db)):
 
 # ---------- PRACTICE QUIZ ----------
 
-@router.post("/quiz/{player_id}/start")
-def quiz_start(player_id: str, body: QuizStartBody, db: DBSession = Depends(get_db)):
-    if db.get(Player, player_id) is None:
-        raise HTTPException(status_code=404, detail="player not found")
+@router.post("/quiz/start")
+def quiz_start(body: QuizStartBody, player: Player = Depends(get_current_player),
+               db: DBSession = Depends(get_db)):
     if body.topic_filter is not None:
         topics = {t[0] for t in db.query(Question.topic).distinct().all()}
         if body.topic_filter not in topics:
             raise HTTPException(status_code=422,
                                 detail=f"unknown topic; valid: {sorted(topics)}")
     session = Session(
-        player_id=player_id, mode="practice_quiz",
+        player_id=player.player_id, mode="practice_quiz",
         config={"topic_filter": body.topic_filter, "num_questions": body.num_questions},
     )
     db.add(session)
@@ -237,21 +240,25 @@ def quiz_start(player_id: str, body: QuizStartBody, db: DBSession = Depends(get_
 
 
 @router.get("/quiz/{session_id}/next")
-def quiz_next(session_id: str, db: DBSession = Depends(get_db)):
-    session = _get_session(db, session_id, "practice_quiz")
+def quiz_next(session_id: str, player: Player = Depends(get_current_player),
+             db: DBSession = Depends(get_db)):
+    session = _get_owned_session(db, session_id, "practice_quiz", player)
     num_questions = (session.config or {}).get("num_questions", 10)
     return _next_question(db, session, num_questions)
 
 
 @router.post("/quiz/{session_id}/submit")
-def quiz_submit(session_id: str, body: SubmitBody, db: DBSession = Depends(get_db)):
-    session = _get_session(db, session_id, "practice_quiz")
+def quiz_submit(session_id: str, body: SubmitBody,
+                player: Player = Depends(get_current_player),
+                db: DBSession = Depends(get_db)):
+    session = _get_owned_session(db, session_id, "practice_quiz", player)
     return _submit(db, session, body, scored=True)
 
 
 @router.get("/quiz/{session_id}/summary")
-def quiz_summary(session_id: str, db: DBSession = Depends(get_db)):
-    session = _get_session(db, session_id, "practice_quiz")
+def quiz_summary(session_id: str, player: Player = Depends(get_current_player),
+                 db: DBSession = Depends(get_db)):
+    session = _get_owned_session(db, session_id, "practice_quiz", player)
     attempts = _session_attempts(db, session_id)
     if not attempts:
         return {"session_id": session_id, "total_score": 0, "accuracy_pct": 0,

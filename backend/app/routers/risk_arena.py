@@ -7,6 +7,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session as DBSession
 
+from ..auth import get_current_player
 from ..bots import ARCHETYPES, BOT_NAMES, bot_answer_correct, bot_decide
 from ..database import get_db
 from ..elo import apply_attempt_result, expected_probability, get_effective_rating
@@ -49,6 +50,15 @@ class AnswerBody(BaseModel):
     # None means the answer-phase timer ran out before a selection was made
     selected_answer: Optional[str] = None
     reaction_time_ms: Optional[int] = None
+
+
+def _get_owned_arena_session(db, session_id, player):
+    session = db.get(Session, session_id)
+    if session is None or session.mode != "risk_arena":
+        raise HTTPException(status_code=404, detail="risk_arena session not found")
+    if session.player_id != player.player_id:
+        raise HTTPException(status_code=403, detail="this session belongs to another player")
+    return session
 
 
 def _get_arena(session_id):
@@ -94,13 +104,10 @@ def _resolve_bots(state, question):
     return bot_results
 
 
-@router.post("/{player_id}/start")
-def start(player_id: str, body: StartBody, db: DBSession = Depends(get_db)):
-    player = db.get(Player, player_id)
-    if player is None:
-        raise HTTPException(status_code=404, detail="player not found")
-
-    session = Session(player_id=player_id, mode="risk_arena",
+@router.post("/start")
+def start(body: StartBody, player: Player = Depends(get_current_player),
+         db: DBSession = Depends(get_db)):
+    session = Session(player_id=player.player_id, mode="risk_arena",
                       config={"num_rounds": body.num_rounds})
     db.add(session)
     db.commit()
@@ -111,7 +118,7 @@ def start(player_id: str, body: StartBody, db: DBSession = Depends(get_db)):
     exclude = []
     question_ids = []
     for _ in range(body.num_rounds):
-        q = select_next_question(player_id, "risk_arena", None, exclude, db)
+        q = select_next_question(player.player_id, "risk_arena", None, exclude, db)
         if q is None:
             break
         question_ids.append(q.question_id)
@@ -144,7 +151,9 @@ def start(player_id: str, body: StartBody, db: DBSession = Depends(get_db)):
 
 
 @router.get("/{session_id}/round/{n}")
-def get_round(session_id: str, n: int, db: DBSession = Depends(get_db)):
+def get_round(session_id: str, n: int, player: Player = Depends(get_current_player),
+             db: DBSession = Depends(get_db)):
+    _get_owned_arena_session(db, session_id, player)
     state = _get_arena(session_id)
     if not (1 <= n <= len(state["question_ids"])):
         raise HTTPException(status_code=404, detail="round out of range")
@@ -222,12 +231,12 @@ def _finish_round(db, session, state, player, question, n, hand_raised, correct,
 
 @router.post("/{session_id}/round/{n}/decide")
 def decide_round(session_id: str, n: int, body: DecideBody,
+                 player: Player = Depends(get_current_player),
                  db: DBSession = Depends(get_db)):
     """Phase 1 (10s): raise your hand to commit to answering, or let it pass
     to skip. Bots resolve here regardless — their 'decision' is instant."""
+    session = _get_owned_arena_session(db, session_id, player)
     state = _get_arena(session_id)
-    session = db.get(Session, session_id)
-    player = db.get(Player, session.player_id)
     if not (1 <= n <= len(state["question_ids"])):
         raise HTTPException(status_code=404, detail="round out of range")
     if n in state["submitted_rounds"]:
@@ -262,13 +271,13 @@ def decide_round(session_id: str, n: int, body: DecideBody,
 
 @router.post("/{session_id}/round/{n}/answer")
 def answer_round(session_id: str, n: int, body: AnswerBody,
+                 player: Player = Depends(get_current_player),
                  db: DBSession = Depends(get_db)):
     """Phase 2 (15s): pick an option having already raised your hand. Running
     out the clock here counts as a wrong answer — raising your hand is a
     commitment, not a free look."""
+    session = _get_owned_arena_session(db, session_id, player)
     state = _get_arena(session_id)
-    session = db.get(Session, session_id)
-    player = db.get(Player, session.player_id)
     if not (1 <= n <= len(state["question_ids"])):
         raise HTTPException(status_code=404, detail="round out of range")
     if n in state["submitted_rounds"]:
@@ -299,11 +308,9 @@ def answer_round(session_id: str, n: int, body: AnswerBody,
 
 
 @router.get("/{session_id}/coach_report")
-def coach_report(session_id: str, db: DBSession = Depends(get_db)):
-    session = db.get(Session, session_id)
-    if session is None or session.mode != "risk_arena":
-        raise HTTPException(status_code=404, detail="risk_arena session not found")
-    player = db.get(Player, session.player_id)
+def coach_report(session_id: str, player: Player = Depends(get_current_player),
+                 db: DBSession = Depends(get_db)):
+    session = _get_owned_arena_session(db, session_id, player)
     attempts = (db.query(AttemptLog).filter_by(session_id=session_id)
                 .order_by(AttemptLog.round_num).all())
     if not attempts:

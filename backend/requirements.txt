@@ -5,3 +5,5 @@ pydantic>=2.6
 groq>=0.9
 python-dotenv>=1.0
 psycopg2-binary
+PyJWT[crypto]>=2.8
+requests>=2.31

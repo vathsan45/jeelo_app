@@ -5,9 +5,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session as DBSession
 
+from ..auth import get_current_player
 from ..database import get_db
 from ..llm import call_llm_json
-from ..models import AttemptLog, FailureDiagnostic, Question, Session
+from ..models import AttemptLog, FailureDiagnostic, Player, Question, Session
 
 router = APIRouter(prefix="/reports", tags=["reports"])
 
@@ -45,10 +46,12 @@ class RespondBody(BaseModel):
     selected_option: str
 
 
-def _get_session(db, session_id):
+def _get_owned_session(db, session_id, player):
     session = db.get(Session, session_id)
     if session is None:
         raise HTTPException(status_code=404, detail="session not found")
+    if session.player_id != player.player_id:
+        raise HTTPException(status_code=403, detail="this session belongs to another player")
     return session
 
 
@@ -117,8 +120,9 @@ def _clean_probe(raw, fallback_index):
 # ---------- DETAILED REPORT ----------
 
 @router.get("/{session_id}")
-def get_report(session_id: str, db: DBSession = Depends(get_db)):
-    session = _get_session(db, session_id)
+def get_report(session_id: str, player: Player = Depends(get_current_player),
+              db: DBSession = Depends(get_db)):
+    session = _get_owned_session(db, session_id, player)
     attempts = (
         db.query(AttemptLog)
         .filter_by(session_id=session_id)
@@ -195,8 +199,9 @@ def get_report(session_id: str, db: DBSession = Depends(get_db)):
 
 @router.post("/{session_id}/failure_test/{question_id}")
 def start_failure_test(session_id: str, question_id: str,
+                       player: Player = Depends(get_current_player),
                        db: DBSession = Depends(get_db)):
-    session = _get_session(db, session_id)
+    session = _get_owned_session(db, session_id, player)
     attempt = (
         db.query(AttemptLog)
         .filter_by(session_id=session_id, question_id=question_id,
@@ -274,8 +279,9 @@ def start_failure_test(session_id: str, question_id: str,
 
 @router.post("/{session_id}/failure_test/{question_id}/respond")
 def respond_failure_test(session_id: str, question_id: str, body: RespondBody,
+                         player: Player = Depends(get_current_player),
                          db: DBSession = Depends(get_db)):
-    _get_session(db, session_id)
+    _get_owned_session(db, session_id, player)
     attempt = (
         db.query(AttemptLog)
         .filter_by(session_id=session_id, question_id=question_id)

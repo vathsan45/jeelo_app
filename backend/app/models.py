@@ -44,6 +44,10 @@ class Player(Base):
     __tablename__ = "players"
 
     player_id = Column(String, primary_key=True, default=_uuid)
+    # Clerk's user id (the JWT's `sub` claim). Nullable so old anonymous
+    # players (pre-auth) keep working without a migration; every player
+    # created after auth went live has one.
+    auth_user_id = Column(String, unique=True, nullable=True, index=True)
     name = Column(String, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
     theta_overall = Column(Float, default=1200.0, nullable=False)
